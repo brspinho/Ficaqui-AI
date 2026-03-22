@@ -1,61 +1,100 @@
 import pandas as pd
 import numpy as np
+import requests
 import streamlit as st
+import random
 
-@st.cache_data
+@st.cache_data(ttl=86400) # Mantém em cache por 1 dia
 def load_data():
-    np.random.seed(42)  # Manter a consistência no reload
+    np.random.seed(42)  # Manter a consistência no mapa real
+    random.seed(42)
     
-    # Coordenadas reais aproximadas de ruas do Centro de Aracaju (início e fim do trecho comercial)
-    vias_reais = [
-        {"rua": "Calçadão João Pessoa", "lat_start": -10.9131, "lon_start": -37.0519, "lat_end": -10.9155, "lon_end": -37.0519},
-        {"rua": "Praça Fausto Cardoso", "lat_start": -10.9136, "lon_start": -37.0505, "lat_end": -10.9140, "lon_end": -37.0500},
-        {"rua": "Rua Laranjeiras", "lat_start": -10.9125, "lon_start": -37.0525, "lat_end": -10.9125, "lon_end": -37.0560},
-        {"rua": "Rua Itabaiana", "lat_start": -10.9121, "lon_start": -37.0540, "lat_end": -10.9160, "lon_end": -37.0540},
-        {"rua": "Rua Geru", "lat_start": -10.9142, "lon_start": -37.0516, "lat_end": -10.9142, "lon_end": -37.0545},
-        {"rua": "Rua São Cristóvão", "lat_start": -10.9138, "lon_start": -37.0528, "lat_end": -10.9138, "lon_end": -37.0565},
-        {"rua": "Avenida Rio Branco", "lat_start": -10.9135, "lon_start": -37.0495, "lat_end": -10.9180, "lon_end": -37.0495},
-        {"rua": "Rua Capela", "lat_start": -10.9150, "lon_start": -37.0522, "lat_end": -10.9150, "lon_end": -37.0555},
-        {"rua": "Rua Propriá", "lat_start": -10.9165, "lon_start": -37.0530, "lat_end": -10.9165, "lon_end": -37.0570},
-        {"rua": "Rua Santo Amaro", "lat_start": -10.9170, "lon_start": -37.0525, "lat_end": -10.9170, "lon_end": -37.0560},
-        {"rua": "Praça General Valadão", "lat_start": -10.9118, "lon_start": -37.0510, "lat_end": -10.9122, "lon_end": -37.0515},
-        {"rua": "Avenida Barão de Maruim", "lat_start": -10.9189, "lon_start": -37.0520, "lat_end": -10.9189, "lon_end": -37.0580}
-    ]
+    overpass_url = "http://overpass-api.de/api/interpreter"
+    # Limite Sul: Barão de Maruim (-10.9189). Limite Norte: Mercados (-10.9070).
+    overpass_query = """
+    [out:json][timeout:50];
+    (
+      way["building"](-10.9189,-37.0580,-10.9070,-37.0460);
+      node["building"](-10.9189,-37.0580,-10.9070,-37.0460);
+      node["shop"](-10.9189,-37.0580,-10.9070,-37.0460);
+      way["shop"](-10.9189,-37.0580,-10.9070,-37.0460);
+      node["amenity"](-10.9189,-37.0580,-10.9070,-37.0460);
+      way["amenity"](-10.9189,-37.0580,-10.9070,-37.0460);
+      node["office"](-10.9189,-37.0580,-10.9070,-37.0460);
+      way["office"](-10.9189,-37.0580,-10.9070,-37.0460);
+    );
+    out center;
+    """
     
     data = []
+    ruas_macro_dados = {}
     
-    # Gerando imóveis ao longo do segmento de reta de cada rua
-    for i, via in enumerate(vias_reais):
-        num_imoveis = np.random.randint(6, 18)  # Quantidade de imóveis por rua
-        rua_nome = via["rua"]
+    try:
+        response = requests.get(overpass_url, params={'data': overpass_query})
+        response.raise_for_status()
+        osm_data = response.json()
+        elements = osm_data.get('elements', [])
         
-        for j in range(num_imoveis):
-            # Interpolação linear para posicionar o imóvel ao longo da rua
-            t = j / max(1, (num_imoveis - 1))
+        # Filtra um máximo para a visualização não travar e o LLM conseguir ler o sample depois
+        if len(elements) > 2500:
+            elements = random.sample(elements, 2500)
             
-            # Adicionando um pequeníssimo ruído para simular os dois lados da rua (imóveis não ficam perfeitamente no centro)
-            jitter_lat = np.random.uniform(-0.00015, 0.00015)
-            jitter_lon = np.random.uniform(-0.00015, 0.00015)
+        for el in elements:
+            tags = el.get('tags', {})
             
-            lat = via["lat_start"] + t * (via["lat_end"] - via["lat_start"]) + jitter_lat
-            lon = via["lon_start"] + t * (via["lon_end"] - via["lon_start"]) + jitter_lon
-            
-            # Gerando numeração predial realista
-            numero_imovel = np.random.randint(10, 1500)
-            endereco_completo = f"{rua_nome}, {numero_imovel}"
-            
-            # Mockando características reais do imóvel
-            status = np.random.choice(["Alugado", "Disponível", "Abandonado/IPTU Atrasado"], p=[0.45, 0.35, 0.20])
-            tipo = np.random.choice(["Loja Térrea", "Galpão", "Prédio Misto", "Sala Comercial"])
-            iluminacao = np.random.choice(["Boa", "Regular", "Ruim/Inexistente"])
-            
-            # Ajustando fluxo baseado na rua (Calçadões têm mais fluxo)
-            if "Calçadão" in rua_nome or "Praça" in rua_nome:
-                fluxo = np.random.randint(5000, 20000)
+            # Buscando Latitude e Longitude (Ways tem center lat/lon)
+            if el['type'] == 'way':
+                lat = el['center']['lat']
+                lon = el['center']['lon']
             else:
-                fluxo = np.random.randint(500, 10000)
+                lat = el['lat']
+                lon = el['lon']
+                
+            # Identificando o Logradouro OSM
+            rua_nome = tags.get('addr:street', tags.get('name', 'Centro de Aracaju'))
+            # Se a rua for só "Centro de Aracaju", usamos algumas notórias do centro para mockar realismo onde o OSM falhar a tag
+            if rua_nome == 'Centro de Aracaju':
+                ruas_ficticias = ["Calçadão João Pessoa", "Rua São Cristóvão", "Rua Laranjeiras", "Rua Itabaiana", "Av. Rio Branco"]
+                rua_nome = random.choice(ruas_ficticias)
+                
+            numero = tags.get('addr:housenumber', str(np.random.randint(10, 1500)))
+            endereco_completo = f"{rua_nome}, {numero}"
             
-            # Imóveis alugados geram receita alta. Disponíveis podem zerar e os abandonados devem impostos
+            # --- Mockando informações urbanísticas sensíveis da base de dados Ficaqui ---
+            status = np.random.choice(["Alugado", "Disponível", "Abandonado/IPTU Atrasado"], p=[0.45, 0.35, 0.20])
+            
+            osm_building_type = tags.get('building', '')
+            osm_shop = tags.get('shop', '')
+            osm_amenity = tags.get('amenity', '')
+            osm_office = tags.get('office', '')
+            
+            if osm_shop or osm_amenity or osm_office or osm_building_type in ['commercial', 'retail', 'kiosk']:
+                if osm_office:
+                    tipo = "Sala Comercial"
+                else:
+                    tipo = "Loja Térrea"
+            elif osm_building_type == 'warehouse':
+                tipo = "Galpão"
+            elif osm_building_type in ['apartments', 'residential', 'house']:
+                tipo = "Residencial"
+            else:
+                tipo = np.random.choice(["Loja Térrea", "Galpão", "Prédio Misto", "Sala Comercial", "Residencial"])
+                
+            # Agrupamento macro (mesma rua compartilha fluxo e iluminação base)
+            if rua_nome not in ruas_macro_dados:
+                ilum = np.random.choice(["Boa", "Regular", "Ruim/Inexistente"])
+                # Calçadões e grandes avenidas têm trânsito mais denso
+                if "Calçadão" in rua_nome or "Praça" in rua_nome or "Avenida" in rua_nome:
+                    flux_base = np.random.randint(5000, 20000)
+                else:
+                    flux_base = np.random.randint(500, 10000)
+                ruas_macro_dados[rua_nome] = {"iluminacao": ilum, "fluxo": flux_base}
+                
+            iluminacao = ruas_macro_dados[rua_nome]["iluminacao"]
+            # Pequeno ruído para simular variação da calçada, mas matematicamente consistente com a rua
+            fluxo = ruas_macro_dados[rua_nome]["fluxo"] + np.random.randint(-150, 150)
+                
+            # Dados fiscais / venda
             if status == "Alugado":
                 receita = np.random.randint(15000, 450000)
             else:
@@ -64,8 +103,8 @@ def load_data():
             potencial = round(np.random.uniform(0.4, 0.98), 2)
             
             data.append({
-                "id_espaco": f"IMOVEL-{str(i).zfill(2)}-{str(j).zfill(2)}",
-                "rua": endereco_completo, 
+                "id_espaco": f"OSM-{el['id']}",
+                "rua": endereco_completo,
                 "tipo": tipo,
                 "lat": lat,
                 "lon": lon,
@@ -76,4 +115,20 @@ def load_data():
                 "potencial_retrofit": potencial
             })
             
+    except Exception as e:
+        print(f"OSM fetch error: {e}")
+        # Retorna mock simples se offline
+        data.append({
+            "id_espaco": "IMOVEL-OFFLINE",
+            "rua": "Sistema Offline, 0", 
+            "tipo": "Erro",
+            "lat": -10.913,
+            "lon": -37.052,
+            "status_aluguel": "Alugado",
+            "iluminacao": "Ruim/Inexistente",
+            "receita_gerada": 0,
+            "fluxo_pessoas_dia": 0,
+            "potencial_retrofit": 0.0
+        })
+
     return pd.DataFrame(data)

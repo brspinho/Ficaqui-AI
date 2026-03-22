@@ -12,20 +12,31 @@ def render_map_view(df):
     c1, c2 = st.columns([2, 1])
     
     with c1:
-        m = folium.Map(location=[-10.913, -37.052], zoom_start=15, tiles="cartodbpositron")
+        m = folium.Map(location=[-10.913, -37.052], zoom_start=15, tiles="OpenStreetMap")
+
         
         for i, row in df_filtrado.iterrows():
-            # A cor agora determina o problema do imóvel
+            # A cor agora determina o status de ocupação (Aluguel, Disponível, Abandonado)
             color = 'red' if row['status_aluguel'] == 'Abandonado/IPTU Atrasado' else 'orange' if row['status_aluguel'] == 'Disponível' else 'green'
             
-            folium.CircleMarker(
+            # O ícone determina o TIPO físico/operacional
+            tipo = row['tipo']
+            if tipo == 'Residencial':
+                fa_icon = 'home'
+            elif tipo == 'Galpão':
+                fa_icon = 'industry'
+            elif tipo == 'Prédio Misto':
+                fa_icon = 'building'
+            elif tipo == 'Sala Comercial':
+                fa_icon = 'briefcase'
+            else:
+                fa_icon = 'shopping-cart' # Lojas Térreas / Varejo
+            
+            folium.Marker(
                 location=[row['lat'], row['lon']],
-                radius=max(row['fluxo_pessoas_dia']/1800, 3), # Visibilidade por fluxo com min_radius
-                popup=f"<b># {row['id_espaco']}</b>",
-                tooltip=f"Clique para analisar {row['id_espaco']} na Barra Lateral",
-                color=color,
-                fill=True,
-                fill_opacity=0.6,
+                popup=f"<b># {row['id_espaco']}</b><br><i>{tipo}</i>",
+                tooltip=f"{tipo} - Clique para analisar na Barra Lateral",
+                icon=folium.Icon(color=color, icon=fa_icon, prefix='fa')
             ).add_to(m)
             
         # O st_folium captura eventos de clique no web app
