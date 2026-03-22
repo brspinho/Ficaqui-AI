@@ -4,7 +4,12 @@ import folium
 from streamlit_folium import st_folium
 import plotly.express as px
 import numpy as np
-from huggingface_hub import InferenceClient
+import os
+from dotenv import load_dotenv
+from groq import Groq
+
+# Carrega chaves do arquivo .env automaticamente
+load_dotenv()
 
 st.set_page_config(page_title="Ficaqui - Inteligência Urbana", layout="wide", initial_sidebar_state="expanded")
 
@@ -49,7 +54,8 @@ st.markdown("""
 
 with st.sidebar:
     st.header("Configurações Avançadas Ficaqui AI")
-    hf_token = st.text_input("🔑 HF Token (Opcional)", type="password", help="Insira um Token do Hugging Face para remover limitações de requisição da IA. Se vazio, usaremos a camada gratuita com limites limitados.")
+    env_groq_key = os.getenv("GROQ_API_KEY", "")
+    groq_key = st.text_input("🔑 Groq API Key", value=env_groq_key, type="password", help="Sua chave será lida do .env automaticamente. Se vazio, cole aqui.")
     st.markdown("---")
     st.markdown("**Status do Projeto:** MVP B2G em Operação.")
 
@@ -203,7 +209,7 @@ with tab1:
 
 with tab2:
     st.subheader("Chatbot G2B: Inteligência Generativa sobre os Dados Urbanos")
-    st.markdown("🤖 *Conectado ao Hugging Face LLM.* Pergunte à Inteligência Artificial sobre as discrepâncias, isenções, ou como resolver os desertos mapeados.")
+    st.markdown("🤖 *Conectado ao Agente Urbano.* Pergunte à Inteligência Artificial sobre as discrepâncias, isenções, ou como resolver os desertos mapeados.")
     
     # Session State Chat
     if "messages" not in st.session_state:
@@ -247,17 +253,17 @@ Microdados (Amostra): {context}"""
                         if m["role"] != "system":
                             messages_hf.append({"role": m["role"], "content": m["content"]})
                     
-                    # Conectar ao Hugging Face (Se não tiver token, usa Rate Limit anonimo aberto)
-                    client_kwargs = {}
-                    if hf_token:
-                        client_kwargs['api_key'] = hf_token
+                    # Conectar à Groq
+                    if not groq_key:
+                        st.error("Por favor, preencha sua GROQ_API_KEY no arquivo .env ou na aba lateral.")
+                        st.stop()
                         
-                    client = InferenceClient(**client_kwargs)
+                    client = Groq(api_key=groq_key)
                     
-                    # Stream the real AI response
+                    # Stream the real AI response usando Groq API
                     response = ""
                     stream = client.chat.completions.create(
-                        model="deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+                        model="llama-3.3-70b-versatile", # Modelo Oficial Llama 3.3 (Super estável)
                         messages=messages_hf,
                         max_tokens=2048,
                         stream=True,
@@ -275,5 +281,5 @@ Microdados (Amostra): {context}"""
                     st.session_state.messages.append({"role": "assistant", "content": response})
                     
                 except Exception as e:
-                    st.error(f"Erro ao contatar API do Hugging Face. Detalhes: {e}")
-                    st.warning("💡 Verifique se inseriu um HF Token válido na aba lateral caso o limite gratuito tenha estourado. A API gratuita restringe muitas requisições por minuto.")
+                    st.error(f"Erro ao contatar API da Groq. Detalhes: {e}")
+                    st.warning("💡 Verifique se a sua chave da Groq está correta no arquivo .env ou se você atingiu o limite de requisições.")

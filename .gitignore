@@ -1,0 +1,17 @@
+# Chaves e Env Variables Secretas
+.env
+.env.*
+
+# Ambientes Virtuais de Python
+.venv/
+venv/
+env/
+/ficaqui_dashboard/.venv/
+
+# Cache e Compilados do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Configurações Privadas do Streamlit
+.streamlit/secrets.toml
