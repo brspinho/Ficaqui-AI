@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+folium
+streamlit-folium
+groq
+python-dotenv
+fpdf2
+pydeck
