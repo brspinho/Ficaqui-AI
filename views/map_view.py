@@ -9,6 +9,10 @@ def render_map_view(df):
     # Filtros para detalhar e cruzar
     f_status = st.multiselect("Filtrar por Status de Ocupação", df['status_aluguel'].unique(), default=df['status_aluguel'].unique())
     df_filtrado = df[df['status_aluguel'].isin(f_status)]
+
+    # Diagnostic: Limit markers to 1000 for better performance on some machines
+    # The original dataset has 6k+ markers, which might crash some browsers in iframes
+    df_mapa = df_filtrado.head(1000)
     
     c1, c2 = st.columns([2, 1])
     
@@ -18,7 +22,7 @@ def render_map_view(df):
         # Usamos MarkerCluster para dar conta da multidão de endereços oficiais do IBGE
         marker_cluster = MarkerCluster().add_to(m)
         
-        for i, row in df_filtrado.iterrows():
+        for i, row in df_mapa.iterrows():
             # A cor agora determina o status de ocupação (Aluguel, Disponível, Abandonado)
             color = 'red' if row['status_aluguel'] == 'Abandonado/IPTU Atrasado' else 'orange' if row['status_aluguel'] == 'Disponível' else 'green'
             
@@ -45,8 +49,9 @@ def render_map_view(df):
         # O st_folium captura eventos de clique no web app limitando o retorno para não recarregar no pan/zoom
         st_data = st_folium(
             m, 
-            width="100%", 
+            use_container_width=True, 
             height=550, 
+            key="main_ficaqui_map",
             returned_objects=["last_object_clicked"]
         )
         
