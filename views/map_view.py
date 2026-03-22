@@ -8,16 +8,16 @@ from folium.plugins import HeatMap, FastMarkerCluster
 
 GEOJSON_PATH = "data/imoveis.geojson"
 
-# Lista de Predios Publicos Estrategicos para Revitalizacao (Foco ICMS / Governo do Estado / Federal)
+# Lista de Prédios Públicos Estratégicos para Revitalização (Foco ICMS / Governo do Estado / Federal)
 _PREDIOS_ESTRATEGICOS = [
-    {"nome": "Antiga sede do INSS", "lat": -10.9110, "lon": -37.0510, "natureza": "Federal (Uniao)", "situacao": "Em desuso e a venda", "ideal": "Hub Tech / Smart Co-working"},
-    {"nome": "Hotel Palace", "lat": -10.9130, "lon": -37.0490, "natureza": "Estadual (Gov Sergipe)", "situacao": "Abandonado / Judicializado", "ideal": "Hotel Boutique + Hub Inovacao"},
-    {"nome": "Casarao do Parque", "lat": -10.9150, "lon": -37.0530, "natureza": "Municipal", "situacao": "Deterioracao Estrutural", "ideal": "Hub Criativo / Moradia Social"},
-    {"nome": "Palacio Inacio Barbosa", "lat": -10.9125, "lon": -37.0482, "natureza": "Municipal", "situacao": "Abandonado (18 anos)", "ideal": "Hub GovTech + Comercio"},
-    {"nome": "Antigo Ministerio da Fazenda", "lat": -10.9140, "lon": -37.0490, "natureza": "Federal", "situacao": "Abandonado", "ideal": "Hub Fintech + Residencias compactas"},
-    {"nome": "Antiga Alvandega", "lat": -10.9080, "lon": -37.0480, "natureza": "Federal/Municipal", "situacao": "Em ruinas", "ideal": "Hub Economia Criativa / Gastronomia"},
-    {"nome": "Museu do Homem Sergipano", "lat": -10.9142, "lon": -37.0532, "natureza": "Federal (UFS)", "situacao": "Em reconstrucao licitada", "ideal": "Laboratorios de Humanidades Digitais"},
-    {"nome": "Edificio Danusa (Joao Mulungu)", "lat": -10.9180, "lon": -37.0470, "natureza": "Privado (Cosil)", "situacao": "Abandonado", "ideal": "Retrofit PPP + Habitacao de Interesse Social"}
+    {"nome": "Antiga sede do INSS", "lat": -10.9110, "lon": -37.0510, "natureza": "Federal (União)", "situacao": "Em desuso e à venda", "ideal": "Hub Tech / Smart Co-working"},
+    {"nome": "Hotel Palace", "lat": -10.9130, "lon": -37.0490, "natureza": "Estadual (Gov Sergipe)", "situacao": "Abandonado / Judicializado", "ideal": "Hotel Boutique + Hub Inovação"},
+    {"nome": "Casarão do Parque", "lat": -10.9150, "lon": -37.0530, "natureza": "Municipal", "situacao": "Deterioração Estrutural", "ideal": "Hub Criativo / Moradia Social"},
+    {"nome": "Palácio Inácio Barbosa", "lat": -10.9125, "lon": -37.0482, "natureza": "Municipal", "situacao": "Abandonado (18 anos)", "ideal": "Hub GovTech + Comércio"},
+    {"nome": "Antigo Ministério da Fazenda", "lat": -10.9140, "lon": -37.0490, "natureza": "Federal", "situacao": "Abandonado", "ideal": "Hub Fintech + Residências compactas"},
+    {"nome": "Antiga Alfândega", "lat": -10.9080, "lon": -37.0480, "natureza": "Federal/Municipal", "situacao": "Em ruínas", "ideal": "Hub Economia Criativa / Gastronomia"},
+    {"nome": "Museu do Homem Sergipano", "lat": -10.9142, "lon": -37.0532, "natureza": "Federal (UFS)", "situacao": "Em reconstrução licitada", "ideal": "Laboratórios de Humanidades Digitais"},
+    {"nome": "Edifício Danusa (João Mulungu)", "lat": -10.9180, "lon": -37.0470, "natureza": "Privado (Cosil)", "situacao": "Abandonado", "ideal": "Retrofit PPP + Habitação de Interesse Social"}
 ]
 
 _CLUSTER_CALLBACK = """
@@ -73,15 +73,15 @@ def _build_heatmap_data(status_filter: tuple, metrica: str) -> list:
                 weight = float(props.get("potencial_retrofit", 0))
             else:
                 weight = float(props.get("receita_gerada", 0)) / 500000.0
-        elif metrica == "Iluminacao Noturna (Risco)":
+        elif metrica == "Iluminação Noturna (Risco)":
             ilu = props.get("iluminacao", "")
             weight = {"Ruim/Inexistente": 1.0, "Regular": 0.45, "Boa": 0.1}.get(ilu, 0)
-        elif metrica == "Crimes por Mes":
+        elif metrica == "Crimes por Mês":
             crimes = float(props.get("crimes_mes", 0))
             weight = min(1.0, crimes / 20.0)
         elif metrica == "Cobertura Policial":
             weight = 1.0 - float(props.get("cobertura_policial", 0.5))
-        elif metrica == "Indice de Seguranca":
+        elif metrica == "Índice de Segurança":
             weight = 1.0 - float(props.get("indice_seguranca", 5)) / 10.0
 
         if weight > 0.01:
@@ -91,11 +91,11 @@ def _build_heatmap_data(status_filter: tuple, metrica: str) -> list:
 def generate_time_series(tipo_imovel: str, fluxo_total: int) -> pd.DataFrame:
     horas = list(range(24))
     pesos = np.zeros(24)
-    if tipo_imovel in ["Loja Terrea", "Sala Comercial"]:
+    if tipo_imovel in ["Loja Térrea", "Sala Comercial"]:
         for h in horas:
             if 8 <= h <= 18:
                 pesos[h] = np.exp(-0.5 * ((h - 13) / 2.5) ** 2)
-    elif tipo_imovel == "Galpao":
+    elif tipo_imovel == "Galpão":
         for h in horas:
             if 6 <= h <= 18:
                 pesos[h] = np.exp(-0.5 * ((h - 8) / 1.5) ** 2) + np.exp(-0.5 * ((h - 17) / 1.5) ** 2)
@@ -120,7 +120,7 @@ def generate_police_timeseries(cobertura_base: float, iluminacao: str) -> pd.Dat
         pesos[h] += noturno
     max_p = max(pesos) if max(pesos) > 0 else 1
     presenca = [round(p / max_p * cobertura_base * 100, 1) for p in pesos]
-    df = pd.DataFrame({"Hora": [f"{h:02d}h" for h in horas], "Presenca (%)" : presenca})
+    df = pd.DataFrame({"Hora": [f"{h:02d}h" for h in horas], "Presença (%)" : presenca})
     return df.set_index("Hora")
 
 def generate_crime_breakdown(crimes_mes: int, iluminacao: str, status: str) -> pd.DataFrame:
@@ -132,10 +132,10 @@ def generate_crime_breakdown(crimes_mes: int, iluminacao: str, status: str) -> p
         "Furto/Roubo": int(crimes_mes * 0.45 * fator_abandono),
         "Uso de Drogas": int(crimes_mes * 0.25),
         "Vandalismo": int(crimes_mes * 0.15),
-        "Agressao": int(crimes_mes * 0.10),
+        "Agressão": int(crimes_mes * 0.10),
         "Outros": int(crimes_mes * 0.05),
     }
-    df = pd.DataFrame.from_dict(tipos, orient="index", columns=["Ocorrencias/mes"])
+    df = pd.DataFrame.from_dict(tipos, orient="index", columns=["Ocorrências/mês"])
     df.index.name = "Tipo de Crime"
     return df, diurno, noturno
 
@@ -143,28 +143,28 @@ def render_map_view(df):
     st.subheader("Painel de Controle Espacial")
 
     f_status = st.multiselect(
-        "Filtrar por Status de Ocupacao",
+        "Filtrar por Status de Ocupação",
         df["status_aluguel"].unique(),
         default=df["status_aluguel"].unique()
     )
 
     modo_visao = st.radio(
         "Lente Espacial:",
-        ["Visao Micro (Lotes/Imoveis)", "Visao Macro (Mapas de Calor)"],
+        ["Visão Micro (Lotes/Imóveis)", "Visão Macro (Mapas de Calor)"],
         horizontal=True
     )
 
     metrica_calor = None
-    if modo_visao == "Visao Macro (Mapas de Calor)":
+    if modo_visao == "Visão Macro (Mapas de Calor)":
         metrica_calor = st.selectbox(
-            "Camada Termografica:",
+            "Camada Termográfica:",
             [
                 "Fluxo de Pessoas",
                 "Oportunidade/Potencial",
-                "Iluminacao Noturna (Risco)",
-                "Crimes por Mes",
+                "Iluminação Noturna (Risco)",
+                "Crimes por Mês",
                 "Cobertura Policial",
-                "Indice de Seguranca",
+                "Índice de Segurança",
             ]
         )
 
@@ -174,7 +174,7 @@ def render_map_view(df):
     with c1:
         m = folium.Map(location=[-10.913, -37.052], zoom_start=15, tiles="OpenStreetMap")
 
-        if modo_visao == "Visao Micro (Lotes/Imoveis)":
+        if modo_visao == "Visão Micro (Lotes/Imóveis)":
             cluster_data = _get_cluster_data(status_tuple)
             FastMarkerCluster(
                 data=cluster_data,
@@ -192,14 +192,14 @@ def render_map_view(df):
                 <h4 style="margin-bottom:4px;">{p['nome']}</h4>
                 <b>Esfera:</b> {p['natureza']}<br/>
                 <b>Status:</b> {p['situacao']}<br/>
-                <b>Destinacao Ideal:</b> {p['ideal']}<br/>
-                <small style="color:gray;">*Foco em Parcerias e Isencao de ICMS</small>
+                <b>Destinação Ideal:</b> {p['ideal']}<br/>
+                <small style="color:gray;">*Foco em Parcerias e Isenção de ICMS</small>
             </div>
             """
             folium.Marker(
                 location=[p["lat"], p["lon"]],
                 popup=folium.Popup(popup_html, max_width=300),
-                tooltip=f"PREDIO ESTRATEGICO: {p['nome']}",
+                tooltip=f"PRÉDIO ESTRATÉGICO: {p['nome']}",
                 icon=folium.Icon(color=icon_color, icon="university", prefix="fa")
             ).add_to(m)
 
@@ -207,7 +207,7 @@ def render_map_view(df):
         st_data = st_folium(m, width='stretch', height=650, key=map_key, returned_objects=["last_object_clicked"])
 
     with c2:
-        st.subheader("Diagnostico do Espaco")
+        st.subheader("Diagnóstico do Espaço")
 
         clicked = st_data.get("last_object_clicked") if st_data else None
         if clicked and clicked.get("lat"):
@@ -229,37 +229,37 @@ def render_map_view(df):
             detalhe = df[df["id_espaco"] == espaco_selecionado].iloc[0]
             st.write(f"**Tipologia:** {detalhe['tipo']}")
             st.write(f"**Status:** {detalhe['status_aluguel']}")
-            st.write(f"**Iluminacao Base:** {detalhe['iluminacao']}")
+            st.write(f"**Iluminação Base:** {detalhe['iluminacao']}")
             st.write(f"**VPT (Volume Pedonal Total):** {int(detalhe['fluxo_pessoas_dia']):,} hab/dia")
             
-            if detalhe['status_aluguel'] in ["Disponivel", "Abandonado"]:
+            if detalhe['status_aluguel'] in ["Disponível", "Abandonado"]:
                 incentivo = detalhe.get('incentivo_icms', 0)
-                st.success(f"Credito ICMS (Fomentar Ocupacao): R$ {int(incentivo):,}")
+                st.success(f"Crédito ICMS (Fomentar Ocupação): R$ {int(incentivo):,}")
 
-            with st.expander("Seguranca Publica", expanded=False):
+            with st.expander("Segurança Pública", expanded=False):
                 crimes_mes = int(detalhe.get('crimes_mes', 0))
                 cobertura = float(detalhe.get('cobertura_policial', 0.5))
                 idx_seg = float(detalhe.get('indice_seguranca', 5))
                 ilum = detalhe['iluminacao']
                 
                 col_a, col_b, col_c = st.columns(3)
-                col_a.metric("Crimes/mes", crimes_mes)
+                col_a.metric("Crimes/mês", crimes_mes)
                 col_b.metric("Policiamento", f"{int(cobertura * 100)}%")
-                col_c.metric("Seguranca", f"{idx_seg}/10")
+                col_c.metric("Segurança", f"{idx_seg}/10")
 
-                st.caption("Presenca Policial por Hora (Estimada)")
+                st.caption("Presença Policial por Hora (Estimada)")
                 df_pol = generate_police_timeseries(cobertura, ilum)
                 st.area_chart(df_pol, color="#1E88E5")
 
                 df_crimes, diurno, noturno = generate_crime_breakdown(crimes_mes, ilum, detalhe['status_aluguel'])
-                st.caption(f"Diurno: {diurno} | Noturno: {noturno} ocorrencias/mes")
+                st.caption(f"Diurno: {diurno} | Noturno: {noturno} ocorrências/mês")
                 st.bar_chart(df_crimes, color="#E53935")
 
-            st.markdown("### Fluxo Preditivo Diario")
+            st.markdown("### Fluxo Preditivo Diário")
             df_temporal = generate_time_series(detalhe["tipo"], detalhe["fluxo_pessoas_dia"])
             st.area_chart(df_temporal, color="#ECA118")
 
-            st.markdown("### Inteligencia Ficaqui")
+            st.markdown("### Inteligência Ficaqui")
             s = detalhe["status_aluguel"]
             fl = detalhe["fluxo_pessoas_dia"]
             il = detalhe["iluminacao"]
@@ -267,12 +267,12 @@ def render_map_view(df):
 
             if s != "Alugado":
                 if fl > 8000 and il != "Boa":
-                    diag = "Bloqueio Inconsciente: Alto fluxo diurno colide com arquitetura noturna hostil. E recomendavel pacote de incentivo fiscal estadual (ICMS) ou fomento a revitalizacao do Governo."
+                    diag = "Bloqueio Inconsciente: Alto fluxo diurno colide com arquitetura noturna hostil. É recomendável pacote de incentivo fiscal estadual (ICMS) ou fomento à revitalização do Governo."
                 elif s == "Abandonado":
-                    diag = "Passivo Ativado: Imovel abandonado. FII Ficaqui deve visar aquisicao ou estruturar Retrofit com abatimentos estaduais/PPP (Uso Misto: moradia+comercio)."
+                    diag = "Passivo Ativado: Imóvel abandonado. FII Ficaqui deve visar aquisição ou estruturar Retrofit com abatimentos estaduais/PPP (Uso Misto: moradia+comércio)."
                 else:
-                    diag = "Oportunidade Adormecida: Necessita de ancoras locais ou incentivo de fomento a inovacao para tracao pos-18h."
+                    diag = "Oportunidade Adormecida: Necessita de âncoras locais ou incentivo de fomento à inovação para tração pós-18h."
             else:
-                diag = "Motor Comercial Forte! Manter infraestrutura e iluminacao para evitar migracao do lojista." if re > 150000 else "Ativo perfeitamente locado e operante."
+                diag = "Motor Comercial Forte! Manter infraestrutura e iluminação para evitar migração do lojista." if re > 150000 else "Ativo perfeitamente locado e operante."
 
             st.success(diag)

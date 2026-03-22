@@ -7,7 +7,7 @@ from groq import Groq
 
 def ensure_groq_diagnosis(df, groq_key):
     if not groq_key:
-        return "Configuracao da API Groq ausente. O relatorio nao pode gerar insights de IA."
+        return "Configuração da API Groq ausente. O relatório não pôde gerar insights de IA."
         
     try:
         client = Groq(api_key=groq_key)
@@ -15,14 +15,14 @@ def ensure_groq_diagnosis(df, groq_key):
         df_sample = df.sample(min(15, len(df)))
         context = df_sample.to_json(orient='records')
         
-        prompt = f"""Atue como um Consultor de Inteligencia Urbana focado em B2G.
-O cliente gerou uma exportacao de dados baseada em filtros especificos. 
-Aqui esta uma amostra dos dados filtrados:
+        prompt = f"""Atue como um Consultor de Inteligência Urbana focado em B2G.
+O cliente gerou uma exportação de dados baseada em filtros específicos. 
+Aqui está uma amostra dos dados filtrados:
 {context}
 
-Considerando as estatisticas desse recorte, crie uma "Sintese Executiva" de 2 paragrafos. 
-O primeiro deve diagnosticar o cenario (Ex: vacancia, oportunidades). 
-O segundo deve propor medidas fiscais/urbanas claras. Nao use ingles."""
+Considerando as estatísticas desse recorte, crie uma "Síntese Executiva" de 2 parágrafos. 
+O primeiro deve diagnosticar o cenário (Ex: vacância, oportunidades). 
+O segundo deve propor medidas fiscais/urbanas claras. Não use inglês."""
 
         completion = client.chat.completions.create(
             model="llama-3.3-70b-versatile",
@@ -67,12 +67,12 @@ def create_pdf(df, ai_diagnosis):
     pdf.rect(10 + w1, 10, w2, h_box)
     pdf.set_xy(10 + w1, 15)
     pdf.set_font("helvetica", 'B', 16)
-    pdf.multi_cell(w2, 10, txt=strip_accents("Relatorio Estrategico de\nExportacao de Dados"), border=0, align='C')
+    pdf.multi_cell(w2, 10, txt=strip_accents("Relatório Estratégico de\nExportação de Dados"), border=0, align='C')
     
     pdf.rect(10 + w1 + w2, 10, w3, h_box)
     pdf.set_xy(10 + w1 + w2, 12)
     pdf.set_font("helvetica", 'B', 9)
-    pdf.cell(w3, 5, txt=strip_accents("No Relatorio"), ln=True, align='C')
+    pdf.cell(w3, 5, txt=strip_accents("No Relatório"), ln=True, align='C')
     pdf.set_font("helvetica", '', 8)
     report_id = datetime.now().strftime("%Y%m%d%H%M%S")
     pdf.set_x(10 + w1 + w2)
@@ -88,17 +88,17 @@ def create_pdf(df, ai_diagnosis):
     pdf.set_xy(10, 10 + h_box)
     pdf.set_font("helvetica", 'B', 8)
     pdf.set_text_color(50, 50, 50)
-    params_txt = f" Parametros: Filtro de Imoveis ({len(df)} ativos) | Engine: Ficaqui AI Llama 3.3 | Analise: Urbanism Strategy"
+    params_txt = f" Parâmetros: Filtro de Imóveis ({len(df)} ativos) | Engine: Ficaqui AI Llama 3.3 | Análise: Urbanism Strategy"
     pdf.cell(190, 8, txt=strip_accents(params_txt), border=1, ln=True)
     
     pdf.set_xy(10, 55) 
     pdf.set_text_color(0, 0, 0)
     
-    # --- ESTISTICAS GERAIS ---
+    # --- ESTATISTICAS GERAIS ---
     pdf.set_fill_color(0, 121, 107)
     pdf.set_text_color(255, 255, 255)
     pdf.set_font("helvetica", 'B', 12)
-    pdf.cell(0, 10, txt=" SITUACAO DO RECORTE SELECIONADO", ln=True, fill=True)
+    pdf.cell(0, 10, txt=" SITUAÇÃO DO RECORTE SELECIONADO", ln=True, fill=True)
     pdf.ln(5)
     
     pdf.set_text_color(0, 0, 0)
@@ -115,7 +115,7 @@ def create_pdf(df, ai_diagnosis):
     pdf.cell(30, 10, 'Tipo', 1, 0, 'C', True)
     pdf.cell(40, 10, 'Status', 1, 0, 'C', True)
     pdf.cell(35, 10, 'Fluxo/Dia', 1, 0, 'C', True)
-    pdf.cell(35, 10, 'Iluminacao', 1, 1, 'C', True)
+    pdf.cell(35, 10, 'Iluminação', 1, 1, 'C', True)
     
     pdf.set_font("helvetica", '', 7)
     for i, row in df.head(25).iterrows():
@@ -135,7 +135,7 @@ def create_pdf(df, ai_diagnosis):
     
     pdf.set_font("helvetica", 'B', 14)
     pdf.set_text_color(0, 77, 64)
-    pdf.cell(0, 10, txt="Parecer Estrategico (AI Urbanist Analysis)", ln=True)
+    pdf.cell(0, 10, txt="Parecer Estratégico (AI Urbanist Analysis)", ln=True)
     pdf.set_draw_color(0, 77, 64)
     pdf.line(10, pdf.get_y(), 200, pdf.get_y())
     pdf.ln(5)
@@ -149,7 +149,7 @@ def create_pdf(df, ai_diagnosis):
     pdf.ln(20)
     pdf.set_font("helvetica", 'I', 8)
     pdf.set_text_color(150, 150, 150)
-    pdf.cell(0, 10, txt="Plataforma Ficaqui | Aracaju, SE | Inteligencia Artificial Groq/Llama 3.3", align='C')
+    pdf.cell(0, 10, txt="Plataforma Ficaqui | Aracaju, SE | Inteligência Artificial Groq/Llama 3.3", align='C')
 
     return bytes(pdf.output())
 
@@ -160,14 +160,14 @@ def create_docx(df, ai_diagnosis):
     from datetime import datetime
 
     doc = Document()
-    doc.add_heading('Relatorio Estrategico de Escritorio - Ficaqui', 0)
+    doc.add_heading('Relatório Estratégico de Escritório - Ficaqui', 0)
 
-    doc.add_paragraph(f"Data de Emissao: {datetime.now().strftime('%d/%m/%Y')}")
+    doc.add_paragraph(f"Data de Emissão: {datetime.now().strftime('%d/%m/%Y')}")
     doc.add_paragraph(f"Total de Ativos Analisados: {len(df)} unidades")
     receita_total = df['receita_gerada'].sum()
     doc.add_paragraph(f"Receita Operacional Mensal Estimada: R$ {receita_total:,.2f}")
 
-    doc.add_heading('Amostra Sintetica do Recorte', level=1)
+    doc.add_heading('Amostra Sintética do Recorte', level=1)
     
     table = doc.add_table(rows=1, cols=5)
     table.style = 'Light Grid Accent 1'
@@ -176,7 +176,7 @@ def create_docx(df, ai_diagnosis):
     hdr_cells[1].text = 'Tipo'
     hdr_cells[2].text = 'Status'
     hdr_cells[3].text = 'Fluxo/Dia'
-    hdr_cells[4].text = 'Iluminacao'
+    hdr_cells[4].text = 'Iluminação'
 
     for i, row in df.head(25).iterrows():
         row_cells = table.add_row().cells
@@ -187,7 +187,7 @@ def create_docx(df, ai_diagnosis):
         row_cells[4].text = str(row['iluminacao'])
 
     doc.add_page_break()
-    doc.add_heading('Parecer Estrategico (AI Urbanist Analysis)', level=1)
+    doc.add_heading('Parecer Estratégico (AI Urbanist Analysis)', level=1)
     
     p = doc.add_paragraph()
     run = p.add_run(ai_diagnosis)
@@ -202,14 +202,14 @@ def render_report_view(df, groq_key=None):
         import os
         groq_key = os.getenv("GROQ_API_KEY")
 
-    st.subheader("Relatorios Executivos e Exportacao")
-    st.markdown("Filtre a base de dados espaciais e exija que a IA crie pareceres urbanisticos para download oficial.")
+    st.subheader("Relatórios Executivos e Exportação")
+    st.markdown("Filtre a base de dados espaciais e exija que a IA crie pareceres urbanísticos para download oficial.")
     
     col1, col2 = st.columns(2)
     with col1:
         f_status = st.multiselect("Status do Ativo", df['status_aluguel'].unique(), default=df['status_aluguel'].unique())
     with col2:
-        f_tipo = st.multiselect("Tipologia de Imovel", df['tipo'].unique(), default=df['tipo'].unique())
+        f_tipo = st.multiselect("Tipologia de Imóvel", df['tipo'].unique(), default=df['tipo'].unique())
         
     df_filtrado = df[(df['status_aluguel'].isin(f_status)) & (df['tipo'].isin(f_tipo))]
     

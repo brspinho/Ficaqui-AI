@@ -27,7 +27,7 @@ def render_chat_view(df, groq_key=None):
         with chat_container.chat_message("user"):
             st.markdown(prompt)
 
-        # Resposta Via Hugging Face (InferenceClient) na verdade Groq
+        # Resposta Via Groq
         with chat_container.chat_message("assistant"):
             with st.spinner("Analisando microdados com a Nuvem..."):
                 try:
@@ -52,9 +52,9 @@ REGRAS OBRIGATÓRIAS:
 2. CRUZAMENTO OBRIGATÓRIO (DOUBLE EVIDENCE): Sempre que sugerir algo para um Prédio Público (ex: Hotel Palace), você DEVE cruzar com os dados das ruas ao redor (Microdados CNEFE). Diga: "Instalar um Hub no Hotel Palace é ideal porque as ruas X e Y têm fluxo de N pessoas e índice de segurança K...". Prove sua tese misturando os DOIS datasets fornecidos.
 3. IDIOMA: Responda apenas em Português do Brasil impecável.
 4. LÓGICA URBANÍSTICA:
- - Prédios Estaduais (Hotel Palace) → prioridade de Hubs Tech/Moradia via incentivos de ICMS para atrair empresas do polo de tecnologia.
- - Relação Luz x Crime → Ruas escuras ou abandonadas geram crimes. Instalar um Hub com comércio 24h em um Prédio Público adjacente resolve o ecossistema.
- - INCENTIVOS INVERSOS: O bônus de "Crédito ICMS" é **inversamente proporcional** à valorização da rua. Quanto MENOS fluxo, PIOR a iluminação e mais ocioso for o imóvel, MAIOR deve ser o valor de crédito sugerido para incentivar o empreendedor a desbravar a revitalização do pior cenário.
+ - Prédios Estaduais (Hotel Palace) -> prioridade de Hubs Tech/Moradia via incentivos de ICMS para atrair empresas do polo de tecnologia.
+ - Relação Luz x Crime -> Ruas escuras ou abandonadas geram crimes. Instalar um Hub com comércio 24h em um Prédio Público adjacente resolve o ecossistema.
+ - INCENTIVOS INVERSOS: O bônus de "Crédito ICMS" é inversamente proporcional à valorização da rua. Quanto MENOS fluxo, PIOR a iluminação e mais ocioso for o imóvel, MAIOR deve ser o valor de crédito sugerido para incentivar o empreendedor a desbravar a revitalização do pior cenário.
  - Use os números exatos (ex: {df_sample.iloc[0]['rua'] if not df_sample.empty else 'Rua Exemplo'} tem tantos crimes/mês) para validar.
 
 Microdados CNEFE (Amostra de Vizinhança): {context}
@@ -66,7 +66,7 @@ Prédios Públicos Estratégicos para Revitalização: {predios_context}"""
                         if m["role"] != "system":
                             messages_hf.append({"role": m["role"], "content": m["content"]})
                     
-                    # Conectar à Groq
+                    # Conectar a Groq
                     if not groq_key:
                         st.error("Por favor, preencha sua GROQ_API_KEY no arquivo .env ou na aba lateral.")
                         st.stop()
@@ -76,7 +76,7 @@ Prédios Públicos Estratégicos para Revitalização: {predios_context}"""
                     # Stream the real AI response usando Groq API
                     response = ""
                     stream = client.chat.completions.create(
-                        model="llama-3.3-70b-versatile", # Modelo Oficial Llama 3.3 (Super estável)
+                        model="llama-3.3-70b-versatile",
                         messages=messages_hf,
                         max_tokens=2048,
                         stream=True,
@@ -88,7 +88,7 @@ Prédios Públicos Estratégicos para Revitalização: {predios_context}"""
                         if hasattr(chunk, 'choices') and chunk.choices:
                             delta = getattr(chunk.choices[0].delta, 'content', "") or ""
                             response += delta
-                            placeholder.markdown(response + "▌")
+                            placeholder.markdown(response + "|")
                     placeholder.markdown(response)
                     
                     st.session_state.messages.append({"role": "assistant", "content": response})
