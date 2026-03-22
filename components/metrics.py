@@ -3,7 +3,7 @@ import streamlit as st
 def render_metrics(df):
     col1, col2, col3, col4 = st.columns(4)
     total_imoveis = len(df)
-    abandonados = len(df[df['status_aluguel'] == 'Abandonado/IPTU Atrasado'])
+    abandonados = len(df[df['status_aluguel'] == 'Abandonado'])
     taxa_vacancia = (len(df[df['status_aluguel'] != 'Alugado']) / total_imoveis) * 100
 
     col1.metric("Total de Espaços", total_imoveis)

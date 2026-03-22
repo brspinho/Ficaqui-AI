@@ -28,19 +28,34 @@ def render_chat_view(df, groq_key):
         with chat_container.chat_message("assistant"):
             with st.spinner("Analisando microdados com a Nuvem..."):
                 try:
-                    # Amostrando o DF para que caiba no contexto do limite gratuito do modelo (Zephyr 7B) // Atualizado para Llama 3.3
-                    df_sample = df[['rua', 'status_aluguel', 'iluminacao', 'fluxo_pessoas_dia']].sample(min(15, len(df)))
+                    # Carrega os prédios públicos estratégicos (Novo CSV)
+                    import pandas as pd
+                    try:
+                        df_predios = pd.read_csv("data/Prdio-Localizao-Natureza-Situaodescritanasfontes-Porquefortecandidatoahubtechusomisto.csv")
+                        predios_context = df_predios.to_json(orient='records')
+                    except:
+                        predios_context = "[]"
+
+                    # Amostrando o DF CNEFE para que caiba no contexto do limite do modelo
+                    df_sample = df[['rua', 'status_aluguel', 'iluminacao', 'fluxo_pessoas_dia', 'crimes_mes', 'cobertura_policial', 'indice_seguranca']].sample(min(15, len(df)))
                     context = df_sample.to_json(orient='records')
                     
-                    system_prompt = f"""Você é o Ficaqui AI, um Urbanista Sênior de Aracaju/Brasil orientando Prefeituras e Fundos de Investimentos (FII).
+                    system_prompt = f"""Você é o Ficaqui AI, um Urbanista Sênior de Aracaju/Brasil orientando o Governo do Estado de Sergipe e Fundos de Investimentos (FII).
+
+Sua missão é dar respostas EXTENSAS, ANALÍTICAS e RICAS EM DADOS. Evite respostas curtas de um parágrafo.
+
 REGRAS OBRIGATÓRIAS:
-1. IDIOMA ESTREITO: Responda EXCLUSIVAMENTE em Português do Brasil impecável. Jamais misture palavras em inglês (ex: NUNCA use "several", use "várias").
-2. EVIDÊNCIAS: Cite os dados EXATOS do JSON fornecido (nome da rua específica, status de locação) para comprovar seus argumentos.
-3. LÓGICA URBANÍSTICA CORRETA:
- - Imóveis "Alugados" com fluxo alto significam SUCESSO e VITALIDADE. Isso NÃO é um problema!
- - Espaços "Abandonado/IPTU Atrasado" com grande fluxo são OURO para Fundos Imobiliários atuarem com Retrofits (Uso Misto: comércio embaixo, moradia em cima).
- - Locais com "Iluminação Ruim" ou "Disponíveis" e sem fluxo exigem a força da Prefeitura (melhoria pública e incentivos fiscais/ISS) para atrair âncoras.
-Microdados (Amostra): {context}"""
+1. FOCO ESTADUAL E FEDERAL: Ignore o IPTU. Foque em ICMS (Estado), Fundos PPP, Retrofits de Investimento e destinação de patrimônios públicos.
+2. CRUZAMENTO OBRIGATÓRIO (DOUBLE EVIDENCE): Sempre que sugerir algo para um Prédio Público (ex: Hotel Palace), você DEVE cruzar com os dados das ruas ao redor (Microdados CNEFE). Diga: "Instalar um Hub no Hotel Palace é ideal porque as ruas X e Y têm fluxo de N pessoas e índice de segurança K...". Prove sua tese misturando os DOIS datasets fornecidos.
+3. IDIOMA: Responda apenas em Português do Brasil impecável.
+4. LÓGICA URBANÍSTICA:
+ - Prédios Estaduais (Hotel Palace) → prioridade de Hubs Tech/Moradia via incentivos de ICMS para atrair empresas do polo de tecnologia.
+ - Relação Luz x Crime → Ruas escuras ou abandonadas geram crimes. Instalar um Hub com comércio 24h em um Prédio Público adjacente resolve o ecossistema.
+ - Use os números exatos (ex: {df_sample.iloc[0]['rua'] if not df_sample.empty else 'Rua Exemplo'} tem tantos crimes/mês) para validar.
+
+Microdados CNEFE (Amostra de Vizinhança): {context}
+
+Prédios Públicos Estratégicos para Revitalização: {predios_context}"""
 
                     messages_hf = [{"role": "system", "content": system_prompt}]
                     for m in st.session_state.messages[-4:]:  # last 4

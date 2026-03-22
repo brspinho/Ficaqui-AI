@@ -37,13 +37,13 @@ def generate_geojson():
             status = "Alugado"
         elif tipo_ibge == "Loja/Comércio/Serviço":
             tipo = np.random.choice(["Loja Térrea", "Sala Comercial"], p=[0.7, 0.3])
-            status = np.random.choice(["Alugado", "Disponível", "Abandonado/IPTU Atrasado"], p=[0.50, 0.35, 0.15])
+            status = np.random.choice(["Alugado", "Disponível", "Abandonado"], p=[0.50, 0.35, 0.15])
         elif tipo_ibge == "Galpão/Ruína/Obra":
             tipo = "Galpão"
-            status = np.random.choice(["Disponível", "Abandonado/IPTU Atrasado"], p=[0.3, 0.7])
+            status = np.random.choice(["Disponível", "Abandonado"], p=[0.3, 0.7])
         else:
             tipo = "Prédio Misto"
-            status = np.random.choice(["Alugado", "Disponível", "Abandonado/IPTU Atrasado"], p=[0.6, 0.2, 0.2])
+            status = np.random.choice(["Alugado", "Disponível", "Abandonado"], p=[0.6, 0.2, 0.2])
 
         # Dados por rua (cache interno)
         if rua_nome not in ruas_macro:
@@ -72,7 +72,7 @@ def generate_geojson():
 
         # Crimes mensais: base correlacionada à iluminação + abandono + policiamento inverso
         base_crimes = {"Boa": 1, "Regular": 3, "Ruim/Inexistente": 8}.get(iluminacao, 3)
-        if status == "Abandonado/IPTU Atrasado":
+        if status == "Abandonado":
             base_crimes = int(base_crimes * 2.5)  # Imóveis abandonados atraem mais ocorrências
         crimes_mes = max(0, int(base_crimes * np.random.uniform(0.7, 1.5)) - int(cobertura_policial * 4))
 
@@ -85,7 +85,7 @@ def generate_geojson():
         label_id = nome_estab if nome_estab and nome_estab != 'nan' else endereco
 
         # Cor para a propriedade de estilo do GeoJSON
-        if status == 'Abandonado/IPTU Atrasado':
+        if status == 'Abandonado':
             color = '#dc3545'
         elif status == 'Disponível':
             color = '#ffc107'

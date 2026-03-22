@@ -82,9 +82,9 @@ def generate_cnefe_mock_csv():
             if tipo == "Residencial":
                 status = "Alugado" # Moradores
             elif tipo == "Galpão":
-                status = np.random.choice(["Disponível", "Abandonado/IPTU Atrasado"], p=[0.3, 0.7])
+                status = np.random.choice(["Disponível", "Abandonado"], p=[0.3, 0.7])
             else:
-                status = np.random.choice(["Alugado", "Disponível", "Abandonado/IPTU Atrasado"], p=[0.60, 0.25, 0.15])
+                status = np.random.choice(["Alugado", "Disponível", "Abandonado"], p=[0.60, 0.25, 0.15])
             
             data.append({
                 "id_espaco": f"CNEFE-2800308-{i}-{j}",

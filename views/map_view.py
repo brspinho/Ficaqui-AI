@@ -8,6 +8,18 @@ from folium.plugins import HeatMap, FastMarkerCluster
 
 GEOJSON_PATH = "data/imoveis.geojson"
 
+# Lista de Prédios Públicos Estratégicos para Revitalização (Foco ICMS / Governo do Estado / Federal)
+_PREDIOS_ESTRATEGICOS = [
+    {"nome": "Antiga sede do INSS", "lat": -10.9110, "lon": -37.0510, "natureza": "Federal (União)", "situacao": "Em desuso e à venda", "ideal": "Hub Tech / Smart Co-working"},
+    {"nome": "Hotel Palace", "lat": -10.9130, "lon": -37.0490, "natureza": "Estadual (Gov Sergipe)", "situacao": "Abandonado / Judicializado", "ideal": "Hotel Boutique + Hub Inovação"},
+    {"nome": "Casarão do Parque", "lat": -10.9150, "lon": -37.0530, "natureza": "Municipal", "situacao": "Deterioração Estrutural", "ideal": "Hub Criativo / Moradia Social"},
+    {"nome": "Palácio Inácio Barbosa", "lat": -10.9125, "lon": -37.0482, "natureza": "Municipal", "situacao": "Abandonado (18 anos)", "ideal": "Hub GovTech + Comércio"},
+    {"nome": "Antigo Ministério da Fazenda", "lat": -10.9140, "lon": -37.0490, "natureza": "Federal", "situacao": "Abandonado", "ideal": "Hub Fintech + Residências compactas"},
+    {"nome": "Antiga Alfândega", "lat": -10.9080, "lon": -37.0480, "natureza": "Federal/Municipal", "situacao": "Em ruínas", "ideal": "Hub Economia Criativa / Gastronomia"},
+    {"nome": "Museu do Homem Sergipano", "lat": -10.9142, "lon": -37.0532, "natureza": "Federal (UFS)", "situacao": "Em reconstrução licitada", "ideal": "Laboratórios de Humanidades Digitais"},
+    {"nome": "Edifício Danusa (João Mulungu)", "lat": -10.9180, "lon": -37.0470, "natureza": "Privado (Cosil)", "situacao": "Abandonado", "ideal": "Retrofit PPP + Habitação de Interesse Social"}
+]
+
 # JavaScript callback para o FastMarkerCluster: desenha círculos coloridos
 # Cada row = [lat, lon, color, tooltip_html]
 _CLUSTER_CALLBACK = """
@@ -140,7 +152,7 @@ def generate_crime_breakdown(crimes_mes: int, iluminacao: str, status: str) -> p
     """Distribuição ficticia de crimes por tipo e período, baseada no perfil do imóvel."""
     # Crimes tendem a ser mais noturnos em zonas escuras / abandonadas
     fator_noite = {"Ruim/Inexistente": 0.70, "Regular": 0.55, "Boa": 0.35}.get(iluminacao, 0.5)
-    fator_abandono = 1.5 if status == "Abandonado/IPTU Atrasado" else 1.0
+    fator_abandono = 1.5 if status == "Abandonado" else 1.0
 
     diurno = int(crimes_mes * (1 - fator_noite))
     noturno = int(crimes_mes * fator_noite)
@@ -209,6 +221,25 @@ def render_map_view(df):
             heat_data = _build_heatmap_data(status_tuple, metrica_calor)
             HeatMap(heat_data, radius=22, blur=18, min_opacity=0.45, gradient=_VERDE_VERMELHO).add_to(m)
 
+        # Adiciona os 8 Prédios Públicos Estratégicos como Marcadores de Destaque
+        for p in _PREDIOS_ESTRATEGICOS:
+            icon_color = "purple" if "Estadual" in p["natureza"] else "blue" if "Federal" in p["natureza"] else "orange"
+            popup_html = f"""
+            <div style="font-family:sans-serif; width:220px;">
+                <h4 style="margin-bottom:4px;">🏛️ {p['nome']}</h4>
+                <b>Esfera:</b> {p['natureza']}<br/>
+                <b>Status:</b> {p['situacao']}<br/>
+                <b>Destinação Ideal:</b> {p['ideal']}<br/>
+                <small style="color:gray;">*Foco em Parcerias e Isenção de ICMS</small>
+            </div>
+            """
+            folium.Marker(
+                location=[p["lat"], p["lon"]],
+                popup=folium.Popup(popup_html, max_width=300),
+                tooltip=f"🏛️ PRÉDIO ESTRATÉGICO: {p['nome']}",
+                icon=folium.Icon(color=icon_color, icon="university", prefix="fa")
+            ).add_to(m)
+
         map_key = f"ficaqui_map_{'_'.join(sorted(f_status))}_{modo_visao}_{metrica_calor}"
         st_data = st_folium(m, use_container_width=True, height=650, key=map_key, returned_objects=["last_object_clicked"])
 
@@ -271,12 +302,12 @@ def render_map_view(df):
 
             if s != "Alugado":
                 if fl > 8000 and il != "Boa":
-                    diag = "🚨 **Bloqueio Inconsciente:** Alto fluxo diurno colide com arquitetura noturna hostil. Recomenda-se IPTU progressivo ou revitalização do entorno."
-                elif s == "Abandonado/IPTU Atrasado":
-                    diag = "🏚️ **Passivo Ativado:** FII Ficaqui deve visar aquisição e aplicar retrofit *Multiuso* (Vitrine Comercial + Moradia)."
+                    diag = "🚨 **Bloqueio Inconsciente:** Alto fluxo diurno colide com arquitetura noturna hostil. É recomendável pacote de incentivo fiscal estadual (ICMS) ou fomento à revitalização do Governo."
+                elif s == "Abandonado":
+                    diag = "🏚️ **Passivo Ativado:** Imóvel abandonado. FII Ficaqui deve visar aquisição ou estruturar Retrofit com abatimentos estaduais/PPP (Uso Misto: moradia+comércio)."
                 else:
-                    diag = "🏢 **Oportunidade Adormecida:** Necessita âncoras locais de cultura ou gastronomia para tração pós-18h."
+                    diag = "🏢 **Oportunidade Adormecida:** Necessita de âncoras locais ou incentivo de fomento à inovação para tração pós-18h."
             else:
-                diag = "💎 **Core Asset Comercial!** Manter iluminação e infraestrutura para evitar migração do lojista." if re > 150000 else "✅ Ativo perfeitamente locado e operante."
+                diag = "💎 **Core Asset Comercial!** Manter infraestrutura e iluminação para evitar migração do lojista." if re > 150000 else "✅ Ativo perfeitamente locado e operante."
 
             st.success(diag)
