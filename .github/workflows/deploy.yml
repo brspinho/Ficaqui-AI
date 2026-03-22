@@ -1,4 +1,4 @@
-name: Deploy to Amazon App Runner
+name: Deploy to Amazon EC2
 
 on:
   push:
@@ -8,11 +8,12 @@ on:
 env:
   AWS_REGION: ${{ secrets.AWS_REGION }}
   ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
-  APP_RUNNER_SERVICE_NAME: ficaqui-ai-service
+  EC2_HOST: ${{ secrets.EC2_HOST }}
+  EC2_USER: ec2-user
 
 jobs:
   deploy:
-    name: Build & Push to ECR
+    name: Build & Deploy to EC2
     runs-on: ubuntu-latest
 
     steps:
@@ -24,7 +25,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }} # Necessário para AWS Academy
+        aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
         aws-region: ${{ env.AWS_REGION }}
 
     - name: Login to Amazon ECR
@@ -41,7 +42,18 @@ jobs:
         docker tag $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG $ECR_REGISTRY/$ECR_REPOSITORY:latest
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
-        echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
 
-    # O App Runner configurado como "Automatic" ou via CLI pode ser atualizado aqui
-    # Se o App Runner estiver no modo "Automatic", o push do 'latest' já gatilha o deploy.
+    - name: Deploy to EC2 via SSH
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.EC2_HOST }}
+        username: ${{ env.EC2_USER }}
+        key: ${{ secrets.EC2_SSH_KEY }}
+        script: |
+          cd ~/Ficaqui-AI
+          git pull origin ${{ github.ref_name }}
+          sudo docker build -t ficaqui .
+          sudo docker stop ficaqui || true
+          sudo docker rm ficaqui || true
+          # Note: We use port 80 for public access if 8501 is blocked by firewalls
+          sudo docker run -d -p 80:8501 --name ficaqui ficaqui
