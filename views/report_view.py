@@ -164,8 +164,11 @@ def create_pdf(df, ai_diagnosis):
 
     return bytes(pdf.output())
 
-def render_report_view(df, groq_key):
-    st.subheader("📄 Relatórios Executivos & Exportação")
+def render_report_view(df, groq_key=None):
+    if not groq_key:
+        import os
+        groq_key = os.getenv("GROQ_API_KEY")
+    st.subheader("Relatórios Executivos & Exportação")
     st.markdown("Filtre a base de dados espaciais e exija que a IA crie pareceres urbanísticos para download oficial.")
     
     col1, col2 = st.columns(2)
@@ -177,21 +180,21 @@ def render_report_view(df, groq_key):
     df_filtrado = df[(df['status_aluguel'].isin(f_status)) & (df['tipo'].isin(f_tipo))]
     
     st.markdown(f"**Registros Encontrados: {len(df_filtrado)}**")
-    st.dataframe(df_filtrado, use_container_width=True)
+    st.dataframe(df_filtrado, width='stretch')
     
     c1, c2 = st.columns(2)
     
     with c1:
         csv = df_filtrado.to_csv(index=False).encode('utf-8')
         st.download_button(
-            label="📥 Baixar Base Filtrada (CSV)",
+            label="Baixar Base Filtrada (CSV)",
             data=csv,
             file_name='ficaqui_export.csv',
             mime='text/csv',
         )
         
     with c2:
-        if st.button("🧠 Gerar Parecer em PDF (Groq IA)"):
+        if st.button("Gerar Parecer em PDF (Groq IA)"):
             with st.spinner("Compilando dados e consultando o modelo Llama 3.3..."):
                 ai_diagnosis = ensure_groq_diagnosis(df_filtrado, groq_key)
                 st.info(ai_diagnosis)

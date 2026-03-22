@@ -9,6 +9,7 @@ from data.loader import load_data
 from views.map_view import render_map_view
 from views.chat_view import render_chat_view
 from views.report_view import render_report_view
+import os
 
 # Carrega chaves do arquivo .env automaticamente
 load_dotenv()
@@ -18,11 +19,14 @@ st.set_page_config(page_title="Ficaqui - Inteligência Urbana", layout="wide", i
 # Injeta CSS personalizado
 inject_custom_css()
 
-# Renderiza Sidebar e recupera a chave da Groq
-groq_key = render_sidebar()
+# Renderiza Sidebar e recupera os parâmetros de planejamento
+planning_params = render_sidebar()
+
+# Recupera a chave da Groq do ambiente
+groq_key = os.getenv("GROQ_API_KEY")
 
 # Cabeçalho Principal
-st.title("🏙️ Ficaqui: Ecossistema de Inteligência Urbana")
+st.title("Ficaqui: Ecossistema de Inteligência Urbana")
 st.markdown("Plataforma B2G de mapeamento de desertos comerciais e direcionamento de políticas públicas.")
 st.markdown("---")
 
@@ -34,14 +38,14 @@ render_metrics(df)
 
 # Cria as abas de interface
 tab1, tab2, tab3 = st.tabs([
-    "📍 Mapa Georreferenciado & Interativo", 
-    "💬 Ficaqui AI Real (LLM Chatbot)",
-    "📄 Relatórios Executivos & Exportação"
+    "Mapa Georreferenciado & Interativo", 
+    "Ficaqui AI Real (LLM Chatbot)",
+    "Relatórios Executivos & Exportação"
 ])
 
 # Renderiza as Views para cada Aba
 with tab1:
-    render_map_view(df)
+    render_map_view(df, planning_params)
 
 with tab2:
     render_chat_view(df, groq_key)

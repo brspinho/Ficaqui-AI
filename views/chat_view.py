@@ -1,9 +1,12 @@
 import streamlit as st
 from groq import Groq
 
-def render_chat_view(df, groq_key):
+def render_chat_view(df, groq_key=None):
+    if not groq_key:
+        import os
+        groq_key = os.getenv("GROQ_API_KEY")
     st.subheader("Chatbot G2B: Inteligência Generativa sobre os Dados Urbanos")
-    st.markdown("🤖 *Conectado ao Agente Urbano.* Pergunte à Inteligência Artificial sobre as discrepâncias, isenções, ou como resolver os desertos mapeados.")
+    st.markdown("*Conectado ao Agente Urbano.* Pergunte à Inteligência Artificial sobre as discrepâncias, isenções, ou como resolver os desertos mapeados.")
     
     # Session State Chat
     if "messages" not in st.session_state:
@@ -76,4 +79,4 @@ Microdados (Amostra): {context}"""
                     
                 except Exception as e:
                     st.error(f"Erro ao contatar API da Groq. Detalhes: {e}")
-                    st.warning("💡 Verifique se a sua chave da Groq está correta no arquivo .env ou se você atingiu o limite de requisições.")
+                    st.warning("Verifique se a sua chave da Groq está correta no arquivo .env ou se você atingiu o limite de requisições.")
