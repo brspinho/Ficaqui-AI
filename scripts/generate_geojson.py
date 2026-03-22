@@ -70,6 +70,18 @@ def generate_geojson():
         receita = int(np.random.randint(15000, 450000)) if status == "Alugado" else 0
         potencial = round(float(np.random.uniform(0.4, 0.98)), 2)
 
+        # Crédito de ICMS Estimado (Incentivo do Estado de Sergipe)
+        if status in ["Disponível", "Abandonado"]:
+            # Lógica Inversa: quanto MENOS fluxo e PIOR a luz, MAIOR o incentivo para ocupar
+            base_desvalorizacao = max(0, 20000 - fluxo)
+            fator_luz = {"Ruim/Inexistente": 6000, "Regular": 2500, "Boa": 0}.get(iluminacao, 0)
+            fator_status = 10000 if status == "Abandonado" else 0 # Penalizado por anos de ociosidade
+            
+            # Cálculo incentiva o "pior" cenário a ser habitado
+            incentivo_icms = int((base_desvalorizacao * np.random.uniform(1.5, 3.5)) + fator_luz + fator_status)
+        else:
+            incentivo_icms = 0
+
         # Crimes mensais: base correlacionada à iluminação + abandono + policiamento inverso
         base_crimes = {"Boa": 1, "Regular": 3, "Ruim/Inexistente": 8}.get(iluminacao, 3)
         if status == "Abandonado":
@@ -110,6 +122,7 @@ def generate_geojson():
                 "cobertura_policial": cobertura_policial,
                 "crimes_mes": crimes_mes,
                 "indice_seguranca": indice_seguranca,
+                "incentivo_icms": incentivo_icms,
                 "color": color
             }
         }

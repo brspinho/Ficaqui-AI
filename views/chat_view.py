@@ -37,7 +37,7 @@ def render_chat_view(df, groq_key):
                         predios_context = "[]"
 
                     # Amostrando o DF CNEFE para que caiba no contexto do limite do modelo
-                    df_sample = df[['rua', 'status_aluguel', 'iluminacao', 'fluxo_pessoas_dia', 'crimes_mes', 'cobertura_policial', 'indice_seguranca']].sample(min(15, len(df)))
+                    df_sample = df[['rua', 'status_aluguel', 'iluminacao', 'fluxo_pessoas_dia', 'crimes_mes', 'cobertura_policial', 'indice_seguranca', 'incentivo_icms']].sample(min(15, len(df)))
                     context = df_sample.to_json(orient='records')
                     
                     system_prompt = f"""Você é o Ficaqui AI, um Urbanista Sênior de Aracaju/Brasil orientando o Governo do Estado de Sergipe e Fundos de Investimentos (FII).
@@ -51,6 +51,7 @@ REGRAS OBRIGATÓRIAS:
 4. LÓGICA URBANÍSTICA:
  - Prédios Estaduais (Hotel Palace) → prioridade de Hubs Tech/Moradia via incentivos de ICMS para atrair empresas do polo de tecnologia.
  - Relação Luz x Crime → Ruas escuras ou abandonadas geram crimes. Instalar um Hub com comércio 24h em um Prédio Público adjacente resolve o ecossistema.
+ - INCENTIVOS INVERSOS: O bônus de "Crédito ICMS" é **inversamente proporcional** à valorização da rua. Quanto MENOS fluxo, PIOR a iluminação e mais ocioso for o imóvel, MAIOR deve ser o valor de crédito sugerido para incentivar o empreendedor a desbravar a revitalização do pior cenário.
  - Use os números exatos (ex: {df_sample.iloc[0]['rua'] if not df_sample.empty else 'Rua Exemplo'} tem tantos crimes/mês) para validar.
 
 Microdados CNEFE (Amostra de Vizinhança): {context}

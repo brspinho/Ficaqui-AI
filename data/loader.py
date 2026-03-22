@@ -91,6 +91,16 @@ def load_data():
         bonus_luz = {"Boa": 2, "Regular": 1, "Ruim/Inexistente": 0}.get(iluminacao, 0)
         indice_seguranca = round(max(0.0, min(10.0, 10 - penalidade + bonus_pol + bonus_luz - 2)), 1)
         
+        # Crédito de ICMS Estimado (Incentivo do Estado de Sergipe)
+        if status in ["Disponível", "Abandonado"]:
+            base_desvalorizacao = max(0, 20000 - fluxo)
+            fator_luz = {"Ruim/Inexistente": 6000, "Regular": 2500, "Boa": 0}.get(iluminacao, 0)
+            fator_status = 10000 if status == "Abandonado" else 0
+            
+            incentivo_icms = int((base_desvalorizacao * np.random.uniform(1.5, 3.5)) + fator_luz + fator_status)
+        else:
+            incentivo_icms = 0
+
         # Anexa o nome do estab (se oficial) ao ID visual para facilitar pro usuario
         if nome_estab and str(nome_estab) != 'nan':
             label_id = str(nome_estab)
@@ -111,6 +121,7 @@ def load_data():
             "cobertura_policial": cobertura_policial,
             "crimes_mes": crimes_mes,
             "indice_seguranca": indice_seguranca,
+            "incentivo_icms": incentivo_icms,
         })
 
     return pd.DataFrame(data)

@@ -268,6 +268,10 @@ def render_map_view(df):
             st.write(f"**Status:** {detalhe['status_aluguel']}")
             st.write(f"**Iluminação Base:** {detalhe['iluminacao']}")
             st.write(f"**VPT (Volume Pedonal Total):** {int(detalhe['fluxo_pessoas_dia']):,} hab/dia")
+            
+            if detalhe['status_aluguel'] in ["Disponível", "Abandonado"]:
+                incentivo = detalhe.get('incentivo_icms', 0)
+                st.success(f"💰 **Crédito ICMS (Fomentar Ocupação):** R$ {int(incentivo):,}")
 
             # Métricas de Segurança Pública
             with st.expander("🛡️ Segurança Pública", expanded=False):

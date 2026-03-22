@@ -164,6 +164,51 @@ def create_pdf(df, ai_diagnosis):
 
     return bytes(pdf.output())
 
+def create_docx(df, ai_diagnosis):
+    from docx import Document
+    from docx.shared import Pt
+    import io
+    from datetime import datetime
+
+    doc = Document()
+    doc.add_heading('Relatorio Estrategico de Escritorio - Ficaqui', 0)
+
+    doc.add_paragraph(f"Data de Emissão: {datetime.now().strftime('%d/%m/%Y')}")
+    doc.add_paragraph(f"Total de Ativos Analisados: {len(df)} unidades")
+    receita_total = df['receita_gerada'].sum()
+    doc.add_paragraph(f"Receita Operacional Mensal Estimada: R$ {receita_total:,.2f}")
+
+    doc.add_heading('Amostra Sintetica do Recorte', level=1)
+    
+    table = doc.add_table(rows=1, cols=5)
+    table.style = 'Light Grid Accent 1'
+    hdr_cells = table.rows[0].cells
+    hdr_cells[0].text = 'Logradouro'
+    hdr_cells[1].text = 'Tipo'
+    hdr_cells[2].text = 'Status'
+    hdr_cells[3].text = 'Fluxo/Dia'
+    hdr_cells[4].text = 'Iluminacao'
+
+    # Popula top 25
+    for i, row in df.head(25).iterrows():
+        row_cells = table.add_row().cells
+        row_cells[0].text = str(row['rua'])[:30]
+        row_cells[1].text = str(row['tipo'])
+        row_cells[2].text = str(row['status_aluguel'])
+        row_cells[3].text = f"{row['fluxo_pessoas_dia']} hab"
+        row_cells[4].text = str(row['iluminacao'])
+
+    doc.add_page_break()
+    doc.add_heading('Parecer Estratégico (AI Urbanist Analysis)', level=1)
+    
+    p = doc.add_paragraph()
+    run = p.add_run(ai_diagnosis)
+    run.font.size = Pt(12)
+
+    target = io.BytesIO()
+    doc.save(target)
+    return target.getvalue()
+
 def render_report_view(df, groq_key):
     st.subheader("📄 Relatórios Executivos & Exportação")
     st.markdown("Filtre a base de dados espaciais e exija que a IA crie pareceres urbanísticos para download oficial.")
@@ -191,16 +236,27 @@ def render_report_view(df, groq_key):
         )
         
     with c2:
-        if st.button("🧠 Gerar Parecer em PDF (Groq IA)"):
+        export_format = st.radio("Escolha o Formato do Parecer:", ["PDF", "DOCX (Word)"], horizontal=True)
+        
+        if st.button("🧠 Gerar Parecer Executivo (Groq IA)"):
             with st.spinner("Compilando dados e consultando o modelo Llama 3.3..."):
                 ai_diagnosis = ensure_groq_diagnosis(df_filtrado, groq_key)
                 st.info(ai_diagnosis)
                 
-                pdf_bytes = create_pdf(df_filtrado, ai_diagnosis)
-                
+                if export_format == "PDF":
+                    file_bytes = create_pdf(df_filtrado, ai_diagnosis)
+                    mime_type = "application/pdf"
+                    f_name = "ficaqui_executive_report.pdf"
+                    f_label = "⬇️ Baixar Parecer Executivo (PDF)"
+                else:
+                    file_bytes = create_docx(df_filtrado, ai_diagnosis)
+                    mime_type = "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                    f_name = "ficaqui_executive_report.docx"
+                    f_label = "⬇️ Baixar Parecer Executivo (DOCX)"
+                    
                 st.download_button(
-                    label="⬇️ Baixar Parecer Executivo (PDF)",
-                    data=pdf_bytes,
-                    file_name="ficaqui_executive_report.pdf",
-                    mime="application/pdf"
+                    label=f_label,
+                    data=file_bytes,
+                    file_name=f_name,
+                    mime=mime_type
                 )
