@@ -42,13 +42,13 @@ def load_data():
             status = "Alugado"  # Pressupõe habitação ocupada predominantemente
         elif tipo_ibge == "Loja/Comércio/Serviço":
             tipo = np.random.choice(["Loja Térrea", "Sala Comercial"], p=[0.7, 0.3])
-            status = np.random.choice(["Alugado", "Disponível", "Abandonado/IPTU Atrasado"], p=[0.50, 0.35, 0.15])
+            status = np.random.choice(["Alugado", "Disponível", "Abandonado"], p=[0.50, 0.35, 0.15])
         elif tipo_ibge == "Galpão/Ruína/Obra":
             tipo = "Galpão"
-            status = np.random.choice(["Disponível", "Abandonado/IPTU Atrasado"], p=[0.3, 0.7])
+            status = np.random.choice(["Disponível", "Abandonado"], p=[0.3, 0.7])
         else:
             tipo = "Prédio Misto"
-            status = np.random.choice(["Alugado", "Disponível", "Abandonado/IPTU Atrasado"], p=[0.6, 0.2, 0.2])
+            status = np.random.choice(["Alugado", "Disponível", "Abandonado"], p=[0.6, 0.2, 0.2])
             
         # Agrupamento macro (mesma rua compartilha fluxo e iluminação base)
         if rua_nome not in ruas_macro_dados:
@@ -56,12 +56,20 @@ def load_data():
             # Calçadões e grandes avenidas têm trânsito mais denso
             if "CALCADAO" in rua_nome.upper() or "PRACA" in rua_nome.upper() or "AVENIDA" in rua_nome.upper() or "AV " in rua_nome.upper():
                 flux_base = np.random.randint(5000, 20000)
+                policia_base = round(float(np.random.uniform(0.6, 0.95)), 2)
             else:
                 flux_base = np.random.randint(500, 10000)
-            ruas_macro_dados[rua_nome] = {"iluminacao": ilum, "fluxo": flux_base}
+                policia_base = round(float(np.random.uniform(0.2, 0.65)), 2)
+            # Penaliza policiamento em zonas escuras
+            if ilum == "Ruim/Inexistente":
+                policia_base = round(max(0.05, policia_base - 0.3), 2)
+            elif ilum == "Regular":
+                policia_base = round(max(0.1, policia_base - 0.12), 2)
+            ruas_macro_dados[rua_nome] = {"iluminacao": ilum, "fluxo": flux_base, "policia": policia_base}
             
         iluminacao = ruas_macro_dados[rua_nome]["iluminacao"]
         fluxo = ruas_macro_dados[rua_nome]["fluxo"] + np.random.randint(-150, 150)
+        cobertura_policial = ruas_macro_dados[rua_nome]["policia"]
             
         # Dados fiscais / venda
         if status == "Alugado":
@@ -71,6 +79,28 @@ def load_data():
             
         potencial = round(np.random.uniform(0.4, 0.98), 2)
         
+        # Crimes mensais: correlacionados com iluminação + abandono
+        base_crimes = {"Boa": 1, "Regular": 3, "Ruim/Inexistente": 8}.get(iluminacao, 3)
+        if status == "Abandonado":
+            base_crimes = int(base_crimes * 2.5)
+        crimes_mes = max(0, int(base_crimes * np.random.uniform(0.7, 1.5)) - int(cobertura_policial * 4))
+        
+        # Índice de Segurança composto (0-10)
+        penalidade = min(10, crimes_mes / 2)
+        bonus_pol = cobertura_policial * 4
+        bonus_luz = {"Boa": 2, "Regular": 1, "Ruim/Inexistente": 0}.get(iluminacao, 0)
+        indice_seguranca = round(max(0.0, min(10.0, 10 - penalidade + bonus_pol + bonus_luz - 2)), 1)
+        
+        # Crédito de ICMS Estimado (Incentivo do Estado de Sergipe)
+        if status in ["Disponível", "Abandonado"]:
+            base_desvalorizacao = max(0, 20000 - fluxo)
+            fator_luz = {"Ruim/Inexistente": 6000, "Regular": 2500, "Boa": 0}.get(iluminacao, 0)
+            fator_status = 10000 if status == "Abandonado" else 0
+            
+            incentivo_icms = int((base_desvalorizacao * np.random.uniform(1.5, 3.5)) + fator_luz + fator_status)
+        else:
+            incentivo_icms = 0
+
         # Anexa o nome do estab (se oficial) ao ID visual para facilitar pro usuario
         if nome_estab and str(nome_estab) != 'nan':
             label_id = str(nome_estab)
@@ -78,7 +108,7 @@ def load_data():
             label_id = endereco_completo
             
         data.append({
-            "id_espaco": label_id, # Aqui trocamos o ID IBGE duro pelo Label Limpo para o Front-End
+            "id_espaco": label_id,
             "rua": endereco_completo,
             "tipo": tipo,
             "lat": lat,
@@ -87,7 +117,11 @@ def load_data():
             "iluminacao": iluminacao,
             "receita_gerada": receita,
             "fluxo_pessoas_dia": max(0, fluxo),
-            "potencial_retrofit": potencial
+            "potencial_retrofit": potencial,
+            "cobertura_policial": cobertura_policial,
+            "crimes_mes": crimes_mes,
+            "indice_seguranca": indice_seguranca,
+            "incentivo_icms": incentivo_icms,
         })
 
     return pd.DataFrame(data)

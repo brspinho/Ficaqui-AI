@@ -1,0 +1,145 @@
+"""
+Script de geração do GeoJSON estático para o mapa Ficaqui.
+Roda UMA VEZ. Sempre que os dados mudarem, rode novamente.
+
+Uso:
+    python scripts/generate_geojson.py
+"""
+import pandas as pd
+import numpy as np
+import json
+import random
+
+def generate_geojson():
+    np.random.seed(42)
+    random.seed(42)
+
+    print("Lendo base CNEFE do Centro...")
+    base_df = pd.read_csv("data/cnefe_centro_oficial.csv")
+
+    # Jitter de ~11m para desempilhar prédios verticais
+    np.random.seed(42)
+    base_df['lat'] = base_df['lat'] + np.random.uniform(-0.00015, 0.00015, size=len(base_df))
+    base_df['lon'] = base_df['lon'] + np.random.uniform(-0.00015, 0.00015, size=len(base_df))
+
+    ruas_macro = {}
+    features = []
+
+    for _, row in base_df.iterrows():
+        endereco = str(row['rua'])
+        rua_nome = endereco.split(',')[0].strip()
+        tipo_ibge = row['tipo_ibge']
+        nome_estab = str(row['nome_estab'])
+
+        # Tradução de tipologia IBGE → Ficaqui
+        if tipo_ibge == "Residencial":
+            tipo = "Residencial"
+            status = "Alugado"
+        elif tipo_ibge == "Loja/Comércio/Serviço":
+            tipo = np.random.choice(["Loja Térrea", "Sala Comercial"], p=[0.7, 0.3])
+            status = np.random.choice(["Alugado", "Disponível", "Abandonado"], p=[0.50, 0.35, 0.15])
+        elif tipo_ibge == "Galpão/Ruína/Obra":
+            tipo = "Galpão"
+            status = np.random.choice(["Disponível", "Abandonado"], p=[0.3, 0.7])
+        else:
+            tipo = "Prédio Misto"
+            status = np.random.choice(["Alugado", "Disponível", "Abandonado"], p=[0.6, 0.2, 0.2])
+
+        # Dados por rua (cache interno)
+        if rua_nome not in ruas_macro:
+            ilum = np.random.choice(["Boa", "Regular", "Ruim/Inexistente"])
+            if any(kw in rua_nome.upper() for kw in ["CALCADAO", "PRACA", "AVENIDA", "AV "]):
+                flux_base = int(np.random.randint(5000, 20000))
+                # Eixos comerciais têm maior presença policial
+                policia_base = round(np.random.uniform(0.6, 0.95), 2)
+            else:
+                flux_base = int(np.random.randint(500, 10000))
+                policia_base = round(np.random.uniform(0.2, 0.65), 2)
+            
+            # Penaliza policiamento em zonas escuras
+            if ilum == "Ruim/Inexistente":
+                policia_base = round(max(0.05, policia_base - 0.3), 2)
+            elif ilum == "Regular":
+                policia_base = round(max(0.1, policia_base - 0.12), 2)
+                
+            ruas_macro[rua_nome] = {"iluminacao": ilum, "fluxo": flux_base, "policia": policia_base}
+
+        iluminacao = ruas_macro[rua_nome]["iluminacao"]
+        fluxo = max(0, ruas_macro[rua_nome]["fluxo"] + int(np.random.randint(-150, 150)))
+        cobertura_policial = ruas_macro[rua_nome]["policia"]
+        receita = int(np.random.randint(15000, 450000)) if status == "Alugado" else 0
+        potencial = round(float(np.random.uniform(0.4, 0.98)), 2)
+
+        # Crédito de ICMS Estimado (Incentivo do Estado de Sergipe)
+        if status in ["Disponível", "Abandonado"]:
+            # Lógica Inversa: quanto MENOS fluxo e PIOR a luz, MAIOR o incentivo para ocupar
+            base_desvalorizacao = max(0, 20000 - fluxo)
+            fator_luz = {"Ruim/Inexistente": 6000, "Regular": 2500, "Boa": 0}.get(iluminacao, 0)
+            fator_status = 10000 if status == "Abandonado" else 0 # Penalizado por anos de ociosidade
+            
+            # Cálculo incentiva o "pior" cenário a ser habitado
+            incentivo_icms = int((base_desvalorizacao * np.random.uniform(1.5, 3.5)) + fator_luz + fator_status)
+        else:
+            incentivo_icms = 0
+
+        # Crimes mensais: base correlacionada à iluminação + abandono + policiamento inverso
+        base_crimes = {"Boa": 1, "Regular": 3, "Ruim/Inexistente": 8}.get(iluminacao, 3)
+        if status == "Abandonado":
+            base_crimes = int(base_crimes * 2.5)  # Imóveis abandonados atraem mais ocorrências
+        crimes_mes = max(0, int(base_crimes * np.random.uniform(0.7, 1.5)) - int(cobertura_policial * 4))
+
+        # Índice de Segurança: score 0-10 (10 = muito seguro)
+        penalidade_crimes = min(10, crimes_mes / 2)
+        bonus_policia = cobertura_policial * 4
+        bonus_luz = {"Boa": 2, "Regular": 1, "Ruim/Inexistente": 0}.get(iluminacao, 0)
+        indice_seguranca = round(max(0.0, min(10.0, 10 - penalidade_crimes + bonus_policia + bonus_luz - 2)), 1)
+
+        label_id = nome_estab if nome_estab and nome_estab != 'nan' else endereco
+
+        # Cor para a propriedade de estilo do GeoJSON
+        if status == 'Abandonado':
+            color = '#dc3545'
+        elif status == 'Disponível':
+            color = '#ffc107'
+        else:
+            color = '#28a745'
+
+        feature = {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [float(row['lon']), float(row['lat'])]
+            },
+            "properties": {
+                "id_espaco": label_id,
+                "rua": endereco,
+                "tipo": tipo,
+                "status_aluguel": status,
+                "iluminacao": iluminacao,
+                "fluxo_pessoas_dia": fluxo,
+                "receita_gerada": receita,
+                "potencial_retrofit": potencial,
+                "cobertura_policial": cobertura_policial,
+                "crimes_mes": crimes_mes,
+                "indice_seguranca": indice_seguranca,
+                "incentivo_icms": incentivo_icms,
+                "color": color
+            }
+        }
+        features.append(feature)
+
+    geojson = {
+        "type": "FeatureCollection",
+        "features": features
+    }
+
+    output_path = "data/imoveis.geojson"
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(geojson, f, ensure_ascii=False)
+
+    print(f"✅ GeoJSON salvo em {output_path} com {len(features)} imóveis!")
+    print(f"   Tamanho: {round(len(json.dumps(geojson)) / 1024, 1)} KB")
+
+
+if __name__ == "__main__":
+    generate_geojson()
