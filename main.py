@@ -8,6 +8,45 @@ from huggingface_hub import InferenceClient
 
 st.set_page_config(page_title="Ficaqui - Inteligência Urbana", layout="wide", initial_sidebar_state="expanded")
 
+# --- CUSTOMIZAÇÃO VISUAL (UI/UX) ---
+st.markdown("""
+<style>
+    /* Tipografia de Cabeçalhos em Azul Esverdeado */
+    h1, h2, h3 {
+        color: #00796B !important;
+        font-family: 'Inter', sans-serif;
+    }
+    
+    /* Cartões de Métrica Premium (Dashboard Vibe) */
+    div[data-testid="metric-container"] {
+        background-color: #FFFFFF;
+        border-radius: 12px;
+        border-left: 6px solid #009688; /* Azul Esverdeado (Confiança) */
+        border-right: 4px solid #FFC107; /* Amarelo Dourado (Calor) */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        padding: 15px 20px;
+        transition: transform 0.2s ease-in-out;
+    }
+    div[data-testid="metric-container"]:hover {
+        transform: translateY(-4px);
+    }
+    
+    /* Chatbot Bubbles mais modernas e com sobra leve */
+    [data-testid="stChatMessage"] {
+        background-color: #FFFFFF;
+        border: 1px solid #EAEFEF;
+        border-radius: 10px;
+        padding: 15px;
+    }
+    
+    /* Personalização da Scrollbar para não ficar cinza padrão */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #B2DFDB; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #009688; }
+</style>
+""", unsafe_allow_html=True)
+
 with st.sidebar:
     st.header("Configurações Avançadas Ficaqui AI")
     hf_token = st.text_input("🔑 HF Token (Opcional)", type="password", help="Insira um Token do Hugging Face para remover limitações de requisição da IA. Se vazio, usaremos a camada gratuita com limites limitados.")
@@ -193,10 +232,15 @@ with tab2:
                     df_sample = df[['rua', 'status_aluguel', 'iluminacao', 'fluxo_pessoas_dia']].sample(min(15, len(df)))
                     context = df_sample.to_json(orient='records')
                     
-                    system_prompt = f"""Você é o Ficaqui AI, um Urbanista Sênior que orienta Prefeituras e Fundos de Investimentos.
-Voce foca em: Uso misto (moradia no centro), Retrofits e políticas de isenção de ISS/IPTU.
-Sempre responda em Portugues e seja claro.
-Use como base exclusiva estes dados do centro da cidade (uma amostra dos imoveis): {context}."""
+                    system_prompt = f"""Você é o Ficaqui AI, um Urbanista Sênior de Aracaju/Brasil orientando Prefeituras e Fundos de Investimentos (FII).
+REGRAS OBRIGATÓRIAS:
+1. IDIOMA ESTREITO: Responda EXCLUSIVAMENTE em Português do Brasil impecável. Jamais misture palavras em inglês (ex: NUNCA use "several", use "várias").
+2. EVIDÊNCIAS: Cite os dados EXATOS do JSON fornecido (nome da rua específica, status de locação) para comprovar seus argumentos.
+3. LÓGICA URBANÍSTICA CORRETA:
+ - Imóveis "Alugados" com fluxo alto significam SUCESSO e VITALIDADE. Isso NÃO é um problema!
+ - Espaços "Abandonado/IPTU Atrasado" com grande fluxo são OURO para Fundos Imobiliários atuarem com Retrofits (Uso Misto: comércio embaixo, moradia em cima).
+ - Locais com "Iluminação Ruim" ou "Disponíveis" e sem fluxo exigem a força da Prefeitura (melhoria pública e incentivos fiscais/ISS) para atrair âncoras.
+Microdados (Amostra): {context}"""
 
                     messages_hf = [{"role": "system", "content": system_prompt}]
                     for m in st.session_state.messages[-4:]:  # last 4
