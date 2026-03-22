@@ -10,9 +10,9 @@ def render_map_view(df):
     f_status = st.multiselect("Filtrar por Status de Ocupação", df['status_aluguel'].unique(), default=df['status_aluguel'].unique())
     df_filtrado = df[df['status_aluguel'].isin(f_status)]
 
-    # Diagnostic: Limit markers to 1000 for better performance on some machines
-    # The original dataset has 6k+ markers, which might crash some browsers in iframes
-    df_mapa = df_filtrado.head(1000)
+    # A trava de segurança de 1000 itens da branch de testes foi removida.
+    # Graças às otimizações de SVG Circle e Jitter Math, o Front-end flui com 100% (6330+) pontos originais.
+    df_mapa = df_filtrado
     
     c1, c2 = st.columns([2, 1])
     
