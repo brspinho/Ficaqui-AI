@@ -8,6 +8,7 @@ from components.metrics import render_metrics
 from data.loader import load_data
 from views.map_view import render_map_view
 from views.chat_view import render_chat_view
+from views.report_view import render_report_view
 
 # Carrega chaves do arquivo .env automaticamente
 load_dotenv()
@@ -32,7 +33,11 @@ df = load_data()
 render_metrics(df)
 
 # Cria as abas de interface
-tab1, tab2 = st.tabs(["📍 Mapa Georreferenciado & Interativo", "💬 Ficaqui AI Real (LLM Chatbot)"])
+tab1, tab2, tab3 = st.tabs([
+    "📍 Mapa Georreferenciado & Interativo", 
+    "💬 Ficaqui AI Real (LLM Chatbot)",
+    "📄 Relatórios Executivos & Exportação"
+])
 
 # Renderiza as Views para cada Aba
 with tab1:
@@ -40,3 +45,6 @@ with tab1:
 
 with tab2:
     render_chat_view(df, groq_key)
+
+with tab3:
+    render_report_view(df, groq_key)
