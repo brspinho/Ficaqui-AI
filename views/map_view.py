@@ -1,6 +1,7 @@
 import streamlit as st
 import folium
 from streamlit_folium import st_folium
+from folium.plugins import MarkerCluster
 
 def render_map_view(df):
     st.subheader("Painel de Controle Espacial")
@@ -13,7 +14,9 @@ def render_map_view(df):
     
     with c1:
         m = folium.Map(location=[-10.913, -37.052], zoom_start=15, tiles="OpenStreetMap")
-
+        
+        # Usamos MarkerCluster para dar conta da multidão de endereços oficiais do IBGE
+        marker_cluster = MarkerCluster().add_to(m)
         
         for i, row in df_filtrado.iterrows():
             # A cor agora determina o status de ocupação (Aluguel, Disponível, Abandonado)
@@ -37,10 +40,15 @@ def render_map_view(df):
                 popup=f"<b># {row['id_espaco']}</b><br><i>{tipo}</i>",
                 tooltip=f"{tipo} - Clique para analisar na Barra Lateral",
                 icon=folium.Icon(color=color, icon=fa_icon, prefix='fa')
-            ).add_to(m)
+            ).add_to(marker_cluster) # Adicionado ao Cluster em vez do mapa Base!
             
-        # O st_folium captura eventos de clique no web app
-        st_data = st_folium(m, width="100%", height=550)
+        # O st_folium captura eventos de clique no web app limitando o retorno para não recarregar no pan/zoom
+        st_data = st_folium(
+            m, 
+            width="100%", 
+            height=550, 
+            returned_objects=["last_object_clicked"]
+        )
         
     with c2:
         st.subheader("🏢 Diagnóstico do Espaço")

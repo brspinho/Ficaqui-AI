@@ -1,135 +1,84 @@
 import pandas as pd
 import numpy as np
-import requests
 import streamlit as st
 import random
 
 @st.cache_data(ttl=86400) # Mantém em cache por 1 dia
 def load_data():
-    np.random.seed(42)  # Manter a consistência no mapa real
+    np.random.seed(42)  # Manter a consistência espacial do mock
     random.seed(42)
     
-    overpass_url = "http://overpass-api.de/api/interpreter"
-    # Limite Sul: Barão de Maruim (-10.9189). Limite Norte: Mercados (-10.9070).
-    overpass_query = """
-    [out:json][timeout:50];
-    (
-      way["building"](-10.9189,-37.0580,-10.9070,-37.0460);
-      node["building"](-10.9189,-37.0580,-10.9070,-37.0460);
-      node["shop"](-10.9189,-37.0580,-10.9070,-37.0460);
-      way["shop"](-10.9189,-37.0580,-10.9070,-37.0460);
-      node["amenity"](-10.9189,-37.0580,-10.9070,-37.0460);
-      way["amenity"](-10.9189,-37.0580,-10.9070,-37.0460);
-      node["office"](-10.9189,-37.0580,-10.9070,-37.0460);
-      way["office"](-10.9189,-37.0580,-10.9070,-37.0460);
-    );
-    out center;
-    """
-    
+    try:
+        base_df = pd.read_csv("data/cnefe_centro_oficial.csv")
+    except Exception as e:
+        st.error("Erro ao ler base CNEFE Oficial processada: " + str(e))
+        return pd.DataFrame()
+        
     data = []
     ruas_macro_dados = {}
     
-    try:
-        response = requests.get(overpass_url, params={'data': overpass_query})
-        response.raise_for_status()
-        osm_data = response.json()
-        elements = osm_data.get('elements', [])
+    # Processando os 6.330 imóveis oficiais do IBGE CNEFE
+    for i, row in base_df.iterrows():
+        lat = row['lat']
+        lon = row['lon']
+        endereco_completo = str(row['rua'])
+        rua_nome = endereco_completo.split(',')[0].strip()
+        tipo_ibge = row['tipo_ibge']
+        id_espaco = row['id_espaco']
+        nome_estab = str(row['nome_estab'])
         
-        # ATENÇÃO: O limite MAXIMO para o Streamlit Folium não bugar (sumir a tela branca)
-        # ao utilizar marcadores interativos com Tooltips + Popups do FontAwesome é ao redor de 500 no DOM do iframe.
-        if len(elements) > 400:
-            elements = random.sample(elements, 400)
+        # --- Traduzindo a taxonomia do IBGE (Uso de Solo) para a Visão Comercial Ficaqui ---
+        if tipo_ibge == "Residencial":
+            tipo = "Residencial"
+            status = "Alugado"  # Pressupõe habitação ocupada predominantemente
+        elif tipo_ibge == "Loja/Comércio/Serviço":
+            tipo = np.random.choice(["Loja Térrea", "Sala Comercial"], p=[0.7, 0.3])
+            status = np.random.choice(["Alugado", "Disponível", "Abandonado/IPTU Atrasado"], p=[0.50, 0.35, 0.15])
+        elif tipo_ibge == "Galpão/Ruína/Obra":
+            tipo = "Galpão"
+            status = np.random.choice(["Disponível", "Abandonado/IPTU Atrasado"], p=[0.3, 0.7])
+        else:
+            tipo = "Prédio Misto"
+            status = np.random.choice(["Alugado", "Disponível", "Abandonado/IPTU Atrasado"], p=[0.6, 0.2, 0.2])
             
-        for el in elements:
-            tags = el.get('tags', {})
-            
-            # Buscando Latitude e Longitude (Ways tem center lat/lon)
-            if el['type'] == 'way':
-                lat = el['center']['lat']
-                lon = el['center']['lon']
+        # Agrupamento macro (mesma rua compartilha fluxo e iluminação base)
+        if rua_nome not in ruas_macro_dados:
+            ilum = np.random.choice(["Boa", "Regular", "Ruim/Inexistente"])
+            # Calçadões e grandes avenidas têm trânsito mais denso
+            if "CALCADAO" in rua_nome.upper() or "PRACA" in rua_nome.upper() or "AVENIDA" in rua_nome.upper() or "AV " in rua_nome.upper():
+                flux_base = np.random.randint(5000, 20000)
             else:
-                lat = el['lat']
-                lon = el['lon']
-                
-            # Identificando o Logradouro OSM
-            rua_nome = tags.get('addr:street', tags.get('name', 'Centro de Aracaju'))
-            # Se a rua for só "Centro de Aracaju", usamos algumas notórias do centro para mockar realismo onde o OSM falhar a tag
-            if rua_nome == 'Centro de Aracaju':
-                ruas_ficticias = ["Calçadão João Pessoa", "Rua São Cristóvão", "Rua Laranjeiras", "Rua Itabaiana", "Av. Rio Branco"]
-                rua_nome = random.choice(ruas_ficticias)
-                
-            numero = tags.get('addr:housenumber', str(np.random.randint(10, 1500)))
-            endereco_completo = f"{rua_nome}, {numero}"
+                flux_base = np.random.randint(500, 10000)
+            ruas_macro_dados[rua_nome] = {"iluminacao": ilum, "fluxo": flux_base}
             
-            # --- Mockando informações urbanísticas sensíveis da base de dados IBGE/Ficaqui por cima do OSM---
-            status = np.random.choice(["Alugado", "Disponível", "Abandonado/IPTU Atrasado"], p=[0.45, 0.35, 0.20])
+        iluminacao = ruas_macro_dados[rua_nome]["iluminacao"]
+        fluxo = ruas_macro_dados[rua_nome]["fluxo"] + np.random.randint(-150, 150)
             
-            osm_building_type = tags.get('building', '')
-            osm_shop = tags.get('shop', '')
-            osm_amenity = tags.get('amenity', '')
-            osm_office = tags.get('office', '')
+        # Dados fiscais / venda
+        if status == "Alugado":
+            receita = np.random.randint(15000, 450000)
+        else:
+            receita = 0
             
-            if osm_shop or osm_amenity or osm_office or osm_building_type in ['commercial', 'retail', 'kiosk']:
-                if osm_office:
-                    tipo = "Sala Comercial"
-                else:
-                    tipo = "Loja Térrea"
-            elif osm_building_type == 'warehouse':
-                tipo = "Galpão"
-            elif osm_building_type in ['apartments', 'residential', 'house']:
-                tipo = "Residencial"
-            else:
-                tipo = np.random.choice(["Loja Térrea", "Galpão", "Prédio Misto", "Sala Comercial", "Residencial"])
-                
-            # Agrupamento macro corporativo georreferenciado (mesma rua compartilha fluxo e iluminação base)
-            if rua_nome not in ruas_macro_dados:
-                ilum = np.random.choice(["Boa", "Regular", "Ruim/Inexistente"])
-                # Calçadões e grandes avenidas têm trânsito mais denso
-                if "Calçadão" in rua_nome or "Praça" in rua_nome or "Avenida" in rua_nome:
-                    flux_base = np.random.randint(5000, 20000)
-                else:
-                    flux_base = np.random.randint(500, 10000)
-                ruas_macro_dados[rua_nome] = {"iluminacao": ilum, "fluxo": flux_base}
-                
-            iluminacao = ruas_macro_dados[rua_nome]["iluminacao"]
-            # Pequeno ruído para simular variação da calçada, mas matematicamente consistente com a rua
-            fluxo = ruas_macro_dados[rua_nome]["fluxo"] + np.random.randint(-150, 150)
-                
-            # Dados fiscais / venda
-            if status == "Alugado":
-                receita = np.random.randint(15000, 450000)
-            else:
-                receita = 0
-                
-            potencial = round(np.random.uniform(0.4, 0.98), 2)
+        potencial = round(np.random.uniform(0.4, 0.98), 2)
+        
+        # Anexa o nome do estab (se oficial) ao ID visual
+        if nome_estab and nome_estab != 'nan':
+            label_id = f"{id_espaco} ({nome_estab})"
+        else:
+            label_id = id_espaco
             
-            data.append({
-                "id_espaco": f"OSM-{el['id']}",
-                "rua": endereco_completo,
-                "tipo": tipo,
-                "lat": lat,
-                "lon": lon,
-                "status_aluguel": status,
-                "iluminacao": iluminacao,
-                "receita_gerada": receita,
-                "fluxo_pessoas_dia": max(0, fluxo),
-                "potencial_retrofit": potencial
-            })
-            
-    except Exception as e:
-        print(f"OSM fetch error: {e}")
-        # Retorna mock simples se offline
         data.append({
-            "id_espaco": "IMOVEL-OFFLINE",
-            "rua": "Sistema Offline, 0", 
-            "tipo": "Erro",
-            "lat": -10.913,
-            "lon": -37.052,
-            "status_aluguel": "Alugado",
-            "iluminacao": "Ruim/Inexistente",
-            "receita_gerada": 0,
-            "fluxo_pessoas_dia": 0,
-            "potencial_retrofit": 0.0
+            "id_espaco": label_id,
+            "rua": endereco_completo,
+            "tipo": tipo,
+            "lat": lat,
+            "lon": lon,
+            "status_aluguel": status,
+            "iluminacao": iluminacao,
+            "receita_gerada": receita,
+            "fluxo_pessoas_dia": max(0, fluxo),
+            "potencial_retrofit": potencial
         })
 
     return pd.DataFrame(data)
