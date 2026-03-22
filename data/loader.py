@@ -35,9 +35,10 @@ def load_data():
         osm_data = response.json()
         elements = osm_data.get('elements', [])
         
-        # Filtra um máximo para a visualização não travar e o LLM conseguir ler o sample depois
-        if len(elements) > 2500:
-            elements = random.sample(elements, 2500)
+        # ATENÇÃO: O limite MAXIMO para o Streamlit Folium não bugar (sumir a tela branca)
+        # ao utilizar marcadores interativos com Tooltips + Popups do FontAwesome é ao redor de 500 no DOM do iframe.
+        if len(elements) > 400:
+            elements = random.sample(elements, 400)
             
         for el in elements:
             tags = el.get('tags', {})
@@ -60,7 +61,7 @@ def load_data():
             numero = tags.get('addr:housenumber', str(np.random.randint(10, 1500)))
             endereco_completo = f"{rua_nome}, {numero}"
             
-            # --- Mockando informações urbanísticas sensíveis da base de dados Ficaqui ---
+            # --- Mockando informações urbanísticas sensíveis da base de dados IBGE/Ficaqui por cima do OSM---
             status = np.random.choice(["Alugado", "Disponível", "Abandonado/IPTU Atrasado"], p=[0.45, 0.35, 0.20])
             
             osm_building_type = tags.get('building', '')
@@ -80,7 +81,7 @@ def load_data():
             else:
                 tipo = np.random.choice(["Loja Térrea", "Galpão", "Prédio Misto", "Sala Comercial", "Residencial"])
                 
-            # Agrupamento macro (mesma rua compartilha fluxo e iluminação base)
+            # Agrupamento macro corporativo georreferenciado (mesma rua compartilha fluxo e iluminação base)
             if rua_nome not in ruas_macro_dados:
                 ilum = np.random.choice(["Boa", "Regular", "Ruim/Inexistente"])
                 # Calçadões e grandes avenidas têm trânsito mais denso
@@ -111,7 +112,7 @@ def load_data():
                 "status_aluguel": status,
                 "iluminacao": iluminacao,
                 "receita_gerada": receita,
-                "fluxo_pessoas_dia": fluxo,
+                "fluxo_pessoas_dia": max(0, fluxo),
                 "potencial_retrofit": potencial
             })
             

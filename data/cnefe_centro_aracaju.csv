@@ -1,0 +1,1492 @@
+id_espaco,rua,tipo,lat,lon,status_aluguel
+CNEFE-2800308-0-0,"Calçadão João Pessoa, 7",Loja Térrea,-10.91,-37.0518,Disponível
+CNEFE-2800308-0-1,"Calçadão João Pessoa, 20",Loja Térrea,-10.910073333333333,-37.05200000000001,Alugado
+CNEFE-2800308-0-2,"Calçadão João Pessoa, 40",Residencial,-10.910146666666666,-37.0518,Alugado
+CNEFE-2800308-0-3,"Calçadão João Pessoa, 60",Loja Térrea,-10.91022,-37.05200000000001,Disponível
+CNEFE-2800308-0-4,"Calçadão João Pessoa, 80",Sala Comercial,-10.910293333333334,-37.0518,Alugado
+CNEFE-2800308-0-5,"Calçadão João Pessoa, 100",Sala Comercial,-10.910366666666667,-37.05200000000001,Alugado
+CNEFE-2800308-0-6,"Calçadão João Pessoa, 120",Residencial,-10.91044,-37.0518,Alugado
+CNEFE-2800308-0-7,"Calçadão João Pessoa, 140",Residencial,-10.910513333333334,-37.05200000000001,Alugado
+CNEFE-2800308-0-8,"Calçadão João Pessoa, 160",Residencial,-10.910586666666667,-37.0518,Alugado
+CNEFE-2800308-0-9,"Calçadão João Pessoa, 180",Sala Comercial,-10.91066,-37.05200000000001,Alugado
+CNEFE-2800308-0-10,"Calçadão João Pessoa, 200",Loja Térrea,-10.910733333333333,-37.0518,Alugado
+CNEFE-2800308-0-11,"Calçadão João Pessoa, 220",Residencial,-10.910806666666666,-37.05200000000001,Alugado
+CNEFE-2800308-0-12,"Calçadão João Pessoa, 240",Residencial,-10.91088,-37.0518,Alugado
+CNEFE-2800308-0-13,"Calçadão João Pessoa, 260",Loja Térrea,-10.910953333333334,-37.05200000000001,Disponível
+CNEFE-2800308-0-14,"Calçadão João Pessoa, 280",Residencial,-10.911026666666666,-37.0518,Alugado
+CNEFE-2800308-0-15,"Calçadão João Pessoa, 300",Loja Térrea,-10.9111,-37.05200000000001,Alugado
+CNEFE-2800308-0-16,"Calçadão João Pessoa, 320",Loja Térrea,-10.911173333333334,-37.0518,Alugado
+CNEFE-2800308-0-17,"Calçadão João Pessoa, 340",Residencial,-10.911246666666667,-37.05200000000001,Alugado
+CNEFE-2800308-0-18,"Calçadão João Pessoa, 360",Galpão,-10.91132,-37.0518,Abandonado/IPTU Atrasado
+CNEFE-2800308-0-19,"Calçadão João Pessoa, 380",Residencial,-10.911393333333333,-37.05200000000001,Alugado
+CNEFE-2800308-0-20,"Calçadão João Pessoa, 400",Residencial,-10.911466666666668,-37.0518,Alugado
+CNEFE-2800308-0-21,"Calçadão João Pessoa, 420",Residencial,-10.91154,-37.05200000000001,Alugado
+CNEFE-2800308-0-22,"Calçadão João Pessoa, 440",Residencial,-10.911613333333333,-37.0518,Alugado
+CNEFE-2800308-0-23,"Calçadão João Pessoa, 459",Sala Comercial,-10.911686666666666,-37.05200000000001,Alugado
+CNEFE-2800308-0-24,"Calçadão João Pessoa, 480",Residencial,-10.91176,-37.0518,Alugado
+CNEFE-2800308-0-25,"Calçadão João Pessoa, 500",Galpão,-10.911833333333334,-37.05200000000001,Disponível
+CNEFE-2800308-0-26,"Calçadão João Pessoa, 520",Sala Comercial,-10.911906666666667,-37.0518,Alugado
+CNEFE-2800308-0-27,"Calçadão João Pessoa, 540",Residencial,-10.91198,-37.05200000000001,Alugado
+CNEFE-2800308-0-28,"Calçadão João Pessoa, 560",Loja Térrea,-10.912053333333333,-37.0518,Abandonado/IPTU Atrasado
+CNEFE-2800308-0-29,"Calçadão João Pessoa, 580",Sala Comercial,-10.912126666666667,-37.05200000000001,Alugado
+CNEFE-2800308-0-30,"Calçadão João Pessoa, 600",Galpão,-10.9122,-37.0518,Abandonado/IPTU Atrasado
+CNEFE-2800308-0-31,"Calçadão João Pessoa, 620",Residencial,-10.912273333333333,-37.05200000000001,Alugado
+CNEFE-2800308-0-32,"Calçadão João Pessoa, 640",Sala Comercial,-10.912346666666666,-37.0518,Alugado
+CNEFE-2800308-0-33,"Calçadão João Pessoa, 660",Residencial,-10.91242,-37.05200000000001,Alugado
+CNEFE-2800308-0-34,"Calçadão João Pessoa, 680",Residencial,-10.912493333333334,-37.0518,Alugado
+CNEFE-2800308-0-35,"Calçadão João Pessoa, 700",Residencial,-10.912566666666667,-37.05200000000001,Alugado
+CNEFE-2800308-0-36,"Calçadão João Pessoa, 720",Sala Comercial,-10.91264,-37.0518,Abandonado/IPTU Atrasado
+CNEFE-2800308-0-37,"Calçadão João Pessoa, 740",Loja Térrea,-10.912713333333333,-37.05200000000001,Alugado
+CNEFE-2800308-0-38,"Calçadão João Pessoa, 760",Loja Térrea,-10.912786666666667,-37.0518,Alugado
+CNEFE-2800308-0-39,"Calçadão João Pessoa, 780",Loja Térrea,-10.91286,-37.05200000000001,Alugado
+CNEFE-2800308-0-40,"Calçadão João Pessoa, 800",Residencial,-10.912933333333333,-37.0518,Alugado
+CNEFE-2800308-0-41,"Calçadão João Pessoa, 820",Loja Térrea,-10.913006666666666,-37.05200000000001,Disponível
+CNEFE-2800308-0-42,"Calçadão João Pessoa, 840",Loja Térrea,-10.91308,-37.0518,Alugado
+CNEFE-2800308-0-43,"Calçadão João Pessoa, 860",Residencial,-10.913153333333334,-37.05200000000001,Alugado
+CNEFE-2800308-0-44,"Calçadão João Pessoa, 880",Residencial,-10.913226666666667,-37.0518,Alugado
+CNEFE-2800308-0-45,"Calçadão João Pessoa, 900",Sala Comercial,-10.9133,-37.05200000000001,Alugado
+CNEFE-2800308-0-46,"Calçadão João Pessoa, 919",Residencial,-10.913373333333332,-37.0518,Alugado
+CNEFE-2800308-0-47,"Calçadão João Pessoa, 940",Residencial,-10.913446666666667,-37.05200000000001,Alugado
+CNEFE-2800308-0-48,"Calçadão João Pessoa, 960",Loja Térrea,-10.91352,-37.0518,Disponível
+CNEFE-2800308-0-49,"Calçadão João Pessoa, 980",Loja Térrea,-10.913593333333333,-37.05200000000001,Alugado
+CNEFE-2800308-0-50,"Calçadão João Pessoa, 1000",Residencial,-10.913666666666666,-37.0518,Alugado
+CNEFE-2800308-0-51,"Calçadão João Pessoa, 1020",Galpão,-10.91374,-37.05200000000001,Abandonado/IPTU Atrasado
+CNEFE-2800308-0-52,"Calçadão João Pessoa, 1040",Loja Térrea,-10.913813333333334,-37.0518,Disponível
+CNEFE-2800308-0-53,"Calçadão João Pessoa, 1060",Loja Térrea,-10.913886666666667,-37.05200000000001,Disponível
+CNEFE-2800308-0-54,"Calçadão João Pessoa, 1080",Residencial,-10.91396,-37.0518,Alugado
+CNEFE-2800308-0-55,"Calçadão João Pessoa, 1100",Loja Térrea,-10.914033333333332,-37.05200000000001,Alugado
+CNEFE-2800308-0-56,"Calçadão João Pessoa, 1120",Sala Comercial,-10.914106666666667,-37.0518,Alugado
+CNEFE-2800308-0-57,"Calçadão João Pessoa, 1140",Loja Térrea,-10.91418,-37.05200000000001,Alugado
+CNEFE-2800308-0-58,"Calçadão João Pessoa, 1160",Loja Térrea,-10.914253333333333,-37.0518,Alugado
+CNEFE-2800308-0-59,"Calçadão João Pessoa, 1180",Galpão,-10.914326666666666,-37.05200000000001,Abandonado/IPTU Atrasado
+CNEFE-2800308-0-60,"Calçadão João Pessoa, 1200",Sala Comercial,-10.9144,-37.0518,Abandonado/IPTU Atrasado
+CNEFE-2800308-0-61,"Calçadão João Pessoa, 1220",Loja Térrea,-10.914473333333333,-37.05200000000001,Alugado
+CNEFE-2800308-0-62,"Calçadão João Pessoa, 1240",Sala Comercial,-10.914546666666666,-37.0518,Alugado
+CNEFE-2800308-0-63,"Calçadão João Pessoa, 1260",Loja Térrea,-10.91462,-37.05200000000001,Alugado
+CNEFE-2800308-0-64,"Calçadão João Pessoa, 1280",Residencial,-10.914693333333334,-37.0518,Alugado
+CNEFE-2800308-0-65,"Calçadão João Pessoa, 1300",Residencial,-10.914766666666667,-37.05200000000001,Alugado
+CNEFE-2800308-0-66,"Calçadão João Pessoa, 1320",Galpão,-10.91484,-37.0518,Disponível
+CNEFE-2800308-0-67,"Calçadão João Pessoa, 1340",Loja Térrea,-10.914913333333333,-37.05200000000001,Disponível
+CNEFE-2800308-0-68,"Calçadão João Pessoa, 1360",Loja Térrea,-10.914986666666666,-37.0518,Alugado
+CNEFE-2800308-0-69,"Calçadão João Pessoa, 1380",Sala Comercial,-10.91506,-37.05200000000001,Alugado
+CNEFE-2800308-0-70,"Calçadão João Pessoa, 1400",Residencial,-10.915133333333333,-37.0518,Alugado
+CNEFE-2800308-0-71,"Calçadão João Pessoa, 1420",Residencial,-10.915206666666666,-37.05200000000001,Alugado
+CNEFE-2800308-0-72,"Calçadão João Pessoa, 1440",Galpão,-10.91528,-37.0518,Abandonado/IPTU Atrasado
+CNEFE-2800308-0-73,"Calçadão João Pessoa, 1460",Loja Térrea,-10.915353333333334,-37.05200000000001,Alugado
+CNEFE-2800308-0-74,"Calçadão João Pessoa, 1480",Residencial,-10.915426666666667,-37.0518,Alugado
+CNEFE-2800308-0-75,"Calçadão João Pessoa, 1500",Residencial,-10.9155,-37.05200000000001,Alugado
+CNEFE-2800308-1-0,"Praça Fausto Cardoso, 7",Loja Térrea,-10.9135,-37.0505,Alugado
+CNEFE-2800308-1-1,"Praça Fausto Cardoso, 166",Loja Térrea,-10.9137,-37.050444444444445,Disponível
+CNEFE-2800308-1-2,"Praça Fausto Cardoso, 333",Sala Comercial,-10.9135,-37.05038888888889,Alugado
+CNEFE-2800308-1-3,"Praça Fausto Cardoso, 500",Residencial,-10.9137,-37.050333333333334,Alugado
+CNEFE-2800308-1-4,"Praça Fausto Cardoso, 666",Sala Comercial,-10.9135,-37.05027777777778,Alugado
+CNEFE-2800308-1-5,"Praça Fausto Cardoso, 833",Sala Comercial,-10.9137,-37.05022222222222,Alugado
+CNEFE-2800308-1-6,"Praça Fausto Cardoso, 1000",Loja Térrea,-10.9135,-37.05016666666666,Disponível
+CNEFE-2800308-1-7,"Praça Fausto Cardoso, 1166",Residencial,-10.9137,-37.05011111111111,Alugado
+CNEFE-2800308-1-8,"Praça Fausto Cardoso, 1333",Sala Comercial,-10.9135,-37.05005555555555,Alugado
+CNEFE-2800308-1-9,"Praça Fausto Cardoso, 1500",Sala Comercial,-10.9137,-37.05,Alugado
+CNEFE-2800308-2-0,"Rua Laranjeiras, 1",Residencial,-10.9124,-37.049,Alugado
+CNEFE-2800308-2-1,"Rua Laranjeiras, 15",Loja Térrea,-10.9126,-37.04907291666667,Abandonado/IPTU Atrasado
+CNEFE-2800308-2-2,"Rua Laranjeiras, 31",Residencial,-10.9124,-37.049145833333334,Alugado
+CNEFE-2800308-2-3,"Rua Laranjeiras, 46",Residencial,-10.9126,-37.04921875,Alugado
+CNEFE-2800308-2-4,"Rua Laranjeiras, 62",Sala Comercial,-10.9124,-37.04929166666667,Alugado
+CNEFE-2800308-2-5,"Rua Laranjeiras, 78",Loja Térrea,-10.9126,-37.049364583333336,Disponível
+CNEFE-2800308-2-6,"Rua Laranjeiras, 93",Residencial,-10.9124,-37.049437499999996,Alugado
+CNEFE-2800308-2-7,"Rua Laranjeiras, 109",Galpão,-10.9126,-37.049510416666664,Disponível
+CNEFE-2800308-2-8,"Rua Laranjeiras, 125",Residencial,-10.9124,-37.04958333333333,Alugado
+CNEFE-2800308-2-9,"Rua Laranjeiras, 140",Residencial,-10.9126,-37.04965625,Alugado
+CNEFE-2800308-2-10,"Rua Laranjeiras, 156",Galpão,-10.9124,-37.049729166666665,Abandonado/IPTU Atrasado
+CNEFE-2800308-2-11,"Rua Laranjeiras, 171",Residencial,-10.9126,-37.04980208333333,Alugado
+CNEFE-2800308-2-12,"Rua Laranjeiras, 187",Prédio Misto,-10.9124,-37.049875,Abandonado/IPTU Atrasado
+CNEFE-2800308-2-13,"Rua Laranjeiras, 203",Loja Térrea,-10.9126,-37.04994791666667,Alugado
+CNEFE-2800308-2-14,"Rua Laranjeiras, 218",Residencial,-10.9124,-37.050020833333335,Alugado
+CNEFE-2800308-2-15,"Rua Laranjeiras, 234",Loja Térrea,-10.9126,-37.05009375,Abandonado/IPTU Atrasado
+CNEFE-2800308-2-16,"Rua Laranjeiras, 250",Residencial,-10.9124,-37.05016666666667,Alugado
+CNEFE-2800308-2-17,"Rua Laranjeiras, 265",Residencial,-10.9126,-37.05023958333333,Alugado
+CNEFE-2800308-2-18,"Rua Laranjeiras, 281",Sala Comercial,-10.9124,-37.0503125,Abandonado/IPTU Atrasado
+CNEFE-2800308-2-19,"Rua Laranjeiras, 296",Loja Térrea,-10.9126,-37.050385416666664,Disponível
+CNEFE-2800308-2-20,"Rua Laranjeiras, 312",Residencial,-10.9124,-37.05045833333333,Alugado
+CNEFE-2800308-2-21,"Rua Laranjeiras, 328",Residencial,-10.9126,-37.05053125,Alugado
+CNEFE-2800308-2-22,"Rua Laranjeiras, 343",Prédio Misto,-10.9124,-37.050604166666666,Alugado
+CNEFE-2800308-2-23,"Rua Laranjeiras, 359",Residencial,-10.9126,-37.05067708333333,Alugado
+CNEFE-2800308-2-24,"Rua Laranjeiras, 375",Loja Térrea,-10.9124,-37.05075,Alugado
+CNEFE-2800308-2-25,"Rua Laranjeiras, 390",Residencial,-10.9126,-37.05082291666667,Alugado
+CNEFE-2800308-2-26,"Rua Laranjeiras, 406",Sala Comercial,-10.9124,-37.050895833333335,Disponível
+CNEFE-2800308-2-27,"Rua Laranjeiras, 421",Residencial,-10.9126,-37.050968749999996,Alugado
+CNEFE-2800308-2-28,"Rua Laranjeiras, 437",Loja Térrea,-10.9124,-37.05104166666666,Alugado
+CNEFE-2800308-2-29,"Rua Laranjeiras, 453",Residencial,-10.9126,-37.05111458333333,Alugado
+CNEFE-2800308-2-30,"Rua Laranjeiras, 468",Residencial,-10.9124,-37.0511875,Alugado
+CNEFE-2800308-2-31,"Rua Laranjeiras, 484",Sala Comercial,-10.9126,-37.051260416666665,Disponível
+CNEFE-2800308-2-32,"Rua Laranjeiras, 500",Sala Comercial,-10.9124,-37.05133333333333,Alugado
+CNEFE-2800308-2-33,"Rua Laranjeiras, 515",Residencial,-10.9126,-37.05140625,Alugado
+CNEFE-2800308-2-34,"Rua Laranjeiras, 531",Residencial,-10.9124,-37.05147916666667,Alugado
+CNEFE-2800308-2-35,"Rua Laranjeiras, 546",Galpão,-10.9126,-37.051552083333334,Abandonado/IPTU Atrasado
+CNEFE-2800308-2-36,"Rua Laranjeiras, 562",Sala Comercial,-10.9124,-37.051625,Alugado
+CNEFE-2800308-2-37,"Rua Laranjeiras, 578",Residencial,-10.9126,-37.05169791666667,Alugado
+CNEFE-2800308-2-38,"Rua Laranjeiras, 593",Sala Comercial,-10.9124,-37.05177083333333,Alugado
+CNEFE-2800308-2-39,"Rua Laranjeiras, 609",Residencial,-10.9126,-37.051843749999996,Alugado
+CNEFE-2800308-2-40,"Rua Laranjeiras, 625",Sala Comercial,-10.9124,-37.05191666666666,Alugado
+CNEFE-2800308-2-41,"Rua Laranjeiras, 640",Loja Térrea,-10.9126,-37.05198958333333,Abandonado/IPTU Atrasado
+CNEFE-2800308-2-42,"Rua Laranjeiras, 656",Prédio Misto,-10.9124,-37.0520625,Abandonado/IPTU Atrasado
+CNEFE-2800308-2-43,"Rua Laranjeiras, 671",Residencial,-10.9126,-37.052135416666665,Alugado
+CNEFE-2800308-2-44,"Rua Laranjeiras, 687",Residencial,-10.9124,-37.05220833333333,Alugado
+CNEFE-2800308-2-45,"Rua Laranjeiras, 703",Galpão,-10.9126,-37.05228125,Abandonado/IPTU Atrasado
+CNEFE-2800308-2-46,"Rua Laranjeiras, 718",Galpão,-10.9124,-37.05235416666667,Abandonado/IPTU Atrasado
+CNEFE-2800308-2-47,"Rua Laranjeiras, 734",Sala Comercial,-10.9126,-37.052427083333335,Alugado
+CNEFE-2800308-2-48,"Rua Laranjeiras, 750",Residencial,-10.9124,-37.052499999999995,Alugado
+CNEFE-2800308-2-49,"Rua Laranjeiras, 765",Residencial,-10.9126,-37.05257291666666,Alugado
+CNEFE-2800308-2-50,"Rua Laranjeiras, 781",Prédio Misto,-10.9124,-37.05264583333333,Alugado
+CNEFE-2800308-2-51,"Rua Laranjeiras, 796",Galpão,-10.9126,-37.05271875,Abandonado/IPTU Atrasado
+CNEFE-2800308-2-52,"Rua Laranjeiras, 812",Prédio Misto,-10.9124,-37.052791666666664,Disponível
+CNEFE-2800308-2-53,"Rua Laranjeiras, 828",Prédio Misto,-10.9126,-37.05286458333333,Alugado
+CNEFE-2800308-2-54,"Rua Laranjeiras, 843",Residencial,-10.9124,-37.0529375,Alugado
+CNEFE-2800308-2-55,"Rua Laranjeiras, 859",Residencial,-10.9126,-37.053010416666666,Alugado
+CNEFE-2800308-2-56,"Rua Laranjeiras, 875",Loja Térrea,-10.9124,-37.05308333333333,Disponível
+CNEFE-2800308-2-57,"Rua Laranjeiras, 890",Residencial,-10.9126,-37.05315625,Alugado
+CNEFE-2800308-2-58,"Rua Laranjeiras, 906",Residencial,-10.9124,-37.05322916666667,Alugado
+CNEFE-2800308-2-59,"Rua Laranjeiras, 921",Sala Comercial,-10.9126,-37.05330208333333,Alugado
+CNEFE-2800308-2-60,"Rua Laranjeiras, 937",Prédio Misto,-10.9124,-37.053374999999996,Alugado
+CNEFE-2800308-2-61,"Rua Laranjeiras, 953",Loja Térrea,-10.9126,-37.05344791666666,Alugado
+CNEFE-2800308-2-62,"Rua Laranjeiras, 968",Residencial,-10.9124,-37.05352083333333,Alugado
+CNEFE-2800308-2-63,"Rua Laranjeiras, 984",Residencial,-10.9126,-37.05359375,Alugado
+CNEFE-2800308-2-64,"Rua Laranjeiras, 1000",Sala Comercial,-10.9124,-37.053666666666665,Alugado
+CNEFE-2800308-2-65,"Rua Laranjeiras, 1015",Residencial,-10.9126,-37.05373958333333,Alugado
+CNEFE-2800308-2-66,"Rua Laranjeiras, 1031",Prédio Misto,-10.9124,-37.0538125,Alugado
+CNEFE-2800308-2-67,"Rua Laranjeiras, 1046",Residencial,-10.9126,-37.05388541666667,Alugado
+CNEFE-2800308-2-68,"Rua Laranjeiras, 1062",Prédio Misto,-10.9124,-37.053958333333334,Alugado
+CNEFE-2800308-2-69,"Rua Laranjeiras, 1078",Residencial,-10.9126,-37.05403125,Alugado
+CNEFE-2800308-2-70,"Rua Laranjeiras, 1093",Residencial,-10.9124,-37.05410416666666,Alugado
+CNEFE-2800308-2-71,"Rua Laranjeiras, 1109",Prédio Misto,-10.9126,-37.05417708333333,Alugado
+CNEFE-2800308-2-72,"Rua Laranjeiras, 1125",Residencial,-10.9124,-37.054249999999996,Alugado
+CNEFE-2800308-2-73,"Rua Laranjeiras, 1140",Loja Térrea,-10.9126,-37.05432291666666,Alugado
+CNEFE-2800308-2-74,"Rua Laranjeiras, 1156",Prédio Misto,-10.9124,-37.05439583333333,Alugado
+CNEFE-2800308-2-75,"Rua Laranjeiras, 1171",Loja Térrea,-10.9126,-37.05446875,Abandonado/IPTU Atrasado
+CNEFE-2800308-2-76,"Rua Laranjeiras, 1187",Sala Comercial,-10.9124,-37.054541666666665,Disponível
+CNEFE-2800308-2-77,"Rua Laranjeiras, 1203",Residencial,-10.9126,-37.05461458333333,Alugado
+CNEFE-2800308-2-78,"Rua Laranjeiras, 1218",Sala Comercial,-10.9124,-37.0546875,Alugado
+CNEFE-2800308-2-79,"Rua Laranjeiras, 1234",Residencial,-10.9126,-37.05476041666667,Alugado
+CNEFE-2800308-2-80,"Rua Laranjeiras, 1250",Residencial,-10.9124,-37.054833333333335,Alugado
+CNEFE-2800308-2-81,"Rua Laranjeiras, 1265",Loja Térrea,-10.9126,-37.054906249999995,Alugado
+CNEFE-2800308-2-82,"Rua Laranjeiras, 1281",Galpão,-10.9124,-37.05497916666666,Abandonado/IPTU Atrasado
+CNEFE-2800308-2-83,"Rua Laranjeiras, 1296",Residencial,-10.9126,-37.05505208333333,Alugado
+CNEFE-2800308-2-84,"Rua Laranjeiras, 1312",Residencial,-10.9124,-37.055125,Alugado
+CNEFE-2800308-2-85,"Rua Laranjeiras, 1328",Residencial,-10.9126,-37.055197916666664,Alugado
+CNEFE-2800308-2-86,"Rua Laranjeiras, 1343",Galpão,-10.9124,-37.05527083333333,Abandonado/IPTU Atrasado
+CNEFE-2800308-2-87,"Rua Laranjeiras, 1359",Sala Comercial,-10.9126,-37.05534375,Alugado
+CNEFE-2800308-2-88,"Rua Laranjeiras, 1375",Sala Comercial,-10.9124,-37.055416666666666,Alugado
+CNEFE-2800308-2-89,"Rua Laranjeiras, 1390",Residencial,-10.9126,-37.05548958333333,Alugado
+CNEFE-2800308-2-90,"Rua Laranjeiras, 1406",Loja Térrea,-10.9124,-37.0555625,Alugado
+CNEFE-2800308-2-91,"Rua Laranjeiras, 1421",Residencial,-10.9126,-37.05563541666666,Alugado
+CNEFE-2800308-2-92,"Rua Laranjeiras, 1437",Residencial,-10.9124,-37.05570833333333,Alugado
+CNEFE-2800308-2-93,"Rua Laranjeiras, 1453",Residencial,-10.9126,-37.055781249999995,Alugado
+CNEFE-2800308-2-94,"Rua Laranjeiras, 1468",Galpão,-10.9124,-37.05585416666666,Disponível
+CNEFE-2800308-2-95,"Rua Laranjeiras, 1484",Residencial,-10.9126,-37.05592708333333,Alugado
+CNEFE-2800308-2-96,"Rua Laranjeiras, 1500",Loja Térrea,-10.9124,-37.056,Alugado
+CNEFE-2800308-3-0,"Rua Itabaiana, 1",Loja Térrea,-10.911,-37.0539,Alugado
+CNEFE-2800308-3-1,"Rua Itabaiana, 13",Loja Térrea,-10.91107247706422,-37.054100000000005,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-2,"Rua Itabaiana, 27",Residencial,-10.91114495412844,-37.0539,Alugado
+CNEFE-2800308-3-3,"Rua Itabaiana, 41",Residencial,-10.91121743119266,-37.054100000000005,Alugado
+CNEFE-2800308-3-4,"Rua Itabaiana, 55",Galpão,-10.91128990825688,-37.0539,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-5,"Rua Itabaiana, 68",Loja Térrea,-10.9113623853211,-37.054100000000005,Alugado
+CNEFE-2800308-3-6,"Rua Itabaiana, 82",Residencial,-10.91143486238532,-37.0539,Alugado
+CNEFE-2800308-3-7,"Rua Itabaiana, 96",Loja Térrea,-10.91150733944954,-37.054100000000005,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-8,"Rua Itabaiana, 110",Prédio Misto,-10.911579816513761,-37.0539,Alugado
+CNEFE-2800308-3-9,"Rua Itabaiana, 123",Residencial,-10.911652293577982,-37.054100000000005,Alugado
+CNEFE-2800308-3-10,"Rua Itabaiana, 137",Sala Comercial,-10.911724770642202,-37.0539,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-11,"Rua Itabaiana, 151",Residencial,-10.911797247706422,-37.054100000000005,Alugado
+CNEFE-2800308-3-12,"Rua Itabaiana, 165",Galpão,-10.911869724770641,-37.0539,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-13,"Rua Itabaiana, 178",Residencial,-10.911942201834862,-37.054100000000005,Alugado
+CNEFE-2800308-3-14,"Rua Itabaiana, 192",Residencial,-10.912014678899082,-37.0539,Alugado
+CNEFE-2800308-3-15,"Rua Itabaiana, 206",Residencial,-10.912087155963302,-37.054100000000005,Alugado
+CNEFE-2800308-3-16,"Rua Itabaiana, 220",Residencial,-10.912159633027523,-37.0539,Alugado
+CNEFE-2800308-3-17,"Rua Itabaiana, 233",Residencial,-10.912232110091743,-37.054100000000005,Alugado
+CNEFE-2800308-3-18,"Rua Itabaiana, 247",Loja Térrea,-10.912304587155964,-37.0539,Disponível
+CNEFE-2800308-3-19,"Rua Itabaiana, 261",Residencial,-10.912377064220184,-37.054100000000005,Alugado
+CNEFE-2800308-3-20,"Rua Itabaiana, 275",Prédio Misto,-10.912449541284403,-37.0539,Disponível
+CNEFE-2800308-3-21,"Rua Itabaiana, 288",Residencial,-10.912522018348623,-37.054100000000005,Alugado
+CNEFE-2800308-3-22,"Rua Itabaiana, 302",Residencial,-10.912594495412844,-37.0539,Alugado
+CNEFE-2800308-3-23,"Rua Itabaiana, 316",Loja Térrea,-10.912666972477064,-37.054100000000005,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-24,"Rua Itabaiana, 330",Residencial,-10.912739449541284,-37.0539,Alugado
+CNEFE-2800308-3-25,"Rua Itabaiana, 344",Loja Térrea,-10.912811926605505,-37.054100000000005,Alugado
+CNEFE-2800308-3-26,"Rua Itabaiana, 357",Residencial,-10.912884403669725,-37.0539,Alugado
+CNEFE-2800308-3-27,"Rua Itabaiana, 371",Sala Comercial,-10.912956880733946,-37.054100000000005,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-28,"Rua Itabaiana, 385",Prédio Misto,-10.913029357798164,-37.0539,Alugado
+CNEFE-2800308-3-29,"Rua Itabaiana, 399",Sala Comercial,-10.913101834862385,-37.054100000000005,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-30,"Rua Itabaiana, 412",Loja Térrea,-10.913174311926605,-37.0539,Disponível
+CNEFE-2800308-3-31,"Rua Itabaiana, 426",Sala Comercial,-10.913246788990826,-37.054100000000005,Alugado
+CNEFE-2800308-3-32,"Rua Itabaiana, 440",Galpão,-10.913319266055046,-37.0539,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-33,"Rua Itabaiana, 454",Prédio Misto,-10.913391743119266,-37.054100000000005,Alugado
+CNEFE-2800308-3-34,"Rua Itabaiana, 467",Residencial,-10.913464220183487,-37.0539,Alugado
+CNEFE-2800308-3-35,"Rua Itabaiana, 481",Residencial,-10.913536697247707,-37.054100000000005,Alugado
+CNEFE-2800308-3-36,"Rua Itabaiana, 495",Galpão,-10.913609174311926,-37.0539,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-37,"Rua Itabaiana, 509",Residencial,-10.913681651376146,-37.054100000000005,Alugado
+CNEFE-2800308-3-38,"Rua Itabaiana, 522",Galpão,-10.913754128440367,-37.0539,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-39,"Rua Itabaiana, 536",Prédio Misto,-10.913826605504587,-37.054100000000005,Disponível
+CNEFE-2800308-3-40,"Rua Itabaiana, 550",Sala Comercial,-10.913899082568808,-37.0539,Disponível
+CNEFE-2800308-3-41,"Rua Itabaiana, 564",Loja Térrea,-10.913971559633028,-37.054100000000005,Disponível
+CNEFE-2800308-3-42,"Rua Itabaiana, 577",Loja Térrea,-10.914044036697248,-37.0539,Alugado
+CNEFE-2800308-3-43,"Rua Itabaiana, 591",Galpão,-10.914116513761467,-37.054100000000005,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-44,"Rua Itabaiana, 605",Prédio Misto,-10.914188990825687,-37.0539,Alugado
+CNEFE-2800308-3-45,"Rua Itabaiana, 619",Sala Comercial,-10.914261467889908,-37.054100000000005,Disponível
+CNEFE-2800308-3-46,"Rua Itabaiana, 633",Galpão,-10.914333944954128,-37.0539,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-47,"Rua Itabaiana, 646",Loja Térrea,-10.914406422018349,-37.054100000000005,Alugado
+CNEFE-2800308-3-48,"Rua Itabaiana, 660",Residencial,-10.91447889908257,-37.0539,Alugado
+CNEFE-2800308-3-49,"Rua Itabaiana, 674",Prédio Misto,-10.91455137614679,-37.054100000000005,Alugado
+CNEFE-2800308-3-50,"Rua Itabaiana, 688",Prédio Misto,-10.91462385321101,-37.0539,Alugado
+CNEFE-2800308-3-51,"Rua Itabaiana, 701",Residencial,-10.914696330275229,-37.054100000000005,Alugado
+CNEFE-2800308-3-52,"Rua Itabaiana, 715",Loja Térrea,-10.914768807339449,-37.0539,Alugado
+CNEFE-2800308-3-53,"Rua Itabaiana, 729",Sala Comercial,-10.91484128440367,-37.054100000000005,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-54,"Rua Itabaiana, 743",Prédio Misto,-10.91491376146789,-37.0539,Disponível
+CNEFE-2800308-3-55,"Rua Itabaiana, 756",Prédio Misto,-10.91498623853211,-37.054100000000005,Disponível
+CNEFE-2800308-3-56,"Rua Itabaiana, 770",Residencial,-10.91505871559633,-37.0539,Alugado
+CNEFE-2800308-3-57,"Rua Itabaiana, 784",Residencial,-10.915131192660551,-37.054100000000005,Alugado
+CNEFE-2800308-3-58,"Rua Itabaiana, 798",Loja Térrea,-10.915203669724772,-37.0539,Alugado
+CNEFE-2800308-3-59,"Rua Itabaiana, 811",Prédio Misto,-10.91527614678899,-37.054100000000005,Disponível
+CNEFE-2800308-3-60,"Rua Itabaiana, 825",Sala Comercial,-10.91534862385321,-37.0539,Disponível
+CNEFE-2800308-3-61,"Rua Itabaiana, 839",Loja Térrea,-10.915421100917431,-37.054100000000005,Alugado
+CNEFE-2800308-3-62,"Rua Itabaiana, 853",Loja Térrea,-10.915493577981652,-37.0539,Alugado
+CNEFE-2800308-3-63,"Rua Itabaiana, 866",Loja Térrea,-10.915566055045872,-37.054100000000005,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-64,"Rua Itabaiana, 880",Residencial,-10.915638532110092,-37.0539,Alugado
+CNEFE-2800308-3-65,"Rua Itabaiana, 894",Galpão,-10.915711009174313,-37.054100000000005,Disponível
+CNEFE-2800308-3-66,"Rua Itabaiana, 908",Prédio Misto,-10.915783486238533,-37.0539,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-67,"Rua Itabaiana, 922",Galpão,-10.915855963302752,-37.054100000000005,Disponível
+CNEFE-2800308-3-68,"Rua Itabaiana, 935",Loja Térrea,-10.915928440366972,-37.0539,Alugado
+CNEFE-2800308-3-69,"Rua Itabaiana, 949",Prédio Misto,-10.916000917431193,-37.054100000000005,Alugado
+CNEFE-2800308-3-70,"Rua Itabaiana, 963",Prédio Misto,-10.916073394495413,-37.0539,Alugado
+CNEFE-2800308-3-71,"Rua Itabaiana, 977",Galpão,-10.916145871559634,-37.054100000000005,Disponível
+CNEFE-2800308-3-72,"Rua Itabaiana, 990",Residencial,-10.916218348623854,-37.0539,Alugado
+CNEFE-2800308-3-73,"Rua Itabaiana, 1004",Galpão,-10.916290825688074,-37.054100000000005,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-74,"Rua Itabaiana, 1018",Loja Térrea,-10.916363302752293,-37.0539,Alugado
+CNEFE-2800308-3-75,"Rua Itabaiana, 1032",Residencial,-10.916435779816513,-37.054100000000005,Alugado
+CNEFE-2800308-3-76,"Rua Itabaiana, 1045",Prédio Misto,-10.916508256880734,-37.0539,Alugado
+CNEFE-2800308-3-77,"Rua Itabaiana, 1059",Residencial,-10.916580733944954,-37.054100000000005,Alugado
+CNEFE-2800308-3-78,"Rua Itabaiana, 1073",Residencial,-10.916653211009175,-37.0539,Alugado
+CNEFE-2800308-3-79,"Rua Itabaiana, 1087",Residencial,-10.916725688073395,-37.054100000000005,Alugado
+CNEFE-2800308-3-80,"Rua Itabaiana, 1100",Sala Comercial,-10.916798165137616,-37.0539,Alugado
+CNEFE-2800308-3-81,"Rua Itabaiana, 1114",Residencial,-10.916870642201836,-37.054100000000005,Alugado
+CNEFE-2800308-3-82,"Rua Itabaiana, 1128",Loja Térrea,-10.916943119266055,-37.0539,Alugado
+CNEFE-2800308-3-83,"Rua Itabaiana, 1142",Residencial,-10.917015596330275,-37.054100000000005,Alugado
+CNEFE-2800308-3-84,"Rua Itabaiana, 1155",Galpão,-10.917088073394495,-37.0539,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-85,"Rua Itabaiana, 1169",Loja Térrea,-10.917160550458716,-37.054100000000005,Alugado
+CNEFE-2800308-3-86,"Rua Itabaiana, 1183",Galpão,-10.917233027522936,-37.0539,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-87,"Rua Itabaiana, 1197",Residencial,-10.917305504587157,-37.054100000000005,Alugado
+CNEFE-2800308-3-88,"Rua Itabaiana, 1211",Residencial,-10.917377981651377,-37.0539,Alugado
+CNEFE-2800308-3-89,"Rua Itabaiana, 1224",Residencial,-10.917450458715598,-37.054100000000005,Alugado
+CNEFE-2800308-3-90,"Rua Itabaiana, 1238",Sala Comercial,-10.917522935779816,-37.0539,Alugado
+CNEFE-2800308-3-91,"Rua Itabaiana, 1252",Sala Comercial,-10.917595412844037,-37.054100000000005,Alugado
+CNEFE-2800308-3-92,"Rua Itabaiana, 1266",Loja Térrea,-10.917667889908257,-37.0539,Disponível
+CNEFE-2800308-3-93,"Rua Itabaiana, 1279",Sala Comercial,-10.917740366972478,-37.054100000000005,Alugado
+CNEFE-2800308-3-94,"Rua Itabaiana, 1293",Residencial,-10.917812844036698,-37.0539,Alugado
+CNEFE-2800308-3-95,"Rua Itabaiana, 1307",Residencial,-10.917885321100918,-37.054100000000005,Alugado
+CNEFE-2800308-3-96,"Rua Itabaiana, 1321",Loja Térrea,-10.917957798165139,-37.0539,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-97,"Rua Itabaiana, 1334",Loja Térrea,-10.91803027522936,-37.054100000000005,Alugado
+CNEFE-2800308-3-98,"Rua Itabaiana, 1348",Prédio Misto,-10.918102752293578,-37.0539,Disponível
+CNEFE-2800308-3-99,"Rua Itabaiana, 1362",Residencial,-10.918175229357798,-37.054100000000005,Alugado
+CNEFE-2800308-3-100,"Rua Itabaiana, 1376",Prédio Misto,-10.918247706422019,-37.0539,Alugado
+CNEFE-2800308-3-101,"Rua Itabaiana, 1389",Residencial,-10.91832018348624,-37.054100000000005,Alugado
+CNEFE-2800308-3-102,"Rua Itabaiana, 1403",Residencial,-10.91839266055046,-37.0539,Alugado
+CNEFE-2800308-3-103,"Rua Itabaiana, 1417",Prédio Misto,-10.91846513761468,-37.054100000000005,Alugado
+CNEFE-2800308-3-104,"Rua Itabaiana, 1431",Residencial,-10.9185376146789,-37.0539,Alugado
+CNEFE-2800308-3-105,"Rua Itabaiana, 1444",Prédio Misto,-10.91861009174312,-37.054100000000005,Alugado
+CNEFE-2800308-3-106,"Rua Itabaiana, 1458",Prédio Misto,-10.91868256880734,-37.0539,Abandonado/IPTU Atrasado
+CNEFE-2800308-3-107,"Rua Itabaiana, 1472",Loja Térrea,-10.91875504587156,-37.054100000000005,Alugado
+CNEFE-2800308-3-108,"Rua Itabaiana, 1486",Loja Térrea,-10.91882752293578,-37.0539,Alugado
+CNEFE-2800308-3-109,"Rua Itabaiana, 1500",Residencial,-10.9189,-37.054100000000005,Alugado
+CNEFE-2800308-4-0,"Rua Geru, 5",Prédio Misto,-10.9141,-37.05,Disponível
+CNEFE-2800308-4-1,"Rua Geru, 18",Galpão,-10.914299999999999,-37.050072289156624,Abandonado/IPTU Atrasado
+CNEFE-2800308-4-2,"Rua Geru, 36",Prédio Misto,-10.9141,-37.05014457831325,Alugado
+CNEFE-2800308-4-3,"Rua Geru, 54",Residencial,-10.914299999999999,-37.05021686746988,Alugado
+CNEFE-2800308-4-4,"Rua Geru, 72",Sala Comercial,-10.9141,-37.050289156626505,Disponível
+CNEFE-2800308-4-5,"Rua Geru, 90",Loja Térrea,-10.914299999999999,-37.05036144578313,Disponível
+CNEFE-2800308-4-6,"Rua Geru, 108",Residencial,-10.9141,-37.05043373493976,Alugado
+CNEFE-2800308-4-7,"Rua Geru, 126",Sala Comercial,-10.914299999999999,-37.050506024096386,Disponível
+CNEFE-2800308-4-8,"Rua Geru, 144",Prédio Misto,-10.9141,-37.05057831325301,Abandonado/IPTU Atrasado
+CNEFE-2800308-4-9,"Rua Geru, 162",Loja Térrea,-10.914299999999999,-37.05065060240963,Abandonado/IPTU Atrasado
+CNEFE-2800308-4-10,"Rua Geru, 180",Loja Térrea,-10.9141,-37.05072289156626,Alugado
+CNEFE-2800308-4-11,"Rua Geru, 198",Sala Comercial,-10.914299999999999,-37.050795180722886,Alugado
+CNEFE-2800308-4-12,"Rua Geru, 216",Residencial,-10.9141,-37.05086746987951,Alugado
+CNEFE-2800308-4-13,"Rua Geru, 234",Residencial,-10.914299999999999,-37.05093975903614,Alugado
+CNEFE-2800308-4-14,"Rua Geru, 253",Residencial,-10.9141,-37.05101204819277,Alugado
+CNEFE-2800308-4-15,"Rua Geru, 271",Residencial,-10.914299999999999,-37.051084337349394,Alugado
+CNEFE-2800308-4-16,"Rua Geru, 289",Loja Térrea,-10.9141,-37.05115662650602,Abandonado/IPTU Atrasado
+CNEFE-2800308-4-17,"Rua Geru, 307",Loja Térrea,-10.914299999999999,-37.05122891566265,Abandonado/IPTU Atrasado
+CNEFE-2800308-4-18,"Rua Geru, 325",Sala Comercial,-10.9141,-37.051301204819275,Alugado
+CNEFE-2800308-4-19,"Rua Geru, 343",Residencial,-10.914299999999999,-37.0513734939759,Alugado
+CNEFE-2800308-4-20,"Rua Geru, 361",Residencial,-10.9141,-37.05144578313253,Alugado
+CNEFE-2800308-4-21,"Rua Geru, 379",Residencial,-10.914299999999999,-37.051518072289156,Alugado
+CNEFE-2800308-4-22,"Rua Geru, 397",Residencial,-10.9141,-37.05159036144578,Alugado
+CNEFE-2800308-4-23,"Rua Geru, 415",Residencial,-10.914299999999999,-37.05166265060241,Alugado
+CNEFE-2800308-4-24,"Rua Geru, 433",Prédio Misto,-10.9141,-37.05173493975904,Abandonado/IPTU Atrasado
+CNEFE-2800308-4-25,"Rua Geru, 451",Residencial,-10.914299999999999,-37.051807228915656,Alugado
+CNEFE-2800308-4-26,"Rua Geru, 469",Residencial,-10.9141,-37.05187951807228,Alugado
+CNEFE-2800308-4-27,"Rua Geru, 487",Residencial,-10.914299999999999,-37.05195180722891,Alugado
+CNEFE-2800308-4-28,"Rua Geru, 506",Residencial,-10.9141,-37.05202409638554,Alugado
+CNEFE-2800308-4-29,"Rua Geru, 524",Prédio Misto,-10.914299999999999,-37.052096385542164,Alugado
+CNEFE-2800308-4-30,"Rua Geru, 542",Sala Comercial,-10.9141,-37.05216867469879,Alugado
+CNEFE-2800308-4-31,"Rua Geru, 560",Residencial,-10.914299999999999,-37.05224096385542,Alugado
+CNEFE-2800308-4-32,"Rua Geru, 578",Loja Térrea,-10.9141,-37.052313253012045,Alugado
+CNEFE-2800308-4-33,"Rua Geru, 596",Sala Comercial,-10.914299999999999,-37.05238554216867,Alugado
+CNEFE-2800308-4-34,"Rua Geru, 614",Prédio Misto,-10.9141,-37.0524578313253,Disponível
+CNEFE-2800308-4-35,"Rua Geru, 632",Prédio Misto,-10.914299999999999,-37.052530120481926,Disponível
+CNEFE-2800308-4-36,"Rua Geru, 650",Residencial,-10.9141,-37.05260240963855,Alugado
+CNEFE-2800308-4-37,"Rua Geru, 668",Residencial,-10.914299999999999,-37.05267469879518,Alugado
+CNEFE-2800308-4-38,"Rua Geru, 686",Sala Comercial,-10.9141,-37.05274698795181,Disponível
+CNEFE-2800308-4-39,"Rua Geru, 704",Loja Térrea,-10.914299999999999,-37.05281927710843,Abandonado/IPTU Atrasado
+CNEFE-2800308-4-40,"Rua Geru, 722",Residencial,-10.9141,-37.05289156626506,Alugado
+CNEFE-2800308-4-41,"Rua Geru, 740",Residencial,-10.914299999999999,-37.05296385542169,Alugado
+CNEFE-2800308-4-42,"Rua Geru, 759",Residencial,-10.9141,-37.05303614457831,Alugado
+CNEFE-2800308-4-43,"Rua Geru, 777",Prédio Misto,-10.914299999999999,-37.053108433734934,Alugado
+CNEFE-2800308-4-44,"Rua Geru, 795",Prédio Misto,-10.9141,-37.05318072289156,Alugado
+CNEFE-2800308-4-45,"Rua Geru, 813",Residencial,-10.914299999999999,-37.05325301204819,Alugado
+CNEFE-2800308-4-46,"Rua Geru, 831",Loja Térrea,-10.9141,-37.053325301204815,Disponível
+CNEFE-2800308-4-47,"Rua Geru, 849",Loja Térrea,-10.914299999999999,-37.05339759036144,Alugado
+CNEFE-2800308-4-48,"Rua Geru, 867",Prédio Misto,-10.9141,-37.05346987951807,Alugado
+CNEFE-2800308-4-49,"Rua Geru, 885",Loja Térrea,-10.914299999999999,-37.053542168674696,Alugado
+CNEFE-2800308-4-50,"Rua Geru, 903",Residencial,-10.9141,-37.05361445783132,Alugado
+CNEFE-2800308-4-51,"Rua Geru, 921",Residencial,-10.914299999999999,-37.05368674698795,Alugado
+CNEFE-2800308-4-52,"Rua Geru, 939",Prédio Misto,-10.9141,-37.05375903614458,Alugado
+CNEFE-2800308-4-53,"Rua Geru, 957",Prédio Misto,-10.914299999999999,-37.0538313253012,Disponível
+CNEFE-2800308-4-54,"Rua Geru, 975",Residencial,-10.9141,-37.05390361445783,Alugado
+CNEFE-2800308-4-55,"Rua Geru, 993",Residencial,-10.914299999999999,-37.05397590361446,Alugado
+CNEFE-2800308-4-56,"Rua Geru, 1012",Residencial,-10.9141,-37.054048192771084,Alugado
+CNEFE-2800308-4-57,"Rua Geru, 1030",Residencial,-10.914299999999999,-37.05412048192771,Alugado
+CNEFE-2800308-4-58,"Rua Geru, 1048",Residencial,-10.9141,-37.05419277108434,Alugado
+CNEFE-2800308-4-59,"Rua Geru, 1066",Residencial,-10.914299999999999,-37.05426506024096,Alugado
+CNEFE-2800308-4-60,"Rua Geru, 1084",Residencial,-10.9141,-37.054337349397585,Alugado
+CNEFE-2800308-4-61,"Rua Geru, 1102",Residencial,-10.914299999999999,-37.05440963855421,Alugado
+CNEFE-2800308-4-62,"Rua Geru, 1120",Sala Comercial,-10.9141,-37.05448192771084,Alugado
+CNEFE-2800308-4-63,"Rua Geru, 1138",Residencial,-10.914299999999999,-37.054554216867466,Alugado
+CNEFE-2800308-4-64,"Rua Geru, 1156",Sala Comercial,-10.9141,-37.05462650602409,Abandonado/IPTU Atrasado
+CNEFE-2800308-4-65,"Rua Geru, 1174",Sala Comercial,-10.914299999999999,-37.05469879518072,Abandonado/IPTU Atrasado
+CNEFE-2800308-4-66,"Rua Geru, 1192",Loja Térrea,-10.9141,-37.05477108433735,Alugado
+CNEFE-2800308-4-67,"Rua Geru, 1210",Prédio Misto,-10.914299999999999,-37.05484337349397,Abandonado/IPTU Atrasado
+CNEFE-2800308-4-68,"Rua Geru, 1228",Prédio Misto,-10.9141,-37.0549156626506,Alugado
+CNEFE-2800308-4-69,"Rua Geru, 1246",Prédio Misto,-10.914299999999999,-37.05498795180723,Abandonado/IPTU Atrasado
+CNEFE-2800308-4-70,"Rua Geru, 1265",Loja Térrea,-10.9141,-37.055060240963854,Disponível
+CNEFE-2800308-4-71,"Rua Geru, 1283",Loja Térrea,-10.914299999999999,-37.05513253012048,Disponível
+CNEFE-2800308-4-72,"Rua Geru, 1301",Residencial,-10.9141,-37.05520481927711,Alugado
+CNEFE-2800308-4-73,"Rua Geru, 1319",Sala Comercial,-10.914299999999999,-37.055277108433735,Abandonado/IPTU Atrasado
+CNEFE-2800308-4-74,"Rua Geru, 1337",Residencial,-10.9141,-37.05534939759036,Alugado
+CNEFE-2800308-4-75,"Rua Geru, 1355",Prédio Misto,-10.914299999999999,-37.05542168674698,Alugado
+CNEFE-2800308-4-76,"Rua Geru, 1373",Residencial,-10.9141,-37.05549397590361,Alugado
+CNEFE-2800308-4-77,"Rua Geru, 1391",Residencial,-10.914299999999999,-37.055566265060236,Alugado
+CNEFE-2800308-4-78,"Rua Geru, 1409",Loja Térrea,-10.9141,-37.05563855421686,Disponível
+CNEFE-2800308-4-79,"Rua Geru, 1427",Residencial,-10.914299999999999,-37.05571084337349,Alugado
+CNEFE-2800308-4-80,"Rua Geru, 1445",Residencial,-10.9141,-37.05578313253012,Alugado
+CNEFE-2800308-4-81,"Rua Geru, 1463",Residencial,-10.914299999999999,-37.05585542168674,Alugado
+CNEFE-2800308-4-82,"Rua Geru, 1481",Residencial,-10.9141,-37.05592771084337,Alugado
+CNEFE-2800308-4-83,"Rua Geru, 1500",Prédio Misto,-10.914299999999999,-37.056,Alugado
+CNEFE-2800308-5-0,"Rua São Cristóvão, 1",Prédio Misto,-10.9137,-37.049,Alugado
+CNEFE-2800308-5-1,"Rua São Cristóvão, 12",Loja Térrea,-10.9139,-37.049072,Alugado
+CNEFE-2800308-5-2,"Rua São Cristóvão, 24",Residencial,-10.9137,-37.049144,Alugado
+CNEFE-2800308-5-3,"Rua São Cristóvão, 36",Galpão,-10.9139,-37.049216,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-4,"Rua São Cristóvão, 48",Residencial,-10.9137,-37.049288,Alugado
+CNEFE-2800308-5-5,"Rua São Cristóvão, 60",Sala Comercial,-10.9139,-37.04936,Disponível
+CNEFE-2800308-5-6,"Rua São Cristóvão, 72",Residencial,-10.9137,-37.049432,Alugado
+CNEFE-2800308-5-7,"Rua São Cristóvão, 84",Residencial,-10.9139,-37.049504,Alugado
+CNEFE-2800308-5-8,"Rua São Cristóvão, 96",Residencial,-10.9137,-37.049576,Alugado
+CNEFE-2800308-5-9,"Rua São Cristóvão, 107",Sala Comercial,-10.9139,-37.049648,Disponível
+CNEFE-2800308-5-10,"Rua São Cristóvão, 120",Galpão,-10.9137,-37.04972,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-11,"Rua São Cristóvão, 132",Prédio Misto,-10.9139,-37.049792,Disponível
+CNEFE-2800308-5-12,"Rua São Cristóvão, 144",Prédio Misto,-10.9137,-37.049864,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-13,"Rua São Cristóvão, 156",Loja Térrea,-10.9139,-37.049936,Disponível
+CNEFE-2800308-5-14,"Rua São Cristóvão, 168",Loja Térrea,-10.9137,-37.050008,Alugado
+CNEFE-2800308-5-15,"Rua São Cristóvão, 180",Residencial,-10.9139,-37.05008,Alugado
+CNEFE-2800308-5-16,"Rua São Cristóvão, 192",Loja Térrea,-10.9137,-37.050152,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-17,"Rua São Cristóvão, 204",Sala Comercial,-10.9139,-37.050224,Alugado
+CNEFE-2800308-5-18,"Rua São Cristóvão, 215",Residencial,-10.9137,-37.050296,Alugado
+CNEFE-2800308-5-19,"Rua São Cristóvão, 228",Prédio Misto,-10.9139,-37.050368,Alugado
+CNEFE-2800308-5-20,"Rua São Cristóvão, 240",Loja Térrea,-10.9137,-37.05044,Alugado
+CNEFE-2800308-5-21,"Rua São Cristóvão, 252",Sala Comercial,-10.9139,-37.050512,Disponível
+CNEFE-2800308-5-22,"Rua São Cristóvão, 264",Residencial,-10.9137,-37.050584,Alugado
+CNEFE-2800308-5-23,"Rua São Cristóvão, 276",Residencial,-10.9139,-37.050656,Alugado
+CNEFE-2800308-5-24,"Rua São Cristóvão, 288",Residencial,-10.9137,-37.050728,Alugado
+CNEFE-2800308-5-25,"Rua São Cristóvão, 300",Prédio Misto,-10.9139,-37.0508,Alugado
+CNEFE-2800308-5-26,"Rua São Cristóvão, 312",Loja Térrea,-10.9137,-37.050872,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-27,"Rua São Cristóvão, 324",Residencial,-10.9139,-37.050944,Alugado
+CNEFE-2800308-5-28,"Rua São Cristóvão, 336",Sala Comercial,-10.9137,-37.051016,Alugado
+CNEFE-2800308-5-29,"Rua São Cristóvão, 348",Sala Comercial,-10.9139,-37.051088,Disponível
+CNEFE-2800308-5-30,"Rua São Cristóvão, 360",Residencial,-10.9137,-37.05116,Alugado
+CNEFE-2800308-5-31,"Rua São Cristóvão, 372",Residencial,-10.9139,-37.051232,Alugado
+CNEFE-2800308-5-32,"Rua São Cristóvão, 384",Prédio Misto,-10.9137,-37.051304,Alugado
+CNEFE-2800308-5-33,"Rua São Cristóvão, 396",Prédio Misto,-10.9139,-37.051376,Alugado
+CNEFE-2800308-5-34,"Rua São Cristóvão, 408",Residencial,-10.9137,-37.051448,Alugado
+CNEFE-2800308-5-35,"Rua São Cristóvão, 420",Residencial,-10.9139,-37.05152,Alugado
+CNEFE-2800308-5-36,"Rua São Cristóvão, 431",Galpão,-10.9137,-37.051592,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-37,"Rua São Cristóvão, 444",Sala Comercial,-10.9139,-37.051664,Alugado
+CNEFE-2800308-5-38,"Rua São Cristóvão, 456",Prédio Misto,-10.9137,-37.051736,Alugado
+CNEFE-2800308-5-39,"Rua São Cristóvão, 468",Loja Térrea,-10.9139,-37.051808,Alugado
+CNEFE-2800308-5-40,"Rua São Cristóvão, 480",Sala Comercial,-10.9137,-37.05188,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-41,"Rua São Cristóvão, 492",Loja Térrea,-10.9139,-37.051952,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-42,"Rua São Cristóvão, 504",Prédio Misto,-10.9137,-37.052024,Disponível
+CNEFE-2800308-5-43,"Rua São Cristóvão, 516",Residencial,-10.9139,-37.052096,Alugado
+CNEFE-2800308-5-44,"Rua São Cristóvão, 528",Residencial,-10.9137,-37.052168,Alugado
+CNEFE-2800308-5-45,"Rua São Cristóvão, 540",Residencial,-10.9139,-37.05224,Alugado
+CNEFE-2800308-5-46,"Rua São Cristóvão, 552",Residencial,-10.9137,-37.052312,Alugado
+CNEFE-2800308-5-47,"Rua São Cristóvão, 564",Sala Comercial,-10.9139,-37.052383999999996,Alugado
+CNEFE-2800308-5-48,"Rua São Cristóvão, 576",Residencial,-10.9137,-37.052456,Alugado
+CNEFE-2800308-5-49,"Rua São Cristóvão, 588",Prédio Misto,-10.9139,-37.052528,Alugado
+CNEFE-2800308-5-50,"Rua São Cristóvão, 600",Loja Térrea,-10.9137,-37.0526,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-51,"Rua São Cristóvão, 612",Sala Comercial,-10.9139,-37.052672,Alugado
+CNEFE-2800308-5-52,"Rua São Cristóvão, 624",Residencial,-10.9137,-37.052744,Alugado
+CNEFE-2800308-5-53,"Rua São Cristóvão, 636",Residencial,-10.9139,-37.052816,Alugado
+CNEFE-2800308-5-54,"Rua São Cristóvão, 648",Loja Térrea,-10.9137,-37.052888,Disponível
+CNEFE-2800308-5-55,"Rua São Cristóvão, 660",Residencial,-10.9139,-37.05296,Alugado
+CNEFE-2800308-5-56,"Rua São Cristóvão, 672",Prédio Misto,-10.9137,-37.053032,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-57,"Rua São Cristóvão, 684",Residencial,-10.9139,-37.053104,Alugado
+CNEFE-2800308-5-58,"Rua São Cristóvão, 696",Residencial,-10.9137,-37.053176,Alugado
+CNEFE-2800308-5-59,"Rua São Cristóvão, 708",Loja Térrea,-10.9139,-37.053247999999996,Alugado
+CNEFE-2800308-5-60,"Rua São Cristóvão, 720",Residencial,-10.9137,-37.05332,Alugado
+CNEFE-2800308-5-61,"Rua São Cristóvão, 732",Galpão,-10.9139,-37.053392,Disponível
+CNEFE-2800308-5-62,"Rua São Cristóvão, 744",Prédio Misto,-10.9137,-37.053464,Alugado
+CNEFE-2800308-5-63,"Rua São Cristóvão, 756",Residencial,-10.9139,-37.053536,Alugado
+CNEFE-2800308-5-64,"Rua São Cristóvão, 768",Sala Comercial,-10.9137,-37.053608,Disponível
+CNEFE-2800308-5-65,"Rua São Cristóvão, 780",Residencial,-10.9139,-37.05368,Alugado
+CNEFE-2800308-5-66,"Rua São Cristóvão, 792",Sala Comercial,-10.9137,-37.053752,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-67,"Rua São Cristóvão, 804",Prédio Misto,-10.9139,-37.053824,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-68,"Rua São Cristóvão, 816",Loja Térrea,-10.9137,-37.053896,Alugado
+CNEFE-2800308-5-69,"Rua São Cristóvão, 828",Residencial,-10.9139,-37.053968,Alugado
+CNEFE-2800308-5-70,"Rua São Cristóvão, 840",Residencial,-10.9137,-37.05404,Alugado
+CNEFE-2800308-5-71,"Rua São Cristóvão, 851",Sala Comercial,-10.9139,-37.054111999999996,Alugado
+CNEFE-2800308-5-72,"Rua São Cristóvão, 863",Loja Térrea,-10.9137,-37.054184,Alugado
+CNEFE-2800308-5-73,"Rua São Cristóvão, 876",Sala Comercial,-10.9139,-37.054256,Alugado
+CNEFE-2800308-5-74,"Rua São Cristóvão, 888",Sala Comercial,-10.9137,-37.054328,Alugado
+CNEFE-2800308-5-75,"Rua São Cristóvão, 900",Loja Térrea,-10.9139,-37.0544,Alugado
+CNEFE-2800308-5-76,"Rua São Cristóvão, 912",Sala Comercial,-10.9137,-37.054472,Alugado
+CNEFE-2800308-5-77,"Rua São Cristóvão, 924",Residencial,-10.9139,-37.054544,Alugado
+CNEFE-2800308-5-78,"Rua São Cristóvão, 936",Residencial,-10.9137,-37.054616,Alugado
+CNEFE-2800308-5-79,"Rua São Cristóvão, 948",Prédio Misto,-10.9139,-37.054688,Alugado
+CNEFE-2800308-5-80,"Rua São Cristóvão, 960",Loja Térrea,-10.9137,-37.05476,Alugado
+CNEFE-2800308-5-81,"Rua São Cristóvão, 972",Residencial,-10.9139,-37.054832,Alugado
+CNEFE-2800308-5-82,"Rua São Cristóvão, 984",Loja Térrea,-10.9137,-37.054904,Alugado
+CNEFE-2800308-5-83,"Rua São Cristóvão, 996",Sala Comercial,-10.9139,-37.054975999999996,Alugado
+CNEFE-2800308-5-84,"Rua São Cristóvão, 1008",Loja Térrea,-10.9137,-37.055048,Alugado
+CNEFE-2800308-5-85,"Rua São Cristóvão, 1020",Residencial,-10.9139,-37.05512,Alugado
+CNEFE-2800308-5-86,"Rua São Cristóvão, 1032",Sala Comercial,-10.9137,-37.055192,Disponível
+CNEFE-2800308-5-87,"Rua São Cristóvão, 1044",Residencial,-10.9139,-37.055264,Alugado
+CNEFE-2800308-5-88,"Rua São Cristóvão, 1056",Residencial,-10.9137,-37.055336,Alugado
+CNEFE-2800308-5-89,"Rua São Cristóvão, 1068",Residencial,-10.9139,-37.055408,Alugado
+CNEFE-2800308-5-90,"Rua São Cristóvão, 1080",Prédio Misto,-10.9137,-37.05548,Disponível
+CNEFE-2800308-5-91,"Rua São Cristóvão, 1092",Residencial,-10.9139,-37.055552,Alugado
+CNEFE-2800308-5-92,"Rua São Cristóvão, 1104",Loja Térrea,-10.9137,-37.055624,Alugado
+CNEFE-2800308-5-93,"Rua São Cristóvão, 1116",Residencial,-10.9139,-37.055696,Alugado
+CNEFE-2800308-5-94,"Rua São Cristóvão, 1128",Residencial,-10.9137,-37.055768,Alugado
+CNEFE-2800308-5-95,"Rua São Cristóvão, 1140",Loja Térrea,-10.9139,-37.055839999999996,Alugado
+CNEFE-2800308-5-96,"Rua São Cristóvão, 1152",Residencial,-10.9137,-37.055912,Alugado
+CNEFE-2800308-5-97,"Rua São Cristóvão, 1164",Residencial,-10.9139,-37.055984,Alugado
+CNEFE-2800308-5-98,"Rua São Cristóvão, 1176",Prédio Misto,-10.9137,-37.056056,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-99,"Rua São Cristóvão, 1188",Sala Comercial,-10.9139,-37.056128,Alugado
+CNEFE-2800308-5-100,"Rua São Cristóvão, 1200",Residencial,-10.9137,-37.0562,Alugado
+CNEFE-2800308-5-101,"Rua São Cristóvão, 1212",Loja Térrea,-10.9139,-37.056272,Alugado
+CNEFE-2800308-5-102,"Rua São Cristóvão, 1224",Loja Térrea,-10.9137,-37.056344,Alugado
+CNEFE-2800308-5-103,"Rua São Cristóvão, 1236",Residencial,-10.9139,-37.056416,Alugado
+CNEFE-2800308-5-104,"Rua São Cristóvão, 1248",Galpão,-10.9137,-37.056488,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-105,"Rua São Cristóvão, 1260",Residencial,-10.9139,-37.05656,Alugado
+CNEFE-2800308-5-106,"Rua São Cristóvão, 1272",Sala Comercial,-10.9137,-37.056632,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-107,"Rua São Cristóvão, 1284",Loja Térrea,-10.9139,-37.056703999999996,Alugado
+CNEFE-2800308-5-108,"Rua São Cristóvão, 1296",Loja Térrea,-10.9137,-37.056776,Alugado
+CNEFE-2800308-5-109,"Rua São Cristóvão, 1308",Sala Comercial,-10.9139,-37.056848,Alugado
+CNEFE-2800308-5-110,"Rua São Cristóvão, 1320",Prédio Misto,-10.9137,-37.05692,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-111,"Rua São Cristóvão, 1332",Loja Térrea,-10.9139,-37.056992,Disponível
+CNEFE-2800308-5-112,"Rua São Cristóvão, 1344",Prédio Misto,-10.9137,-37.057064,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-113,"Rua São Cristóvão, 1356",Residencial,-10.9139,-37.057136,Alugado
+CNEFE-2800308-5-114,"Rua São Cristóvão, 1368",Prédio Misto,-10.9137,-37.057208,Alugado
+CNEFE-2800308-5-115,"Rua São Cristóvão, 1380",Prédio Misto,-10.9139,-37.05728,Disponível
+CNEFE-2800308-5-116,"Rua São Cristóvão, 1392",Residencial,-10.9137,-37.057352,Alugado
+CNEFE-2800308-5-117,"Rua São Cristóvão, 1404",Residencial,-10.9139,-37.057424,Alugado
+CNEFE-2800308-5-118,"Rua São Cristóvão, 1416",Residencial,-10.9137,-37.057496,Alugado
+CNEFE-2800308-5-119,"Rua São Cristóvão, 1428",Galpão,-10.9139,-37.057567999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-120,"Rua São Cristóvão, 1440",Loja Térrea,-10.9137,-37.05764,Disponível
+CNEFE-2800308-5-121,"Rua São Cristóvão, 1452",Residencial,-10.9139,-37.057712,Alugado
+CNEFE-2800308-5-122,"Rua São Cristóvão, 1464",Galpão,-10.9137,-37.057784,Abandonado/IPTU Atrasado
+CNEFE-2800308-5-123,"Rua São Cristóvão, 1476",Residencial,-10.9139,-37.057856,Alugado
+CNEFE-2800308-5-124,"Rua São Cristóvão, 1488",Prédio Misto,-10.9137,-37.057928,Alugado
+CNEFE-2800308-5-125,"Rua São Cristóvão, 1500",Sala Comercial,-10.9139,-37.058,Alugado
+CNEFE-2800308-6-0,"Avenida Rio Branco, 3",Residencial,-10.911,-37.048899999999996,Alugado
+CNEFE-2800308-6-1,"Avenida Rio Branco, 13",Residencial,-10.91107247706422,-37.0491,Alugado
+CNEFE-2800308-6-2,"Avenida Rio Branco, 27",Residencial,-10.91114495412844,-37.048899999999996,Alugado
+CNEFE-2800308-6-3,"Avenida Rio Branco, 41",Residencial,-10.91121743119266,-37.0491,Alugado
+CNEFE-2800308-6-4,"Avenida Rio Branco, 55",Sala Comercial,-10.91128990825688,-37.048899999999996,Disponível
+CNEFE-2800308-6-5,"Avenida Rio Branco, 68",Galpão,-10.9113623853211,-37.0491,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-6,"Avenida Rio Branco, 82",Galpão,-10.91143486238532,-37.048899999999996,Disponível
+CNEFE-2800308-6-7,"Avenida Rio Branco, 96",Prédio Misto,-10.91150733944954,-37.0491,Alugado
+CNEFE-2800308-6-8,"Avenida Rio Branco, 110",Residencial,-10.911579816513761,-37.048899999999996,Alugado
+CNEFE-2800308-6-9,"Avenida Rio Branco, 123",Sala Comercial,-10.911652293577982,-37.0491,Disponível
+CNEFE-2800308-6-10,"Avenida Rio Branco, 137",Galpão,-10.911724770642202,-37.048899999999996,Disponível
+CNEFE-2800308-6-11,"Avenida Rio Branco, 151",Prédio Misto,-10.911797247706422,-37.0491,Alugado
+CNEFE-2800308-6-12,"Avenida Rio Branco, 165",Residencial,-10.911869724770641,-37.048899999999996,Alugado
+CNEFE-2800308-6-13,"Avenida Rio Branco, 178",Loja Térrea,-10.911942201834862,-37.0491,Disponível
+CNEFE-2800308-6-14,"Avenida Rio Branco, 192",Loja Térrea,-10.912014678899082,-37.048899999999996,Alugado
+CNEFE-2800308-6-15,"Avenida Rio Branco, 206",Loja Térrea,-10.912087155963302,-37.0491,Alugado
+CNEFE-2800308-6-16,"Avenida Rio Branco, 220",Galpão,-10.912159633027523,-37.048899999999996,Disponível
+CNEFE-2800308-6-17,"Avenida Rio Branco, 233",Residencial,-10.912232110091743,-37.0491,Alugado
+CNEFE-2800308-6-18,"Avenida Rio Branco, 247",Residencial,-10.912304587155964,-37.048899999999996,Alugado
+CNEFE-2800308-6-19,"Avenida Rio Branco, 261",Loja Térrea,-10.912377064220184,-37.0491,Alugado
+CNEFE-2800308-6-20,"Avenida Rio Branco, 275",Galpão,-10.912449541284403,-37.048899999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-21,"Avenida Rio Branco, 288",Residencial,-10.912522018348623,-37.0491,Alugado
+CNEFE-2800308-6-22,"Avenida Rio Branco, 302",Sala Comercial,-10.912594495412844,-37.048899999999996,Disponível
+CNEFE-2800308-6-23,"Avenida Rio Branco, 316",Sala Comercial,-10.912666972477064,-37.0491,Disponível
+CNEFE-2800308-6-24,"Avenida Rio Branco, 330",Loja Térrea,-10.912739449541284,-37.048899999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-25,"Avenida Rio Branco, 344",Sala Comercial,-10.912811926605505,-37.0491,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-26,"Avenida Rio Branco, 357",Galpão,-10.912884403669725,-37.048899999999996,Disponível
+CNEFE-2800308-6-27,"Avenida Rio Branco, 371",Sala Comercial,-10.912956880733946,-37.0491,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-28,"Avenida Rio Branco, 385",Prédio Misto,-10.913029357798164,-37.048899999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-29,"Avenida Rio Branco, 399",Residencial,-10.913101834862385,-37.0491,Alugado
+CNEFE-2800308-6-30,"Avenida Rio Branco, 412",Loja Térrea,-10.913174311926605,-37.048899999999996,Alugado
+CNEFE-2800308-6-31,"Avenida Rio Branco, 426",Residencial,-10.913246788990826,-37.0491,Alugado
+CNEFE-2800308-6-32,"Avenida Rio Branco, 440",Loja Térrea,-10.913319266055046,-37.048899999999996,Alugado
+CNEFE-2800308-6-33,"Avenida Rio Branco, 454",Sala Comercial,-10.913391743119266,-37.0491,Alugado
+CNEFE-2800308-6-34,"Avenida Rio Branco, 467",Sala Comercial,-10.913464220183487,-37.048899999999996,Alugado
+CNEFE-2800308-6-35,"Avenida Rio Branco, 481",Sala Comercial,-10.913536697247707,-37.0491,Alugado
+CNEFE-2800308-6-36,"Avenida Rio Branco, 495",Sala Comercial,-10.913609174311926,-37.048899999999996,Disponível
+CNEFE-2800308-6-37,"Avenida Rio Branco, 509",Residencial,-10.913681651376146,-37.0491,Alugado
+CNEFE-2800308-6-38,"Avenida Rio Branco, 522",Sala Comercial,-10.913754128440367,-37.048899999999996,Alugado
+CNEFE-2800308-6-39,"Avenida Rio Branco, 536",Loja Térrea,-10.913826605504587,-37.0491,Disponível
+CNEFE-2800308-6-40,"Avenida Rio Branco, 550",Loja Térrea,-10.913899082568808,-37.048899999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-41,"Avenida Rio Branco, 564",Prédio Misto,-10.913971559633028,-37.0491,Alugado
+CNEFE-2800308-6-42,"Avenida Rio Branco, 577",Prédio Misto,-10.914044036697248,-37.048899999999996,Alugado
+CNEFE-2800308-6-43,"Avenida Rio Branco, 591",Loja Térrea,-10.914116513761467,-37.0491,Alugado
+CNEFE-2800308-6-44,"Avenida Rio Branco, 605",Galpão,-10.914188990825687,-37.048899999999996,Disponível
+CNEFE-2800308-6-45,"Avenida Rio Branco, 619",Residencial,-10.914261467889908,-37.0491,Alugado
+CNEFE-2800308-6-46,"Avenida Rio Branco, 633",Residencial,-10.914333944954128,-37.048899999999996,Alugado
+CNEFE-2800308-6-47,"Avenida Rio Branco, 646",Residencial,-10.914406422018349,-37.0491,Alugado
+CNEFE-2800308-6-48,"Avenida Rio Branco, 660",Residencial,-10.91447889908257,-37.048899999999996,Alugado
+CNEFE-2800308-6-49,"Avenida Rio Branco, 674",Sala Comercial,-10.91455137614679,-37.0491,Alugado
+CNEFE-2800308-6-50,"Avenida Rio Branco, 688",Residencial,-10.91462385321101,-37.048899999999996,Alugado
+CNEFE-2800308-6-51,"Avenida Rio Branco, 701",Residencial,-10.914696330275229,-37.0491,Alugado
+CNEFE-2800308-6-52,"Avenida Rio Branco, 715",Loja Térrea,-10.914768807339449,-37.048899999999996,Alugado
+CNEFE-2800308-6-53,"Avenida Rio Branco, 729",Residencial,-10.91484128440367,-37.0491,Alugado
+CNEFE-2800308-6-54,"Avenida Rio Branco, 743",Residencial,-10.91491376146789,-37.048899999999996,Alugado
+CNEFE-2800308-6-55,"Avenida Rio Branco, 756",Residencial,-10.91498623853211,-37.0491,Alugado
+CNEFE-2800308-6-56,"Avenida Rio Branco, 770",Residencial,-10.91505871559633,-37.048899999999996,Alugado
+CNEFE-2800308-6-57,"Avenida Rio Branco, 784",Residencial,-10.915131192660551,-37.0491,Alugado
+CNEFE-2800308-6-58,"Avenida Rio Branco, 798",Residencial,-10.915203669724772,-37.048899999999996,Alugado
+CNEFE-2800308-6-59,"Avenida Rio Branco, 811",Residencial,-10.91527614678899,-37.0491,Alugado
+CNEFE-2800308-6-60,"Avenida Rio Branco, 825",Loja Térrea,-10.91534862385321,-37.048899999999996,Alugado
+CNEFE-2800308-6-61,"Avenida Rio Branco, 839",Residencial,-10.915421100917431,-37.0491,Alugado
+CNEFE-2800308-6-62,"Avenida Rio Branco, 853",Residencial,-10.915493577981652,-37.048899999999996,Alugado
+CNEFE-2800308-6-63,"Avenida Rio Branco, 866",Galpão,-10.915566055045872,-37.0491,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-64,"Avenida Rio Branco, 880",Residencial,-10.915638532110092,-37.048899999999996,Alugado
+CNEFE-2800308-6-65,"Avenida Rio Branco, 894",Sala Comercial,-10.915711009174313,-37.0491,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-66,"Avenida Rio Branco, 908",Galpão,-10.915783486238533,-37.048899999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-67,"Avenida Rio Branco, 922",Loja Térrea,-10.915855963302752,-37.0491,Disponível
+CNEFE-2800308-6-68,"Avenida Rio Branco, 935",Residencial,-10.915928440366972,-37.048899999999996,Alugado
+CNEFE-2800308-6-69,"Avenida Rio Branco, 949",Loja Térrea,-10.916000917431193,-37.0491,Disponível
+CNEFE-2800308-6-70,"Avenida Rio Branco, 963",Loja Térrea,-10.916073394495413,-37.048899999999996,Alugado
+CNEFE-2800308-6-71,"Avenida Rio Branco, 977",Residencial,-10.916145871559634,-37.0491,Alugado
+CNEFE-2800308-6-72,"Avenida Rio Branco, 990",Residencial,-10.916218348623854,-37.048899999999996,Alugado
+CNEFE-2800308-6-73,"Avenida Rio Branco, 1004",Residencial,-10.916290825688074,-37.0491,Alugado
+CNEFE-2800308-6-74,"Avenida Rio Branco, 1018",Galpão,-10.916363302752293,-37.048899999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-75,"Avenida Rio Branco, 1032",Prédio Misto,-10.916435779816513,-37.0491,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-76,"Avenida Rio Branco, 1045",Sala Comercial,-10.916508256880734,-37.048899999999996,Alugado
+CNEFE-2800308-6-77,"Avenida Rio Branco, 1059",Sala Comercial,-10.916580733944954,-37.0491,Alugado
+CNEFE-2800308-6-78,"Avenida Rio Branco, 1073",Prédio Misto,-10.916653211009175,-37.048899999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-79,"Avenida Rio Branco, 1087",Sala Comercial,-10.916725688073395,-37.0491,Alugado
+CNEFE-2800308-6-80,"Avenida Rio Branco, 1100",Residencial,-10.916798165137616,-37.048899999999996,Alugado
+CNEFE-2800308-6-81,"Avenida Rio Branco, 1114",Loja Térrea,-10.916870642201836,-37.0491,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-82,"Avenida Rio Branco, 1128",Sala Comercial,-10.916943119266055,-37.048899999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-83,"Avenida Rio Branco, 1142",Residencial,-10.917015596330275,-37.0491,Alugado
+CNEFE-2800308-6-84,"Avenida Rio Branco, 1155",Residencial,-10.917088073394495,-37.048899999999996,Alugado
+CNEFE-2800308-6-85,"Avenida Rio Branco, 1169",Loja Térrea,-10.917160550458716,-37.0491,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-86,"Avenida Rio Branco, 1183",Residencial,-10.917233027522936,-37.048899999999996,Alugado
+CNEFE-2800308-6-87,"Avenida Rio Branco, 1197",Residencial,-10.917305504587157,-37.0491,Alugado
+CNEFE-2800308-6-88,"Avenida Rio Branco, 1211",Galpão,-10.917377981651377,-37.048899999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-89,"Avenida Rio Branco, 1224",Residencial,-10.917450458715598,-37.0491,Alugado
+CNEFE-2800308-6-90,"Avenida Rio Branco, 1238",Residencial,-10.917522935779816,-37.048899999999996,Alugado
+CNEFE-2800308-6-91,"Avenida Rio Branco, 1252",Residencial,-10.917595412844037,-37.0491,Alugado
+CNEFE-2800308-6-92,"Avenida Rio Branco, 1266",Prédio Misto,-10.917667889908257,-37.048899999999996,Alugado
+CNEFE-2800308-6-93,"Avenida Rio Branco, 1279",Galpão,-10.917740366972478,-37.0491,Disponível
+CNEFE-2800308-6-94,"Avenida Rio Branco, 1293",Loja Térrea,-10.917812844036698,-37.048899999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-95,"Avenida Rio Branco, 1307",Prédio Misto,-10.917885321100918,-37.0491,Alugado
+CNEFE-2800308-6-96,"Avenida Rio Branco, 1321",Prédio Misto,-10.917957798165139,-37.048899999999996,Alugado
+CNEFE-2800308-6-97,"Avenida Rio Branco, 1334",Loja Térrea,-10.91803027522936,-37.0491,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-98,"Avenida Rio Branco, 1348",Loja Térrea,-10.918102752293578,-37.048899999999996,Alugado
+CNEFE-2800308-6-99,"Avenida Rio Branco, 1362",Residencial,-10.918175229357798,-37.0491,Alugado
+CNEFE-2800308-6-100,"Avenida Rio Branco, 1376",Residencial,-10.918247706422019,-37.048899999999996,Alugado
+CNEFE-2800308-6-101,"Avenida Rio Branco, 1389",Residencial,-10.91832018348624,-37.0491,Alugado
+CNEFE-2800308-6-102,"Avenida Rio Branco, 1403",Galpão,-10.91839266055046,-37.048899999999996,Disponível
+CNEFE-2800308-6-103,"Avenida Rio Branco, 1417",Sala Comercial,-10.91846513761468,-37.0491,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-104,"Avenida Rio Branco, 1431",Galpão,-10.9185376146789,-37.048899999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-6-105,"Avenida Rio Branco, 1444",Prédio Misto,-10.91861009174312,-37.0491,Alugado
+CNEFE-2800308-6-106,"Avenida Rio Branco, 1458",Residencial,-10.91868256880734,-37.048899999999996,Alugado
+CNEFE-2800308-6-107,"Avenida Rio Branco, 1472",Sala Comercial,-10.91875504587156,-37.0491,Alugado
+CNEFE-2800308-6-108,"Avenida Rio Branco, 1486",Loja Térrea,-10.91882752293578,-37.048899999999996,Alugado
+CNEFE-2800308-6-109,"Avenida Rio Branco, 1500",Residencial,-10.9189,-37.0491,Alugado
+CNEFE-2800308-7-0,"Rua Capela, 1",Sala Comercial,-10.913,-37.052099999999996,Alugado
+CNEFE-2800308-7-1,"Rua Capela, 18",Residencial,-10.913072839506173,-37.0523,Alugado
+CNEFE-2800308-7-2,"Rua Capela, 37",Prédio Misto,-10.913145679012345,-37.052099999999996,Alugado
+CNEFE-2800308-7-3,"Rua Capela, 55",Residencial,-10.91321851851852,-37.0523,Alugado
+CNEFE-2800308-7-4,"Rua Capela, 74",Prédio Misto,-10.913291358024692,-37.052099999999996,Alugado
+CNEFE-2800308-7-5,"Rua Capela, 92",Prédio Misto,-10.913364197530864,-37.0523,Disponível
+CNEFE-2800308-7-6,"Rua Capela, 111",Prédio Misto,-10.913437037037037,-37.052099999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-7-7,"Rua Capela, 129",Residencial,-10.91350987654321,-37.0523,Alugado
+CNEFE-2800308-7-8,"Rua Capela, 148",Loja Térrea,-10.913582716049383,-37.052099999999996,Alugado
+CNEFE-2800308-7-9,"Rua Capela, 166",Residencial,-10.913655555555556,-37.0523,Alugado
+CNEFE-2800308-7-10,"Rua Capela, 185",Sala Comercial,-10.913728395061728,-37.052099999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-7-11,"Rua Capela, 203",Sala Comercial,-10.913801234567902,-37.0523,Abandonado/IPTU Atrasado
+CNEFE-2800308-7-12,"Rua Capela, 222",Sala Comercial,-10.913874074074075,-37.052099999999996,Alugado
+CNEFE-2800308-7-13,"Rua Capela, 240",Residencial,-10.913946913580247,-37.0523,Alugado
+CNEFE-2800308-7-14,"Rua Capela, 259",Residencial,-10.91401975308642,-37.052099999999996,Alugado
+CNEFE-2800308-7-15,"Rua Capela, 277",Sala Comercial,-10.914092592592594,-37.0523,Alugado
+CNEFE-2800308-7-16,"Rua Capela, 296",Prédio Misto,-10.914165432098766,-37.052099999999996,Alugado
+CNEFE-2800308-7-17,"Rua Capela, 314",Residencial,-10.914238271604939,-37.0523,Alugado
+CNEFE-2800308-7-18,"Rua Capela, 333",Loja Térrea,-10.914311111111111,-37.052099999999996,Alugado
+CNEFE-2800308-7-19,"Rua Capela, 351",Sala Comercial,-10.914383950617284,-37.0523,Disponível
+CNEFE-2800308-7-20,"Rua Capela, 370",Prédio Misto,-10.914456790123458,-37.052099999999996,Disponível
+CNEFE-2800308-7-21,"Rua Capela, 388",Residencial,-10.91452962962963,-37.0523,Alugado
+CNEFE-2800308-7-22,"Rua Capela, 407",Residencial,-10.914602469135803,-37.052099999999996,Alugado
+CNEFE-2800308-7-23,"Rua Capela, 425",Prédio Misto,-10.914675308641975,-37.0523,Alugado
+CNEFE-2800308-7-24,"Rua Capela, 444",Loja Térrea,-10.91474814814815,-37.052099999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-7-25,"Rua Capela, 462",Prédio Misto,-10.914820987654322,-37.0523,Disponível
+CNEFE-2800308-7-26,"Rua Capela, 481",Sala Comercial,-10.914893827160494,-37.052099999999996,Alugado
+CNEFE-2800308-7-27,"Rua Capela, 500",Sala Comercial,-10.914966666666666,-37.0523,Disponível
+CNEFE-2800308-7-28,"Rua Capela, 518",Residencial,-10.91503950617284,-37.052099999999996,Alugado
+CNEFE-2800308-7-29,"Rua Capela, 537",Prédio Misto,-10.915112345679013,-37.0523,Abandonado/IPTU Atrasado
+CNEFE-2800308-7-30,"Rua Capela, 555",Prédio Misto,-10.915185185185186,-37.052099999999996,Alugado
+CNEFE-2800308-7-31,"Rua Capela, 574",Residencial,-10.915258024691358,-37.0523,Alugado
+CNEFE-2800308-7-32,"Rua Capela, 592",Residencial,-10.915330864197532,-37.052099999999996,Alugado
+CNEFE-2800308-7-33,"Rua Capela, 611",Prédio Misto,-10.915403703703705,-37.0523,Disponível
+CNEFE-2800308-7-34,"Rua Capela, 629",Loja Térrea,-10.915476543209877,-37.052099999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-7-35,"Rua Capela, 648",Galpão,-10.91554938271605,-37.0523,Disponível
+CNEFE-2800308-7-36,"Rua Capela, 666",Prédio Misto,-10.915622222222222,-37.052099999999996,Alugado
+CNEFE-2800308-7-37,"Rua Capela, 685",Residencial,-10.915695061728396,-37.0523,Alugado
+CNEFE-2800308-7-38,"Rua Capela, 703",Loja Térrea,-10.915767901234569,-37.052099999999996,Alugado
+CNEFE-2800308-7-39,"Rua Capela, 722",Sala Comercial,-10.915840740740741,-37.0523,Disponível
+CNEFE-2800308-7-40,"Rua Capela, 740",Residencial,-10.915913580246913,-37.052099999999996,Alugado
+CNEFE-2800308-7-41,"Rua Capela, 759",Sala Comercial,-10.915986419753088,-37.0523,Abandonado/IPTU Atrasado
+CNEFE-2800308-7-42,"Rua Capela, 777",Residencial,-10.91605925925926,-37.052099999999996,Alugado
+CNEFE-2800308-7-43,"Rua Capela, 796",Prédio Misto,-10.916132098765432,-37.0523,Alugado
+CNEFE-2800308-7-44,"Rua Capela, 814",Sala Comercial,-10.916204938271605,-37.052099999999996,Disponível
+CNEFE-2800308-7-45,"Rua Capela, 833",Loja Térrea,-10.916277777777779,-37.0523,Abandonado/IPTU Atrasado
+CNEFE-2800308-7-46,"Rua Capela, 851",Sala Comercial,-10.916350617283952,-37.052099999999996,Alugado
+CNEFE-2800308-7-47,"Rua Capela, 870",Residencial,-10.916423456790124,-37.0523,Alugado
+CNEFE-2800308-7-48,"Rua Capela, 888",Residencial,-10.916496296296296,-37.052099999999996,Alugado
+CNEFE-2800308-7-49,"Rua Capela, 907",Sala Comercial,-10.916569135802469,-37.0523,Alugado
+CNEFE-2800308-7-50,"Rua Capela, 925",Loja Térrea,-10.916641975308643,-37.052099999999996,Alugado
+CNEFE-2800308-7-51,"Rua Capela, 944",Residencial,-10.916714814814815,-37.0523,Alugado
+CNEFE-2800308-7-52,"Rua Capela, 962",Residencial,-10.916787654320988,-37.052099999999996,Alugado
+CNEFE-2800308-7-53,"Rua Capela, 981",Loja Térrea,-10.91686049382716,-37.0523,Abandonado/IPTU Atrasado
+CNEFE-2800308-7-54,"Rua Capela, 1000",Residencial,-10.916933333333334,-37.052099999999996,Alugado
+CNEFE-2800308-7-55,"Rua Capela, 1018",Prédio Misto,-10.917006172839507,-37.0523,Alugado
+CNEFE-2800308-7-56,"Rua Capela, 1037",Residencial,-10.91707901234568,-37.052099999999996,Alugado
+CNEFE-2800308-7-57,"Rua Capela, 1055",Prédio Misto,-10.917151851851852,-37.0523,Disponível
+CNEFE-2800308-7-58,"Rua Capela, 1074",Prédio Misto,-10.917224691358026,-37.052099999999996,Alugado
+CNEFE-2800308-7-59,"Rua Capela, 1092",Residencial,-10.917297530864198,-37.0523,Alugado
+CNEFE-2800308-7-60,"Rua Capela, 1111",Sala Comercial,-10.91737037037037,-37.052099999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-7-61,"Rua Capela, 1129",Loja Térrea,-10.917443209876543,-37.0523,Alugado
+CNEFE-2800308-7-62,"Rua Capela, 1148",Prédio Misto,-10.917516049382717,-37.052099999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-7-63,"Rua Capela, 1166",Galpão,-10.91758888888889,-37.0523,Abandonado/IPTU Atrasado
+CNEFE-2800308-7-64,"Rua Capela, 1185",Sala Comercial,-10.917661728395062,-37.052099999999996,Disponível
+CNEFE-2800308-7-65,"Rua Capela, 1203",Residencial,-10.917734567901235,-37.0523,Alugado
+CNEFE-2800308-7-66,"Rua Capela, 1222",Prédio Misto,-10.917807407407407,-37.052099999999996,Disponível
+CNEFE-2800308-7-67,"Rua Capela, 1240",Sala Comercial,-10.917880246913581,-37.0523,Alugado
+CNEFE-2800308-7-68,"Rua Capela, 1259",Residencial,-10.917953086419754,-37.052099999999996,Alugado
+CNEFE-2800308-7-69,"Rua Capela, 1277",Prédio Misto,-10.918025925925926,-37.0523,Alugado
+CNEFE-2800308-7-70,"Rua Capela, 1296",Residencial,-10.918098765432099,-37.052099999999996,Alugado
+CNEFE-2800308-7-71,"Rua Capela, 1314",Residencial,-10.918171604938273,-37.0523,Alugado
+CNEFE-2800308-7-72,"Rua Capela, 1333",Prédio Misto,-10.918244444444445,-37.052099999999996,Alugado
+CNEFE-2800308-7-73,"Rua Capela, 1351",Loja Térrea,-10.918317283950618,-37.0523,Alugado
+CNEFE-2800308-7-74,"Rua Capela, 1370",Sala Comercial,-10.91839012345679,-37.052099999999996,Alugado
+CNEFE-2800308-7-75,"Rua Capela, 1388",Residencial,-10.918462962962964,-37.0523,Alugado
+CNEFE-2800308-7-76,"Rua Capela, 1407",Residencial,-10.918535802469137,-37.052099999999996,Alugado
+CNEFE-2800308-7-77,"Rua Capela, 1425",Loja Térrea,-10.91860864197531,-37.0523,Abandonado/IPTU Atrasado
+CNEFE-2800308-7-78,"Rua Capela, 1444",Galpão,-10.918681481481482,-37.052099999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-7-79,"Rua Capela, 1462",Residencial,-10.918754320987656,-37.0523,Alugado
+CNEFE-2800308-7-80,"Rua Capela, 1481",Loja Térrea,-10.918827160493828,-37.052099999999996,Alugado
+CNEFE-2800308-7-81,"Rua Capela, 1500",Residencial,-10.9189,-37.0523,Alugado
+CNEFE-2800308-8-0,"Rua Propriá, 7",Prédio Misto,-10.9164,-37.05,Abandonado/IPTU Atrasado
+CNEFE-2800308-8-1,"Rua Propriá, 15",Loja Térrea,-10.916599999999999,-37.05007216494845,Alugado
+CNEFE-2800308-8-2,"Rua Propriá, 30",Residencial,-10.9164,-37.0501443298969,Alugado
+CNEFE-2800308-8-3,"Rua Propriá, 46",Prédio Misto,-10.916599999999999,-37.05021649484536,Abandonado/IPTU Atrasado
+CNEFE-2800308-8-4,"Rua Propriá, 61",Prédio Misto,-10.9164,-37.050288659793814,Disponível
+CNEFE-2800308-8-5,"Rua Propriá, 77",Prédio Misto,-10.916599999999999,-37.05036082474226,Alugado
+CNEFE-2800308-8-6,"Rua Propriá, 92",Sala Comercial,-10.9164,-37.05043298969072,Alugado
+CNEFE-2800308-8-7,"Rua Propriá, 108",Prédio Misto,-10.916599999999999,-37.050505154639175,Alugado
+CNEFE-2800308-8-8,"Rua Propriá, 123",Residencial,-10.9164,-37.050577319587624,Alugado
+CNEFE-2800308-8-9,"Rua Propriá, 139",Loja Térrea,-10.916599999999999,-37.05064948453608,Disponível
+CNEFE-2800308-8-10,"Rua Propriá, 154",Residencial,-10.9164,-37.05072164948454,Alugado
+CNEFE-2800308-8-11,"Rua Propriá, 170",Prédio Misto,-10.916599999999999,-37.050793814432986,Alugado
+CNEFE-2800308-8-12,"Rua Propriá, 185",Residencial,-10.9164,-37.05086597938144,Alugado
+CNEFE-2800308-8-13,"Rua Propriá, 201",Galpão,-10.916599999999999,-37.0509381443299,Disponível
+CNEFE-2800308-8-14,"Rua Propriá, 216",Loja Térrea,-10.9164,-37.05101030927835,Alugado
+CNEFE-2800308-8-15,"Rua Propriá, 231",Residencial,-10.916599999999999,-37.0510824742268,Alugado
+CNEFE-2800308-8-16,"Rua Propriá, 247",Prédio Misto,-10.9164,-37.05115463917526,Alugado
+CNEFE-2800308-8-17,"Rua Propriá, 262",Residencial,-10.916599999999999,-37.05122680412371,Alugado
+CNEFE-2800308-8-18,"Rua Propriá, 278",Prédio Misto,-10.9164,-37.051298969072164,Disponível
+CNEFE-2800308-8-19,"Rua Propriá, 293",Residencial,-10.916599999999999,-37.05137113402062,Alugado
+CNEFE-2800308-8-20,"Rua Propriá, 309",Residencial,-10.9164,-37.05144329896907,Alugado
+CNEFE-2800308-8-21,"Rua Propriá, 324",Loja Térrea,-10.916599999999999,-37.051515463917525,Alugado
+CNEFE-2800308-8-22,"Rua Propriá, 340",Loja Térrea,-10.9164,-37.05158762886598,Alugado
+CNEFE-2800308-8-23,"Rua Propriá, 355",Residencial,-10.916599999999999,-37.05165979381443,Alugado
+CNEFE-2800308-8-24,"Rua Propriá, 371",Prédio Misto,-10.9164,-37.051731958762886,Alugado
+CNEFE-2800308-8-25,"Rua Propriá, 386",Prédio Misto,-10.916599999999999,-37.051804123711335,Disponível
+CNEFE-2800308-8-26,"Rua Propriá, 402",Residencial,-10.9164,-37.05187628865979,Alugado
+CNEFE-2800308-8-27,"Rua Propriá, 417",Sala Comercial,-10.916599999999999,-37.05194845360825,Abandonado/IPTU Atrasado
+CNEFE-2800308-8-28,"Rua Propriá, 432",Residencial,-10.9164,-37.052020618556696,Alugado
+CNEFE-2800308-8-29,"Rua Propriá, 448",Residencial,-10.916599999999999,-37.05209278350515,Alugado
+CNEFE-2800308-8-30,"Rua Propriá, 463",Residencial,-10.9164,-37.05216494845361,Alugado
+CNEFE-2800308-8-31,"Rua Propriá, 479",Sala Comercial,-10.916599999999999,-37.05223711340206,Disponível
+CNEFE-2800308-8-32,"Rua Propriá, 494",Loja Térrea,-10.9164,-37.05230927835051,Disponível
+CNEFE-2800308-8-33,"Rua Propriá, 510",Sala Comercial,-10.916599999999999,-37.05238144329897,Abandonado/IPTU Atrasado
+CNEFE-2800308-8-34,"Rua Propriá, 525",Residencial,-10.9164,-37.05245360824742,Alugado
+CNEFE-2800308-8-35,"Rua Propriá, 541",Residencial,-10.916599999999999,-37.052525773195875,Alugado
+CNEFE-2800308-8-36,"Rua Propriá, 556",Residencial,-10.9164,-37.05259793814433,Alugado
+CNEFE-2800308-8-37,"Rua Propriá, 572",Residencial,-10.916599999999999,-37.05267010309278,Alugado
+CNEFE-2800308-8-38,"Rua Propriá, 587",Prédio Misto,-10.9164,-37.052742268041236,Alugado
+CNEFE-2800308-8-39,"Rua Propriá, 603",Residencial,-10.916599999999999,-37.05281443298969,Alugado
+CNEFE-2800308-8-40,"Rua Propriá, 618",Loja Térrea,-10.9164,-37.05288659793814,Alugado
+CNEFE-2800308-8-41,"Rua Propriá, 634",Residencial,-10.916599999999999,-37.0529587628866,Alugado
+CNEFE-2800308-8-42,"Rua Propriá, 649",Prédio Misto,-10.9164,-37.05303092783505,Alugado
+CNEFE-2800308-8-43,"Rua Propriá, 664",Sala Comercial,-10.916599999999999,-37.0531030927835,Alugado
+CNEFE-2800308-8-44,"Rua Propriá, 680",Galpão,-10.9164,-37.05317525773196,Abandonado/IPTU Atrasado
+CNEFE-2800308-8-45,"Rua Propriá, 695",Sala Comercial,-10.916599999999999,-37.053247422680414,Alugado
+CNEFE-2800308-8-46,"Rua Propriá, 711",Sala Comercial,-10.9164,-37.05331958762886,Disponível
+CNEFE-2800308-8-47,"Rua Propriá, 726",Residencial,-10.916599999999999,-37.05339175257732,Alugado
+CNEFE-2800308-8-48,"Rua Propriá, 742",Residencial,-10.9164,-37.053463917525775,Alugado
+CNEFE-2800308-8-49,"Rua Propriá, 757",Residencial,-10.916599999999999,-37.053536082474224,Alugado
+CNEFE-2800308-8-50,"Rua Propriá, 773",Prédio Misto,-10.9164,-37.05360824742268,Disponível
+CNEFE-2800308-8-51,"Rua Propriá, 788",Residencial,-10.916599999999999,-37.053680412371136,Alugado
+CNEFE-2800308-8-52,"Rua Propriá, 804",Residencial,-10.9164,-37.053752577319585,Alugado
+CNEFE-2800308-8-53,"Rua Propriá, 819",Loja Térrea,-10.916599999999999,-37.05382474226804,Alugado
+CNEFE-2800308-8-54,"Rua Propriá, 835",Prédio Misto,-10.9164,-37.0538969072165,Alugado
+CNEFE-2800308-8-55,"Rua Propriá, 850",Sala Comercial,-10.916599999999999,-37.053969072164946,Abandonado/IPTU Atrasado
+CNEFE-2800308-8-56,"Rua Propriá, 865",Prédio Misto,-10.9164,-37.0540412371134,Alugado
+CNEFE-2800308-8-57,"Rua Propriá, 881",Sala Comercial,-10.916599999999999,-37.05411340206186,Alugado
+CNEFE-2800308-8-58,"Rua Propriá, 896",Residencial,-10.9164,-37.05418556701031,Alugado
+CNEFE-2800308-8-59,"Rua Propriá, 912",Galpão,-10.916599999999999,-37.054257731958764,Abandonado/IPTU Atrasado
+CNEFE-2800308-8-60,"Rua Propriá, 927",Sala Comercial,-10.9164,-37.05432989690722,Abandonado/IPTU Atrasado
+CNEFE-2800308-8-61,"Rua Propriá, 943",Loja Térrea,-10.916599999999999,-37.05440206185567,Alugado
+CNEFE-2800308-8-62,"Rua Propriá, 958",Residencial,-10.9164,-37.054474226804125,Alugado
+CNEFE-2800308-8-63,"Rua Propriá, 974",Residencial,-10.916599999999999,-37.05454639175258,Alugado
+CNEFE-2800308-8-64,"Rua Propriá, 989",Sala Comercial,-10.9164,-37.05461855670103,Abandonado/IPTU Atrasado
+CNEFE-2800308-8-65,"Rua Propriá, 1005",Loja Térrea,-10.916599999999999,-37.054690721649486,Disponível
+CNEFE-2800308-8-66,"Rua Propriá, 1020",Loja Térrea,-10.9164,-37.05476288659794,Alugado
+CNEFE-2800308-8-67,"Rua Propriá, 1036",Prédio Misto,-10.916599999999999,-37.05483505154639,Alugado
+CNEFE-2800308-8-68,"Rua Propriá, 1051",Prédio Misto,-10.9164,-37.05490721649485,Abandonado/IPTU Atrasado
+CNEFE-2800308-8-69,"Rua Propriá, 1067",Sala Comercial,-10.916599999999999,-37.0549793814433,Alugado
+CNEFE-2800308-8-70,"Rua Propriá, 1082",Prédio Misto,-10.9164,-37.05505154639175,Alugado
+CNEFE-2800308-8-71,"Rua Propriá, 1097",Residencial,-10.916599999999999,-37.05512371134021,Alugado
+CNEFE-2800308-8-72,"Rua Propriá, 1113",Residencial,-10.9164,-37.055195876288664,Alugado
+CNEFE-2800308-8-73,"Rua Propriá, 1128",Residencial,-10.916599999999999,-37.05526804123711,Alugado
+CNEFE-2800308-8-74,"Rua Propriá, 1144",Residencial,-10.9164,-37.05534020618557,Alugado
+CNEFE-2800308-8-75,"Rua Propriá, 1159",Loja Térrea,-10.916599999999999,-37.05541237113402,Alugado
+CNEFE-2800308-8-76,"Rua Propriá, 1175",Residencial,-10.9164,-37.055484536082474,Alugado
+CNEFE-2800308-8-77,"Rua Propriá, 1190",Residencial,-10.916599999999999,-37.05555670103093,Alugado
+CNEFE-2800308-8-78,"Rua Propriá, 1206",Residencial,-10.9164,-37.05562886597938,Alugado
+CNEFE-2800308-8-79,"Rua Propriá, 1221",Residencial,-10.916599999999999,-37.055701030927835,Alugado
+CNEFE-2800308-8-80,"Rua Propriá, 1237",Prédio Misto,-10.9164,-37.05577319587629,Disponível
+CNEFE-2800308-8-81,"Rua Propriá, 1252",Loja Térrea,-10.916599999999999,-37.05584536082474,Alugado
+CNEFE-2800308-8-82,"Rua Propriá, 1268",Prédio Misto,-10.9164,-37.0559175257732,Alugado
+CNEFE-2800308-8-83,"Rua Propriá, 1283",Residencial,-10.916599999999999,-37.05598969072165,Alugado
+CNEFE-2800308-8-84,"Rua Propriá, 1298",Residencial,-10.9164,-37.0560618556701,Alugado
+CNEFE-2800308-8-85,"Rua Propriá, 1314",Residencial,-10.916599999999999,-37.05613402061856,Alugado
+CNEFE-2800308-8-86,"Rua Propriá, 1329",Residencial,-10.9164,-37.056206185567014,Alugado
+CNEFE-2800308-8-87,"Rua Propriá, 1345",Sala Comercial,-10.916599999999999,-37.05627835051546,Alugado
+CNEFE-2800308-8-88,"Rua Propriá, 1360",Prédio Misto,-10.9164,-37.05635051546392,Disponível
+CNEFE-2800308-8-89,"Rua Propriá, 1376",Galpão,-10.916599999999999,-37.056422680412375,Disponível
+CNEFE-2800308-8-90,"Rua Propriá, 1391",Residencial,-10.9164,-37.056494845360824,Alugado
+CNEFE-2800308-8-91,"Rua Propriá, 1407",Residencial,-10.916599999999999,-37.05656701030928,Alugado
+CNEFE-2800308-8-92,"Rua Propriá, 1422",Sala Comercial,-10.9164,-37.056639175257736,Alugado
+CNEFE-2800308-8-93,"Rua Propriá, 1438",Galpão,-10.916599999999999,-37.056711340206185,Disponível
+CNEFE-2800308-8-94,"Rua Propriá, 1453",Galpão,-10.9164,-37.05678350515464,Abandonado/IPTU Atrasado
+CNEFE-2800308-8-95,"Rua Propriá, 1469",Residencial,-10.916599999999999,-37.0568556701031,Alugado
+CNEFE-2800308-8-96,"Rua Propriá, 1484",Loja Térrea,-10.9164,-37.056927835051546,Alugado
+CNEFE-2800308-8-97,"Rua Propriá, 1500",Residencial,-10.916599999999999,-37.057,Alugado
+CNEFE-2800308-9-0,"Rua Santo Amaro, 3",Prédio Misto,-10.9169,-37.05,Disponível
+CNEFE-2800308-9-1,"Rua Santo Amaro, 18",Loja Térrea,-10.9171,-37.050072289156624,Abandonado/IPTU Atrasado
+CNEFE-2800308-9-2,"Rua Santo Amaro, 36",Prédio Misto,-10.9169,-37.05014457831325,Alugado
+CNEFE-2800308-9-3,"Rua Santo Amaro, 54",Prédio Misto,-10.9171,-37.05021686746988,Disponível
+CNEFE-2800308-9-4,"Rua Santo Amaro, 72",Residencial,-10.9169,-37.050289156626505,Alugado
+CNEFE-2800308-9-5,"Rua Santo Amaro, 90",Residencial,-10.9171,-37.05036144578313,Alugado
+CNEFE-2800308-9-6,"Rua Santo Amaro, 108",Loja Térrea,-10.9169,-37.05043373493976,Alugado
+CNEFE-2800308-9-7,"Rua Santo Amaro, 126",Galpão,-10.9171,-37.050506024096386,Abandonado/IPTU Atrasado
+CNEFE-2800308-9-8,"Rua Santo Amaro, 144",Loja Térrea,-10.9169,-37.05057831325301,Alugado
+CNEFE-2800308-9-9,"Rua Santo Amaro, 162",Sala Comercial,-10.9171,-37.05065060240963,Abandonado/IPTU Atrasado
+CNEFE-2800308-9-10,"Rua Santo Amaro, 180",Prédio Misto,-10.9169,-37.05072289156626,Alugado
+CNEFE-2800308-9-11,"Rua Santo Amaro, 198",Prédio Misto,-10.9171,-37.050795180722886,Alugado
+CNEFE-2800308-9-12,"Rua Santo Amaro, 216",Prédio Misto,-10.9169,-37.05086746987951,Alugado
+CNEFE-2800308-9-13,"Rua Santo Amaro, 234",Galpão,-10.9171,-37.05093975903614,Abandonado/IPTU Atrasado
+CNEFE-2800308-9-14,"Rua Santo Amaro, 253",Sala Comercial,-10.9169,-37.05101204819277,Disponível
+CNEFE-2800308-9-15,"Rua Santo Amaro, 271",Residencial,-10.9171,-37.051084337349394,Alugado
+CNEFE-2800308-9-16,"Rua Santo Amaro, 289",Sala Comercial,-10.9169,-37.05115662650602,Disponível
+CNEFE-2800308-9-17,"Rua Santo Amaro, 307",Residencial,-10.9171,-37.05122891566265,Alugado
+CNEFE-2800308-9-18,"Rua Santo Amaro, 325",Loja Térrea,-10.9169,-37.051301204819275,Alugado
+CNEFE-2800308-9-19,"Rua Santo Amaro, 343",Residencial,-10.9171,-37.0513734939759,Alugado
+CNEFE-2800308-9-20,"Rua Santo Amaro, 361",Residencial,-10.9169,-37.05144578313253,Alugado
+CNEFE-2800308-9-21,"Rua Santo Amaro, 379",Loja Térrea,-10.9171,-37.051518072289156,Alugado
+CNEFE-2800308-9-22,"Rua Santo Amaro, 397",Residencial,-10.9169,-37.05159036144578,Alugado
+CNEFE-2800308-9-23,"Rua Santo Amaro, 415",Residencial,-10.9171,-37.05166265060241,Alugado
+CNEFE-2800308-9-24,"Rua Santo Amaro, 433",Sala Comercial,-10.9169,-37.05173493975904,Alugado
+CNEFE-2800308-9-25,"Rua Santo Amaro, 451",Residencial,-10.9171,-37.051807228915656,Alugado
+CNEFE-2800308-9-26,"Rua Santo Amaro, 469",Residencial,-10.9169,-37.05187951807228,Alugado
+CNEFE-2800308-9-27,"Rua Santo Amaro, 487",Prédio Misto,-10.9171,-37.05195180722891,Alugado
+CNEFE-2800308-9-28,"Rua Santo Amaro, 506",Residencial,-10.9169,-37.05202409638554,Alugado
+CNEFE-2800308-9-29,"Rua Santo Amaro, 524",Prédio Misto,-10.9171,-37.052096385542164,Alugado
+CNEFE-2800308-9-30,"Rua Santo Amaro, 542",Sala Comercial,-10.9169,-37.05216867469879,Disponível
+CNEFE-2800308-9-31,"Rua Santo Amaro, 560",Residencial,-10.9171,-37.05224096385542,Alugado
+CNEFE-2800308-9-32,"Rua Santo Amaro, 578",Residencial,-10.9169,-37.052313253012045,Alugado
+CNEFE-2800308-9-33,"Rua Santo Amaro, 596",Prédio Misto,-10.9171,-37.05238554216867,Alugado
+CNEFE-2800308-9-34,"Rua Santo Amaro, 614",Galpão,-10.9169,-37.0524578313253,Abandonado/IPTU Atrasado
+CNEFE-2800308-9-35,"Rua Santo Amaro, 632",Residencial,-10.9171,-37.052530120481926,Alugado
+CNEFE-2800308-9-36,"Rua Santo Amaro, 650",Sala Comercial,-10.9169,-37.05260240963855,Alugado
+CNEFE-2800308-9-37,"Rua Santo Amaro, 668",Residencial,-10.9171,-37.05267469879518,Alugado
+CNEFE-2800308-9-38,"Rua Santo Amaro, 686",Residencial,-10.9169,-37.05274698795181,Alugado
+CNEFE-2800308-9-39,"Rua Santo Amaro, 704",Loja Térrea,-10.9171,-37.05281927710843,Alugado
+CNEFE-2800308-9-40,"Rua Santo Amaro, 722",Residencial,-10.9169,-37.05289156626506,Alugado
+CNEFE-2800308-9-41,"Rua Santo Amaro, 740",Sala Comercial,-10.9171,-37.05296385542169,Disponível
+CNEFE-2800308-9-42,"Rua Santo Amaro, 759",Residencial,-10.9169,-37.05303614457831,Alugado
+CNEFE-2800308-9-43,"Rua Santo Amaro, 777",Sala Comercial,-10.9171,-37.053108433734934,Alugado
+CNEFE-2800308-9-44,"Rua Santo Amaro, 795",Residencial,-10.9169,-37.05318072289156,Alugado
+CNEFE-2800308-9-45,"Rua Santo Amaro, 813",Residencial,-10.9171,-37.05325301204819,Alugado
+CNEFE-2800308-9-46,"Rua Santo Amaro, 831",Sala Comercial,-10.9169,-37.053325301204815,Alugado
+CNEFE-2800308-9-47,"Rua Santo Amaro, 849",Residencial,-10.9171,-37.05339759036144,Alugado
+CNEFE-2800308-9-48,"Rua Santo Amaro, 867",Sala Comercial,-10.9169,-37.05346987951807,Alugado
+CNEFE-2800308-9-49,"Rua Santo Amaro, 885",Residencial,-10.9171,-37.053542168674696,Alugado
+CNEFE-2800308-9-50,"Rua Santo Amaro, 903",Loja Térrea,-10.9169,-37.05361445783132,Alugado
+CNEFE-2800308-9-51,"Rua Santo Amaro, 921",Loja Térrea,-10.9171,-37.05368674698795,Alugado
+CNEFE-2800308-9-52,"Rua Santo Amaro, 939",Prédio Misto,-10.9169,-37.05375903614458,Alugado
+CNEFE-2800308-9-53,"Rua Santo Amaro, 957",Loja Térrea,-10.9171,-37.0538313253012,Alugado
+CNEFE-2800308-9-54,"Rua Santo Amaro, 975",Sala Comercial,-10.9169,-37.05390361445783,Abandonado/IPTU Atrasado
+CNEFE-2800308-9-55,"Rua Santo Amaro, 993",Residencial,-10.9171,-37.05397590361446,Alugado
+CNEFE-2800308-9-56,"Rua Santo Amaro, 1012",Residencial,-10.9169,-37.054048192771084,Alugado
+CNEFE-2800308-9-57,"Rua Santo Amaro, 1030",Residencial,-10.9171,-37.05412048192771,Alugado
+CNEFE-2800308-9-58,"Rua Santo Amaro, 1048",Loja Térrea,-10.9169,-37.05419277108434,Disponível
+CNEFE-2800308-9-59,"Rua Santo Amaro, 1066",Prédio Misto,-10.9171,-37.05426506024096,Alugado
+CNEFE-2800308-9-60,"Rua Santo Amaro, 1084",Loja Térrea,-10.9169,-37.054337349397585,Disponível
+CNEFE-2800308-9-61,"Rua Santo Amaro, 1102",Prédio Misto,-10.9171,-37.05440963855421,Alugado
+CNEFE-2800308-9-62,"Rua Santo Amaro, 1120",Residencial,-10.9169,-37.05448192771084,Alugado
+CNEFE-2800308-9-63,"Rua Santo Amaro, 1138",Residencial,-10.9171,-37.054554216867466,Alugado
+CNEFE-2800308-9-64,"Rua Santo Amaro, 1156",Residencial,-10.9169,-37.05462650602409,Alugado
+CNEFE-2800308-9-65,"Rua Santo Amaro, 1174",Residencial,-10.9171,-37.05469879518072,Alugado
+CNEFE-2800308-9-66,"Rua Santo Amaro, 1192",Residencial,-10.9169,-37.05477108433735,Alugado
+CNEFE-2800308-9-67,"Rua Santo Amaro, 1210",Residencial,-10.9171,-37.05484337349397,Alugado
+CNEFE-2800308-9-68,"Rua Santo Amaro, 1228",Sala Comercial,-10.9169,-37.0549156626506,Alugado
+CNEFE-2800308-9-69,"Rua Santo Amaro, 1246",Prédio Misto,-10.9171,-37.05498795180723,Alugado
+CNEFE-2800308-9-70,"Rua Santo Amaro, 1265",Galpão,-10.9169,-37.055060240963854,Abandonado/IPTU Atrasado
+CNEFE-2800308-9-71,"Rua Santo Amaro, 1283",Loja Térrea,-10.9171,-37.05513253012048,Alugado
+CNEFE-2800308-9-72,"Rua Santo Amaro, 1301",Loja Térrea,-10.9169,-37.05520481927711,Alugado
+CNEFE-2800308-9-73,"Rua Santo Amaro, 1319",Sala Comercial,-10.9171,-37.055277108433735,Disponível
+CNEFE-2800308-9-74,"Rua Santo Amaro, 1337",Prédio Misto,-10.9169,-37.05534939759036,Disponível
+CNEFE-2800308-9-75,"Rua Santo Amaro, 1355",Prédio Misto,-10.9171,-37.05542168674698,Alugado
+CNEFE-2800308-9-76,"Rua Santo Amaro, 1373",Prédio Misto,-10.9169,-37.05549397590361,Alugado
+CNEFE-2800308-9-77,"Rua Santo Amaro, 1391",Residencial,-10.9171,-37.055566265060236,Alugado
+CNEFE-2800308-9-78,"Rua Santo Amaro, 1409",Galpão,-10.9169,-37.05563855421686,Abandonado/IPTU Atrasado
+CNEFE-2800308-9-79,"Rua Santo Amaro, 1427",Galpão,-10.9171,-37.05571084337349,Abandonado/IPTU Atrasado
+CNEFE-2800308-9-80,"Rua Santo Amaro, 1445",Loja Térrea,-10.9169,-37.05578313253012,Abandonado/IPTU Atrasado
+CNEFE-2800308-9-81,"Rua Santo Amaro, 1463",Prédio Misto,-10.9171,-37.05585542168674,Abandonado/IPTU Atrasado
+CNEFE-2800308-9-82,"Rua Santo Amaro, 1481",Sala Comercial,-10.9169,-37.05592771084337,Abandonado/IPTU Atrasado
+CNEFE-2800308-9-83,"Rua Santo Amaro, 1500",Loja Térrea,-10.9171,-37.056,Alugado
+CNEFE-2800308-10-0,"Praça General Valadão, 8",Sala Comercial,-10.911,-37.0509,Alugado
+CNEFE-2800308-10-1,"Praça General Valadão, 100",Galpão,-10.91108,-37.051100000000005,Abandonado/IPTU Atrasado
+CNEFE-2800308-10-2,"Praça General Valadão, 200",Galpão,-10.911159999999999,-37.0509,Abandonado/IPTU Atrasado
+CNEFE-2800308-10-3,"Praça General Valadão, 300",Residencial,-10.91124,-37.051100000000005,Alugado
+CNEFE-2800308-10-4,"Praça General Valadão, 400",Sala Comercial,-10.91132,-37.0509,Alugado
+CNEFE-2800308-10-5,"Praça General Valadão, 500",Sala Comercial,-10.9114,-37.051100000000005,Alugado
+CNEFE-2800308-10-6,"Praça General Valadão, 600",Sala Comercial,-10.91148,-37.0509,Alugado
+CNEFE-2800308-10-7,"Praça General Valadão, 700",Residencial,-10.91156,-37.051100000000005,Alugado
+CNEFE-2800308-10-8,"Praça General Valadão, 800",Sala Comercial,-10.91164,-37.0509,Alugado
+CNEFE-2800308-10-9,"Praça General Valadão, 900",Residencial,-10.91172,-37.051100000000005,Alugado
+CNEFE-2800308-10-10,"Praça General Valadão, 1000",Loja Térrea,-10.9118,-37.0509,Disponível
+CNEFE-2800308-10-11,"Praça General Valadão, 1100",Residencial,-10.91188,-37.051100000000005,Alugado
+CNEFE-2800308-10-12,"Praça General Valadão, 1200",Loja Térrea,-10.91196,-37.0509,Alugado
+CNEFE-2800308-10-13,"Praça General Valadão, 1300",Residencial,-10.912040000000001,-37.051100000000005,Alugado
+CNEFE-2800308-10-14,"Praça General Valadão, 1400",Residencial,-10.91212,-37.0509,Alugado
+CNEFE-2800308-10-15,"Praça General Valadão, 1500",Residencial,-10.9122,-37.051100000000005,Alugado
+CNEFE-2800308-11-0,"Avenida Barão de Maruim, 1",Sala Comercial,-10.918800000000001,-37.049,Alugado
+CNEFE-2800308-11-1,"Avenida Barão de Maruim, 12",Residencial,-10.919,-37.049072,Alugado
+CNEFE-2800308-11-2,"Avenida Barão de Maruim, 24",Residencial,-10.918800000000001,-37.049144,Alugado
+CNEFE-2800308-11-3,"Avenida Barão de Maruim, 36",Residencial,-10.919,-37.049216,Alugado
+CNEFE-2800308-11-4,"Avenida Barão de Maruim, 48",Prédio Misto,-10.918800000000001,-37.049288,Alugado
+CNEFE-2800308-11-5,"Avenida Barão de Maruim, 60",Residencial,-10.919,-37.04936,Alugado
+CNEFE-2800308-11-6,"Avenida Barão de Maruim, 72",Prédio Misto,-10.918800000000001,-37.049432,Disponível
+CNEFE-2800308-11-7,"Avenida Barão de Maruim, 84",Residencial,-10.919,-37.049504,Alugado
+CNEFE-2800308-11-8,"Avenida Barão de Maruim, 96",Prédio Misto,-10.918800000000001,-37.049576,Disponível
+CNEFE-2800308-11-9,"Avenida Barão de Maruim, 107",Prédio Misto,-10.919,-37.049648,Abandonado/IPTU Atrasado
+CNEFE-2800308-11-10,"Avenida Barão de Maruim, 120",Residencial,-10.918800000000001,-37.04972,Alugado
+CNEFE-2800308-11-11,"Avenida Barão de Maruim, 132",Residencial,-10.919,-37.049792,Alugado
+CNEFE-2800308-11-12,"Avenida Barão de Maruim, 144",Prédio Misto,-10.918800000000001,-37.049864,Alugado
+CNEFE-2800308-11-13,"Avenida Barão de Maruim, 156",Prédio Misto,-10.919,-37.049936,Alugado
+CNEFE-2800308-11-14,"Avenida Barão de Maruim, 168",Loja Térrea,-10.918800000000001,-37.050008,Alugado
+CNEFE-2800308-11-15,"Avenida Barão de Maruim, 180",Residencial,-10.919,-37.05008,Alugado
+CNEFE-2800308-11-16,"Avenida Barão de Maruim, 192",Galpão,-10.918800000000001,-37.050152,Abandonado/IPTU Atrasado
+CNEFE-2800308-11-17,"Avenida Barão de Maruim, 204",Galpão,-10.919,-37.050224,Abandonado/IPTU Atrasado
+CNEFE-2800308-11-18,"Avenida Barão de Maruim, 215",Residencial,-10.918800000000001,-37.050296,Alugado
+CNEFE-2800308-11-19,"Avenida Barão de Maruim, 228",Sala Comercial,-10.919,-37.050368,Alugado
+CNEFE-2800308-11-20,"Avenida Barão de Maruim, 240",Residencial,-10.918800000000001,-37.05044,Alugado
+CNEFE-2800308-11-21,"Avenida Barão de Maruim, 252",Residencial,-10.919,-37.050512,Alugado
+CNEFE-2800308-11-22,"Avenida Barão de Maruim, 264",Residencial,-10.918800000000001,-37.050584,Alugado
+CNEFE-2800308-11-23,"Avenida Barão de Maruim, 276",Prédio Misto,-10.919,-37.050656,Alugado
+CNEFE-2800308-11-24,"Avenida Barão de Maruim, 288",Residencial,-10.918800000000001,-37.050728,Alugado
+CNEFE-2800308-11-25,"Avenida Barão de Maruim, 300",Residencial,-10.919,-37.0508,Alugado
+CNEFE-2800308-11-26,"Avenida Barão de Maruim, 312",Loja Térrea,-10.918800000000001,-37.050872,Abandonado/IPTU Atrasado
+CNEFE-2800308-11-27,"Avenida Barão de Maruim, 324",Residencial,-10.919,-37.050944,Alugado
+CNEFE-2800308-11-28,"Avenida Barão de Maruim, 336",Residencial,-10.918800000000001,-37.051016,Alugado
+CNEFE-2800308-11-29,"Avenida Barão de Maruim, 348",Loja Térrea,-10.919,-37.051088,Disponível
+CNEFE-2800308-11-30,"Avenida Barão de Maruim, 360",Loja Térrea,-10.918800000000001,-37.05116,Alugado
+CNEFE-2800308-11-31,"Avenida Barão de Maruim, 372",Galpão,-10.919,-37.051232,Disponível
+CNEFE-2800308-11-32,"Avenida Barão de Maruim, 384",Sala Comercial,-10.918800000000001,-37.051304,Alugado
+CNEFE-2800308-11-33,"Avenida Barão de Maruim, 396",Residencial,-10.919,-37.051376,Alugado
+CNEFE-2800308-11-34,"Avenida Barão de Maruim, 408",Loja Térrea,-10.918800000000001,-37.051448,Disponível
+CNEFE-2800308-11-35,"Avenida Barão de Maruim, 420",Residencial,-10.919,-37.05152,Alugado
+CNEFE-2800308-11-36,"Avenida Barão de Maruim, 431",Sala Comercial,-10.918800000000001,-37.051592,Alugado
+CNEFE-2800308-11-37,"Avenida Barão de Maruim, 444",Sala Comercial,-10.919,-37.051664,Disponível
+CNEFE-2800308-11-38,"Avenida Barão de Maruim, 456",Residencial,-10.918800000000001,-37.051736,Alugado
+CNEFE-2800308-11-39,"Avenida Barão de Maruim, 468",Residencial,-10.919,-37.051808,Alugado
+CNEFE-2800308-11-40,"Avenida Barão de Maruim, 480",Loja Térrea,-10.918800000000001,-37.05188,Disponível
+CNEFE-2800308-11-41,"Avenida Barão de Maruim, 492",Residencial,-10.919,-37.051952,Alugado
+CNEFE-2800308-11-42,"Avenida Barão de Maruim, 504",Residencial,-10.918800000000001,-37.052024,Alugado
+CNEFE-2800308-11-43,"Avenida Barão de Maruim, 516",Prédio Misto,-10.919,-37.052096,Alugado
+CNEFE-2800308-11-44,"Avenida Barão de Maruim, 528",Sala Comercial,-10.918800000000001,-37.052168,Abandonado/IPTU Atrasado
+CNEFE-2800308-11-45,"Avenida Barão de Maruim, 540",Sala Comercial,-10.919,-37.05224,Alugado
+CNEFE-2800308-11-46,"Avenida Barão de Maruim, 552",Residencial,-10.918800000000001,-37.052312,Alugado
+CNEFE-2800308-11-47,"Avenida Barão de Maruim, 564",Prédio Misto,-10.919,-37.052383999999996,Alugado
+CNEFE-2800308-11-48,"Avenida Barão de Maruim, 576",Residencial,-10.918800000000001,-37.052456,Alugado
+CNEFE-2800308-11-49,"Avenida Barão de Maruim, 588",Galpão,-10.919,-37.052528,Disponível
+CNEFE-2800308-11-50,"Avenida Barão de Maruim, 600",Loja Térrea,-10.918800000000001,-37.0526,Abandonado/IPTU Atrasado
+CNEFE-2800308-11-51,"Avenida Barão de Maruim, 612",Sala Comercial,-10.919,-37.052672,Alugado
+CNEFE-2800308-11-52,"Avenida Barão de Maruim, 624",Prédio Misto,-10.918800000000001,-37.052744,Alugado
+CNEFE-2800308-11-53,"Avenida Barão de Maruim, 636",Galpão,-10.919,-37.052816,Abandonado/IPTU Atrasado
+CNEFE-2800308-11-54,"Avenida Barão de Maruim, 648",Prédio Misto,-10.918800000000001,-37.052888,Disponível
+CNEFE-2800308-11-55,"Avenida Barão de Maruim, 660",Residencial,-10.919,-37.05296,Alugado
+CNEFE-2800308-11-56,"Avenida Barão de Maruim, 672",Galpão,-10.918800000000001,-37.053032,Abandonado/IPTU Atrasado
+CNEFE-2800308-11-57,"Avenida Barão de Maruim, 684",Sala Comercial,-10.919,-37.053104,Alugado
+CNEFE-2800308-11-58,"Avenida Barão de Maruim, 696",Prédio Misto,-10.918800000000001,-37.053176,Alugado
+CNEFE-2800308-11-59,"Avenida Barão de Maruim, 708",Residencial,-10.919,-37.053247999999996,Alugado
+CNEFE-2800308-11-60,"Avenida Barão de Maruim, 720",Galpão,-10.918800000000001,-37.05332,Disponível
+CNEFE-2800308-11-61,"Avenida Barão de Maruim, 732",Residencial,-10.919,-37.053392,Alugado
+CNEFE-2800308-11-62,"Avenida Barão de Maruim, 744",Prédio Misto,-10.918800000000001,-37.053464,Disponível
+CNEFE-2800308-11-63,"Avenida Barão de Maruim, 756",Galpão,-10.919,-37.053536,Disponível
+CNEFE-2800308-11-64,"Avenida Barão de Maruim, 768",Residencial,-10.918800000000001,-37.053608,Alugado
+CNEFE-2800308-11-65,"Avenida Barão de Maruim, 780",Residencial,-10.919,-37.05368,Alugado
+CNEFE-2800308-11-66,"Avenida Barão de Maruim, 792",Loja Térrea,-10.918800000000001,-37.053752,Alugado
+CNEFE-2800308-11-67,"Avenida Barão de Maruim, 804",Sala Comercial,-10.919,-37.053824,Abandonado/IPTU Atrasado
+CNEFE-2800308-11-68,"Avenida Barão de Maruim, 816",Residencial,-10.918800000000001,-37.053896,Alugado
+CNEFE-2800308-11-69,"Avenida Barão de Maruim, 828",Loja Térrea,-10.919,-37.053968,Disponível
+CNEFE-2800308-11-70,"Avenida Barão de Maruim, 840",Prédio Misto,-10.918800000000001,-37.05404,Disponível
+CNEFE-2800308-11-71,"Avenida Barão de Maruim, 851",Sala Comercial,-10.919,-37.054111999999996,Alugado
+CNEFE-2800308-11-72,"Avenida Barão de Maruim, 863",Loja Térrea,-10.918800000000001,-37.054184,Abandonado/IPTU Atrasado
+CNEFE-2800308-11-73,"Avenida Barão de Maruim, 876",Residencial,-10.919,-37.054256,Alugado
+CNEFE-2800308-11-74,"Avenida Barão de Maruim, 888",Residencial,-10.918800000000001,-37.054328,Alugado
+CNEFE-2800308-11-75,"Avenida Barão de Maruim, 900",Residencial,-10.919,-37.0544,Alugado
+CNEFE-2800308-11-76,"Avenida Barão de Maruim, 912",Sala Comercial,-10.918800000000001,-37.054472,Abandonado/IPTU Atrasado
+CNEFE-2800308-11-77,"Avenida Barão de Maruim, 924",Sala Comercial,-10.919,-37.054544,Disponível
+CNEFE-2800308-11-78,"Avenida Barão de Maruim, 936",Sala Comercial,-10.918800000000001,-37.054616,Disponível
+CNEFE-2800308-11-79,"Avenida Barão de Maruim, 948",Sala Comercial,-10.919,-37.054688,Alugado
+CNEFE-2800308-11-80,"Avenida Barão de Maruim, 960",Loja Térrea,-10.918800000000001,-37.05476,Alugado
+CNEFE-2800308-11-81,"Avenida Barão de Maruim, 972",Loja Térrea,-10.919,-37.054832,Disponível
+CNEFE-2800308-11-82,"Avenida Barão de Maruim, 984",Residencial,-10.918800000000001,-37.054904,Alugado
+CNEFE-2800308-11-83,"Avenida Barão de Maruim, 996",Loja Térrea,-10.919,-37.054975999999996,Disponível
+CNEFE-2800308-11-84,"Avenida Barão de Maruim, 1008",Sala Comercial,-10.918800000000001,-37.055048,Alugado
+CNEFE-2800308-11-85,"Avenida Barão de Maruim, 1020",Sala Comercial,-10.919,-37.05512,Alugado
+CNEFE-2800308-11-86,"Avenida Barão de Maruim, 1032",Prédio Misto,-10.918800000000001,-37.055192,Disponível
+CNEFE-2800308-11-87,"Avenida Barão de Maruim, 1044",Residencial,-10.919,-37.055264,Alugado
+CNEFE-2800308-11-88,"Avenida Barão de Maruim, 1056",Residencial,-10.918800000000001,-37.055336,Alugado
+CNEFE-2800308-11-89,"Avenida Barão de Maruim, 1068",Prédio Misto,-10.919,-37.055408,Disponível
+CNEFE-2800308-11-90,"Avenida Barão de Maruim, 1080",Loja Térrea,-10.918800000000001,-37.05548,Alugado
+CNEFE-2800308-11-91,"Avenida Barão de Maruim, 1092",Loja Térrea,-10.919,-37.055552,Alugado
+CNEFE-2800308-11-92,"Avenida Barão de Maruim, 1104",Residencial,-10.918800000000001,-37.055624,Alugado
+CNEFE-2800308-11-93,"Avenida Barão de Maruim, 1116",Residencial,-10.919,-37.055696,Alugado
+CNEFE-2800308-11-94,"Avenida Barão de Maruim, 1128",Residencial,-10.918800000000001,-37.055768,Alugado
+CNEFE-2800308-11-95,"Avenida Barão de Maruim, 1140",Loja Térrea,-10.919,-37.055839999999996,Alugado
+CNEFE-2800308-11-96,"Avenida Barão de Maruim, 1152",Residencial,-10.918800000000001,-37.055912,Alugado
+CNEFE-2800308-11-97,"Avenida Barão de Maruim, 1164",Prédio Misto,-10.919,-37.055984,Abandonado/IPTU Atrasado
+CNEFE-2800308-11-98,"Avenida Barão de Maruim, 1176",Loja Térrea,-10.918800000000001,-37.056056,Disponível
+CNEFE-2800308-11-99,"Avenida Barão de Maruim, 1188",Residencial,-10.919,-37.056128,Alugado
+CNEFE-2800308-11-100,"Avenida Barão de Maruim, 1200",Residencial,-10.918800000000001,-37.0562,Alugado
+CNEFE-2800308-11-101,"Avenida Barão de Maruim, 1212",Residencial,-10.919,-37.056272,Alugado
+CNEFE-2800308-11-102,"Avenida Barão de Maruim, 1224",Residencial,-10.918800000000001,-37.056344,Alugado
+CNEFE-2800308-11-103,"Avenida Barão de Maruim, 1236",Residencial,-10.919,-37.056416,Alugado
+CNEFE-2800308-11-104,"Avenida Barão de Maruim, 1248",Residencial,-10.918800000000001,-37.056488,Alugado
+CNEFE-2800308-11-105,"Avenida Barão de Maruim, 1260",Sala Comercial,-10.919,-37.05656,Alugado
+CNEFE-2800308-11-106,"Avenida Barão de Maruim, 1272",Loja Térrea,-10.918800000000001,-37.056632,Alugado
+CNEFE-2800308-11-107,"Avenida Barão de Maruim, 1284",Prédio Misto,-10.919,-37.056703999999996,Alugado
+CNEFE-2800308-11-108,"Avenida Barão de Maruim, 1296",Sala Comercial,-10.918800000000001,-37.056776,Alugado
+CNEFE-2800308-11-109,"Avenida Barão de Maruim, 1308",Loja Térrea,-10.919,-37.056848,Disponível
+CNEFE-2800308-11-110,"Avenida Barão de Maruim, 1320",Residencial,-10.918800000000001,-37.05692,Alugado
+CNEFE-2800308-11-111,"Avenida Barão de Maruim, 1332",Prédio Misto,-10.919,-37.056992,Abandonado/IPTU Atrasado
+CNEFE-2800308-11-112,"Avenida Barão de Maruim, 1344",Residencial,-10.918800000000001,-37.057064,Alugado
+CNEFE-2800308-11-113,"Avenida Barão de Maruim, 1356",Sala Comercial,-10.919,-37.057136,Alugado
+CNEFE-2800308-11-114,"Avenida Barão de Maruim, 1368",Residencial,-10.918800000000001,-37.057208,Alugado
+CNEFE-2800308-11-115,"Avenida Barão de Maruim, 1380",Residencial,-10.919,-37.05728,Alugado
+CNEFE-2800308-11-116,"Avenida Barão de Maruim, 1392",Prédio Misto,-10.918800000000001,-37.057352,Alugado
+CNEFE-2800308-11-117,"Avenida Barão de Maruim, 1404",Residencial,-10.919,-37.057424,Alugado
+CNEFE-2800308-11-118,"Avenida Barão de Maruim, 1416",Sala Comercial,-10.918800000000001,-37.057496,Abandonado/IPTU Atrasado
+CNEFE-2800308-11-119,"Avenida Barão de Maruim, 1428",Galpão,-10.919,-37.057567999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-11-120,"Avenida Barão de Maruim, 1440",Sala Comercial,-10.918800000000001,-37.05764,Alugado
+CNEFE-2800308-11-121,"Avenida Barão de Maruim, 1452",Prédio Misto,-10.919,-37.057712,Disponível
+CNEFE-2800308-11-122,"Avenida Barão de Maruim, 1464",Prédio Misto,-10.918800000000001,-37.057784,Alugado
+CNEFE-2800308-11-123,"Avenida Barão de Maruim, 1476",Residencial,-10.919,-37.057856,Alugado
+CNEFE-2800308-11-124,"Avenida Barão de Maruim, 1488",Residencial,-10.918800000000001,-37.057928,Alugado
+CNEFE-2800308-11-125,"Avenida Barão de Maruim, 1500",Residencial,-10.919,-37.058,Alugado
+CNEFE-2800308-12-0,"Rua Pacatuba, 1",Prédio Misto,-10.911,-37.050399999999996,Alugado
+CNEFE-2800308-12-1,"Rua Pacatuba, 13",Loja Térrea,-10.91107247706422,-37.0506,Disponível
+CNEFE-2800308-12-2,"Rua Pacatuba, 27",Residencial,-10.91114495412844,-37.050399999999996,Alugado
+CNEFE-2800308-12-3,"Rua Pacatuba, 41",Prédio Misto,-10.91121743119266,-37.0506,Abandonado/IPTU Atrasado
+CNEFE-2800308-12-4,"Rua Pacatuba, 55",Loja Térrea,-10.91128990825688,-37.050399999999996,Alugado
+CNEFE-2800308-12-5,"Rua Pacatuba, 68",Loja Térrea,-10.9113623853211,-37.0506,Disponível
+CNEFE-2800308-12-6,"Rua Pacatuba, 82",Prédio Misto,-10.91143486238532,-37.050399999999996,Disponível
+CNEFE-2800308-12-7,"Rua Pacatuba, 96",Loja Térrea,-10.91150733944954,-37.0506,Disponível
+CNEFE-2800308-12-8,"Rua Pacatuba, 110",Residencial,-10.911579816513761,-37.050399999999996,Alugado
+CNEFE-2800308-12-9,"Rua Pacatuba, 123",Residencial,-10.911652293577982,-37.0506,Alugado
+CNEFE-2800308-12-10,"Rua Pacatuba, 137",Residencial,-10.911724770642202,-37.050399999999996,Alugado
+CNEFE-2800308-12-11,"Rua Pacatuba, 151",Residencial,-10.911797247706422,-37.0506,Alugado
+CNEFE-2800308-12-12,"Rua Pacatuba, 165",Residencial,-10.911869724770641,-37.050399999999996,Alugado
+CNEFE-2800308-12-13,"Rua Pacatuba, 178",Galpão,-10.911942201834862,-37.0506,Abandonado/IPTU Atrasado
+CNEFE-2800308-12-14,"Rua Pacatuba, 192",Residencial,-10.912014678899082,-37.050399999999996,Alugado
+CNEFE-2800308-12-15,"Rua Pacatuba, 206",Residencial,-10.912087155963302,-37.0506,Alugado
+CNEFE-2800308-12-16,"Rua Pacatuba, 220",Residencial,-10.912159633027523,-37.050399999999996,Alugado
+CNEFE-2800308-12-17,"Rua Pacatuba, 233",Residencial,-10.912232110091743,-37.0506,Alugado
+CNEFE-2800308-12-18,"Rua Pacatuba, 247",Residencial,-10.912304587155964,-37.050399999999996,Alugado
+CNEFE-2800308-12-19,"Rua Pacatuba, 261",Residencial,-10.912377064220184,-37.0506,Alugado
+CNEFE-2800308-12-20,"Rua Pacatuba, 275",Prédio Misto,-10.912449541284403,-37.050399999999996,Alugado
+CNEFE-2800308-12-21,"Rua Pacatuba, 288",Prédio Misto,-10.912522018348623,-37.0506,Disponível
+CNEFE-2800308-12-22,"Rua Pacatuba, 302",Residencial,-10.912594495412844,-37.050399999999996,Alugado
+CNEFE-2800308-12-23,"Rua Pacatuba, 316",Residencial,-10.912666972477064,-37.0506,Alugado
+CNEFE-2800308-12-24,"Rua Pacatuba, 330",Sala Comercial,-10.912739449541284,-37.050399999999996,Alugado
+CNEFE-2800308-12-25,"Rua Pacatuba, 344",Galpão,-10.912811926605505,-37.0506,Disponível
+CNEFE-2800308-12-26,"Rua Pacatuba, 357",Loja Térrea,-10.912884403669725,-37.050399999999996,Disponível
+CNEFE-2800308-12-27,"Rua Pacatuba, 371",Residencial,-10.912956880733946,-37.0506,Alugado
+CNEFE-2800308-12-28,"Rua Pacatuba, 385",Residencial,-10.913029357798164,-37.050399999999996,Alugado
+CNEFE-2800308-12-29,"Rua Pacatuba, 399",Sala Comercial,-10.913101834862385,-37.0506,Abandonado/IPTU Atrasado
+CNEFE-2800308-12-30,"Rua Pacatuba, 412",Sala Comercial,-10.913174311926605,-37.050399999999996,Alugado
+CNEFE-2800308-12-31,"Rua Pacatuba, 426",Prédio Misto,-10.913246788990826,-37.0506,Disponível
+CNEFE-2800308-12-32,"Rua Pacatuba, 440",Prédio Misto,-10.913319266055046,-37.050399999999996,Alugado
+CNEFE-2800308-12-33,"Rua Pacatuba, 454",Loja Térrea,-10.913391743119266,-37.0506,Alugado
+CNEFE-2800308-12-34,"Rua Pacatuba, 467",Loja Térrea,-10.913464220183487,-37.050399999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-12-35,"Rua Pacatuba, 481",Galpão,-10.913536697247707,-37.0506,Disponível
+CNEFE-2800308-12-36,"Rua Pacatuba, 495",Residencial,-10.913609174311926,-37.050399999999996,Alugado
+CNEFE-2800308-12-37,"Rua Pacatuba, 509",Sala Comercial,-10.913681651376146,-37.0506,Alugado
+CNEFE-2800308-12-38,"Rua Pacatuba, 522",Sala Comercial,-10.913754128440367,-37.050399999999996,Alugado
+CNEFE-2800308-12-39,"Rua Pacatuba, 536",Loja Térrea,-10.913826605504587,-37.0506,Abandonado/IPTU Atrasado
+CNEFE-2800308-12-40,"Rua Pacatuba, 550",Loja Térrea,-10.913899082568808,-37.050399999999996,Disponível
+CNEFE-2800308-12-41,"Rua Pacatuba, 564",Prédio Misto,-10.913971559633028,-37.0506,Alugado
+CNEFE-2800308-12-42,"Rua Pacatuba, 577",Loja Térrea,-10.914044036697248,-37.050399999999996,Alugado
+CNEFE-2800308-12-43,"Rua Pacatuba, 591",Residencial,-10.914116513761467,-37.0506,Alugado
+CNEFE-2800308-12-44,"Rua Pacatuba, 605",Loja Térrea,-10.914188990825687,-37.050399999999996,Disponível
+CNEFE-2800308-12-45,"Rua Pacatuba, 619",Sala Comercial,-10.914261467889908,-37.0506,Disponível
+CNEFE-2800308-12-46,"Rua Pacatuba, 633",Sala Comercial,-10.914333944954128,-37.050399999999996,Alugado
+CNEFE-2800308-12-47,"Rua Pacatuba, 646",Prédio Misto,-10.914406422018349,-37.0506,Abandonado/IPTU Atrasado
+CNEFE-2800308-12-48,"Rua Pacatuba, 660",Loja Térrea,-10.91447889908257,-37.050399999999996,Alugado
+CNEFE-2800308-12-49,"Rua Pacatuba, 674",Residencial,-10.91455137614679,-37.0506,Alugado
+CNEFE-2800308-12-50,"Rua Pacatuba, 688",Residencial,-10.91462385321101,-37.050399999999996,Alugado
+CNEFE-2800308-12-51,"Rua Pacatuba, 701",Residencial,-10.914696330275229,-37.0506,Alugado
+CNEFE-2800308-12-52,"Rua Pacatuba, 715",Prédio Misto,-10.914768807339449,-37.050399999999996,Alugado
+CNEFE-2800308-12-53,"Rua Pacatuba, 729",Residencial,-10.91484128440367,-37.0506,Alugado
+CNEFE-2800308-12-54,"Rua Pacatuba, 743",Prédio Misto,-10.91491376146789,-37.050399999999996,Alugado
+CNEFE-2800308-12-55,"Rua Pacatuba, 756",Prédio Misto,-10.91498623853211,-37.0506,Disponível
+CNEFE-2800308-12-56,"Rua Pacatuba, 770",Prédio Misto,-10.91505871559633,-37.050399999999996,Alugado
+CNEFE-2800308-12-57,"Rua Pacatuba, 784",Loja Térrea,-10.915131192660551,-37.0506,Alugado
+CNEFE-2800308-12-58,"Rua Pacatuba, 798",Sala Comercial,-10.915203669724772,-37.050399999999996,Disponível
+CNEFE-2800308-12-59,"Rua Pacatuba, 811",Prédio Misto,-10.91527614678899,-37.0506,Alugado
+CNEFE-2800308-12-60,"Rua Pacatuba, 825",Sala Comercial,-10.91534862385321,-37.050399999999996,Alugado
+CNEFE-2800308-12-61,"Rua Pacatuba, 839",Loja Térrea,-10.915421100917431,-37.0506,Alugado
+CNEFE-2800308-12-62,"Rua Pacatuba, 853",Sala Comercial,-10.915493577981652,-37.050399999999996,Disponível
+CNEFE-2800308-12-63,"Rua Pacatuba, 866",Residencial,-10.915566055045872,-37.0506,Alugado
+CNEFE-2800308-12-64,"Rua Pacatuba, 880",Prédio Misto,-10.915638532110092,-37.050399999999996,Alugado
+CNEFE-2800308-12-65,"Rua Pacatuba, 894",Prédio Misto,-10.915711009174313,-37.0506,Alugado
+CNEFE-2800308-12-66,"Rua Pacatuba, 908",Sala Comercial,-10.915783486238533,-37.050399999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-12-67,"Rua Pacatuba, 922",Residencial,-10.915855963302752,-37.0506,Alugado
+CNEFE-2800308-12-68,"Rua Pacatuba, 935",Loja Térrea,-10.915928440366972,-37.050399999999996,Alugado
+CNEFE-2800308-12-69,"Rua Pacatuba, 949",Residencial,-10.916000917431193,-37.0506,Alugado
+CNEFE-2800308-12-70,"Rua Pacatuba, 963",Sala Comercial,-10.916073394495413,-37.050399999999996,Alugado
+CNEFE-2800308-12-71,"Rua Pacatuba, 977",Prédio Misto,-10.916145871559634,-37.0506,Alugado
+CNEFE-2800308-12-72,"Rua Pacatuba, 990",Sala Comercial,-10.916218348623854,-37.050399999999996,Alugado
+CNEFE-2800308-12-73,"Rua Pacatuba, 1004",Galpão,-10.916290825688074,-37.0506,Abandonado/IPTU Atrasado
+CNEFE-2800308-12-74,"Rua Pacatuba, 1018",Loja Térrea,-10.916363302752293,-37.050399999999996,Disponível
+CNEFE-2800308-12-75,"Rua Pacatuba, 1032",Residencial,-10.916435779816513,-37.0506,Alugado
+CNEFE-2800308-12-76,"Rua Pacatuba, 1045",Prédio Misto,-10.916508256880734,-37.050399999999996,Alugado
+CNEFE-2800308-12-77,"Rua Pacatuba, 1059",Residencial,-10.916580733944954,-37.0506,Alugado
+CNEFE-2800308-12-78,"Rua Pacatuba, 1073",Residencial,-10.916653211009175,-37.050399999999996,Alugado
+CNEFE-2800308-12-79,"Rua Pacatuba, 1087",Loja Térrea,-10.916725688073395,-37.0506,Alugado
+CNEFE-2800308-12-80,"Rua Pacatuba, 1100",Prédio Misto,-10.916798165137616,-37.050399999999996,Alugado
+CNEFE-2800308-12-81,"Rua Pacatuba, 1114",Loja Térrea,-10.916870642201836,-37.0506,Alugado
+CNEFE-2800308-12-82,"Rua Pacatuba, 1128",Residencial,-10.916943119266055,-37.050399999999996,Alugado
+CNEFE-2800308-12-83,"Rua Pacatuba, 1142",Galpão,-10.917015596330275,-37.0506,Disponível
+CNEFE-2800308-12-84,"Rua Pacatuba, 1155",Loja Térrea,-10.917088073394495,-37.050399999999996,Alugado
+CNEFE-2800308-12-85,"Rua Pacatuba, 1169",Loja Térrea,-10.917160550458716,-37.0506,Alugado
+CNEFE-2800308-12-86,"Rua Pacatuba, 1183",Sala Comercial,-10.917233027522936,-37.050399999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-12-87,"Rua Pacatuba, 1197",Loja Térrea,-10.917305504587157,-37.0506,Alugado
+CNEFE-2800308-12-88,"Rua Pacatuba, 1211",Residencial,-10.917377981651377,-37.050399999999996,Alugado
+CNEFE-2800308-12-89,"Rua Pacatuba, 1224",Sala Comercial,-10.917450458715598,-37.0506,Alugado
+CNEFE-2800308-12-90,"Rua Pacatuba, 1238",Residencial,-10.917522935779816,-37.050399999999996,Alugado
+CNEFE-2800308-12-91,"Rua Pacatuba, 1252",Prédio Misto,-10.917595412844037,-37.0506,Disponível
+CNEFE-2800308-12-92,"Rua Pacatuba, 1266",Prédio Misto,-10.917667889908257,-37.050399999999996,Disponível
+CNEFE-2800308-12-93,"Rua Pacatuba, 1279",Prédio Misto,-10.917740366972478,-37.0506,Abandonado/IPTU Atrasado
+CNEFE-2800308-12-94,"Rua Pacatuba, 1293",Loja Térrea,-10.917812844036698,-37.050399999999996,Disponível
+CNEFE-2800308-12-95,"Rua Pacatuba, 1307",Residencial,-10.917885321100918,-37.0506,Alugado
+CNEFE-2800308-12-96,"Rua Pacatuba, 1321",Sala Comercial,-10.917957798165139,-37.050399999999996,Alugado
+CNEFE-2800308-12-97,"Rua Pacatuba, 1334",Loja Térrea,-10.91803027522936,-37.0506,Disponível
+CNEFE-2800308-12-98,"Rua Pacatuba, 1348",Residencial,-10.918102752293578,-37.050399999999996,Alugado
+CNEFE-2800308-12-99,"Rua Pacatuba, 1362",Prédio Misto,-10.918175229357798,-37.0506,Alugado
+CNEFE-2800308-12-100,"Rua Pacatuba, 1376",Residencial,-10.918247706422019,-37.050399999999996,Alugado
+CNEFE-2800308-12-101,"Rua Pacatuba, 1389",Residencial,-10.91832018348624,-37.0506,Alugado
+CNEFE-2800308-12-102,"Rua Pacatuba, 1403",Residencial,-10.91839266055046,-37.050399999999996,Alugado
+CNEFE-2800308-12-103,"Rua Pacatuba, 1417",Residencial,-10.91846513761468,-37.0506,Alugado
+CNEFE-2800308-12-104,"Rua Pacatuba, 1431",Prédio Misto,-10.9185376146789,-37.050399999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-12-105,"Rua Pacatuba, 1444",Residencial,-10.91861009174312,-37.0506,Alugado
+CNEFE-2800308-12-106,"Rua Pacatuba, 1458",Loja Térrea,-10.91868256880734,-37.050399999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-12-107,"Rua Pacatuba, 1472",Prédio Misto,-10.91875504587156,-37.0506,Disponível
+CNEFE-2800308-12-108,"Rua Pacatuba, 1486",Sala Comercial,-10.91882752293578,-37.050399999999996,Alugado
+CNEFE-2800308-12-109,"Rua Pacatuba, 1500",Residencial,-10.9189,-37.0506,Alugado
+CNEFE-2800308-13-0,"Rua Lagarto, 4",Residencial,-10.911,-37.055899999999994,Alugado
+CNEFE-2800308-13-1,"Rua Lagarto, 13",Residencial,-10.91107247706422,-37.0561,Alugado
+CNEFE-2800308-13-2,"Rua Lagarto, 27",Sala Comercial,-10.91114495412844,-37.055899999999994,Alugado
+CNEFE-2800308-13-3,"Rua Lagarto, 41",Loja Térrea,-10.91121743119266,-37.0561,Alugado
+CNEFE-2800308-13-4,"Rua Lagarto, 55",Residencial,-10.91128990825688,-37.055899999999994,Alugado
+CNEFE-2800308-13-5,"Rua Lagarto, 68",Galpão,-10.9113623853211,-37.0561,Disponível
+CNEFE-2800308-13-6,"Rua Lagarto, 82",Prédio Misto,-10.91143486238532,-37.055899999999994,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-7,"Rua Lagarto, 96",Loja Térrea,-10.91150733944954,-37.0561,Disponível
+CNEFE-2800308-13-8,"Rua Lagarto, 110",Prédio Misto,-10.911579816513761,-37.055899999999994,Disponível
+CNEFE-2800308-13-9,"Rua Lagarto, 123",Residencial,-10.911652293577982,-37.0561,Alugado
+CNEFE-2800308-13-10,"Rua Lagarto, 137",Sala Comercial,-10.911724770642202,-37.055899999999994,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-11,"Rua Lagarto, 151",Residencial,-10.911797247706422,-37.0561,Alugado
+CNEFE-2800308-13-12,"Rua Lagarto, 165",Loja Térrea,-10.911869724770641,-37.055899999999994,Alugado
+CNEFE-2800308-13-13,"Rua Lagarto, 178",Residencial,-10.911942201834862,-37.0561,Alugado
+CNEFE-2800308-13-14,"Rua Lagarto, 192",Residencial,-10.912014678899082,-37.055899999999994,Alugado
+CNEFE-2800308-13-15,"Rua Lagarto, 206",Loja Térrea,-10.912087155963302,-37.0561,Disponível
+CNEFE-2800308-13-16,"Rua Lagarto, 220",Residencial,-10.912159633027523,-37.055899999999994,Alugado
+CNEFE-2800308-13-17,"Rua Lagarto, 233",Residencial,-10.912232110091743,-37.0561,Alugado
+CNEFE-2800308-13-18,"Rua Lagarto, 247",Loja Térrea,-10.912304587155964,-37.055899999999994,Alugado
+CNEFE-2800308-13-19,"Rua Lagarto, 261",Galpão,-10.912377064220184,-37.0561,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-20,"Rua Lagarto, 275",Prédio Misto,-10.912449541284403,-37.055899999999994,Alugado
+CNEFE-2800308-13-21,"Rua Lagarto, 288",Sala Comercial,-10.912522018348623,-37.0561,Alugado
+CNEFE-2800308-13-22,"Rua Lagarto, 302",Residencial,-10.912594495412844,-37.055899999999994,Alugado
+CNEFE-2800308-13-23,"Rua Lagarto, 316",Prédio Misto,-10.912666972477064,-37.0561,Alugado
+CNEFE-2800308-13-24,"Rua Lagarto, 330",Residencial,-10.912739449541284,-37.055899999999994,Alugado
+CNEFE-2800308-13-25,"Rua Lagarto, 344",Loja Térrea,-10.912811926605505,-37.0561,Alugado
+CNEFE-2800308-13-26,"Rua Lagarto, 357",Residencial,-10.912884403669725,-37.055899999999994,Alugado
+CNEFE-2800308-13-27,"Rua Lagarto, 371",Sala Comercial,-10.912956880733946,-37.0561,Alugado
+CNEFE-2800308-13-28,"Rua Lagarto, 385",Loja Térrea,-10.913029357798164,-37.055899999999994,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-29,"Rua Lagarto, 399",Loja Térrea,-10.913101834862385,-37.0561,Alugado
+CNEFE-2800308-13-30,"Rua Lagarto, 412",Galpão,-10.913174311926605,-37.055899999999994,Disponível
+CNEFE-2800308-13-31,"Rua Lagarto, 426",Prédio Misto,-10.913246788990826,-37.0561,Alugado
+CNEFE-2800308-13-32,"Rua Lagarto, 440",Loja Térrea,-10.913319266055046,-37.055899999999994,Alugado
+CNEFE-2800308-13-33,"Rua Lagarto, 454",Residencial,-10.913391743119266,-37.0561,Alugado
+CNEFE-2800308-13-34,"Rua Lagarto, 467",Residencial,-10.913464220183487,-37.055899999999994,Alugado
+CNEFE-2800308-13-35,"Rua Lagarto, 481",Galpão,-10.913536697247707,-37.0561,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-36,"Rua Lagarto, 495",Sala Comercial,-10.913609174311926,-37.055899999999994,Alugado
+CNEFE-2800308-13-37,"Rua Lagarto, 509",Prédio Misto,-10.913681651376146,-37.0561,Disponível
+CNEFE-2800308-13-38,"Rua Lagarto, 522",Galpão,-10.913754128440367,-37.055899999999994,Disponível
+CNEFE-2800308-13-39,"Rua Lagarto, 536",Residencial,-10.913826605504587,-37.0561,Alugado
+CNEFE-2800308-13-40,"Rua Lagarto, 550",Loja Térrea,-10.913899082568808,-37.055899999999994,Alugado
+CNEFE-2800308-13-41,"Rua Lagarto, 564",Prédio Misto,-10.913971559633028,-37.0561,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-42,"Rua Lagarto, 577",Residencial,-10.914044036697248,-37.055899999999994,Alugado
+CNEFE-2800308-13-43,"Rua Lagarto, 591",Residencial,-10.914116513761467,-37.0561,Alugado
+CNEFE-2800308-13-44,"Rua Lagarto, 605",Sala Comercial,-10.914188990825687,-37.055899999999994,Alugado
+CNEFE-2800308-13-45,"Rua Lagarto, 619",Residencial,-10.914261467889908,-37.0561,Alugado
+CNEFE-2800308-13-46,"Rua Lagarto, 633",Galpão,-10.914333944954128,-37.055899999999994,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-47,"Rua Lagarto, 646",Prédio Misto,-10.914406422018349,-37.0561,Disponível
+CNEFE-2800308-13-48,"Rua Lagarto, 660",Residencial,-10.91447889908257,-37.055899999999994,Alugado
+CNEFE-2800308-13-49,"Rua Lagarto, 674",Residencial,-10.91455137614679,-37.0561,Alugado
+CNEFE-2800308-13-50,"Rua Lagarto, 688",Prédio Misto,-10.91462385321101,-37.055899999999994,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-51,"Rua Lagarto, 701",Residencial,-10.914696330275229,-37.0561,Alugado
+CNEFE-2800308-13-52,"Rua Lagarto, 715",Loja Térrea,-10.914768807339449,-37.055899999999994,Alugado
+CNEFE-2800308-13-53,"Rua Lagarto, 729",Loja Térrea,-10.91484128440367,-37.0561,Alugado
+CNEFE-2800308-13-54,"Rua Lagarto, 743",Residencial,-10.91491376146789,-37.055899999999994,Alugado
+CNEFE-2800308-13-55,"Rua Lagarto, 756",Residencial,-10.91498623853211,-37.0561,Alugado
+CNEFE-2800308-13-56,"Rua Lagarto, 770",Residencial,-10.91505871559633,-37.055899999999994,Alugado
+CNEFE-2800308-13-57,"Rua Lagarto, 784",Loja Térrea,-10.915131192660551,-37.0561,Disponível
+CNEFE-2800308-13-58,"Rua Lagarto, 798",Residencial,-10.915203669724772,-37.055899999999994,Alugado
+CNEFE-2800308-13-59,"Rua Lagarto, 811",Residencial,-10.91527614678899,-37.0561,Alugado
+CNEFE-2800308-13-60,"Rua Lagarto, 825",Loja Térrea,-10.91534862385321,-37.055899999999994,Alugado
+CNEFE-2800308-13-61,"Rua Lagarto, 839",Prédio Misto,-10.915421100917431,-37.0561,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-62,"Rua Lagarto, 853",Residencial,-10.915493577981652,-37.055899999999994,Alugado
+CNEFE-2800308-13-63,"Rua Lagarto, 866",Residencial,-10.915566055045872,-37.0561,Alugado
+CNEFE-2800308-13-64,"Rua Lagarto, 880",Residencial,-10.915638532110092,-37.055899999999994,Alugado
+CNEFE-2800308-13-65,"Rua Lagarto, 894",Loja Térrea,-10.915711009174313,-37.0561,Disponível
+CNEFE-2800308-13-66,"Rua Lagarto, 908",Loja Térrea,-10.915783486238533,-37.055899999999994,Disponível
+CNEFE-2800308-13-67,"Rua Lagarto, 922",Galpão,-10.915855963302752,-37.0561,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-68,"Rua Lagarto, 935",Residencial,-10.915928440366972,-37.055899999999994,Alugado
+CNEFE-2800308-13-69,"Rua Lagarto, 949",Sala Comercial,-10.916000917431193,-37.0561,Disponível
+CNEFE-2800308-13-70,"Rua Lagarto, 963",Loja Térrea,-10.916073394495413,-37.055899999999994,Disponível
+CNEFE-2800308-13-71,"Rua Lagarto, 977",Prédio Misto,-10.916145871559634,-37.0561,Disponível
+CNEFE-2800308-13-72,"Rua Lagarto, 990",Prédio Misto,-10.916218348623854,-37.055899999999994,Alugado
+CNEFE-2800308-13-73,"Rua Lagarto, 1004",Loja Térrea,-10.916290825688074,-37.0561,Alugado
+CNEFE-2800308-13-74,"Rua Lagarto, 1018",Residencial,-10.916363302752293,-37.055899999999994,Alugado
+CNEFE-2800308-13-75,"Rua Lagarto, 1032",Residencial,-10.916435779816513,-37.0561,Alugado
+CNEFE-2800308-13-76,"Rua Lagarto, 1045",Galpão,-10.916508256880734,-37.055899999999994,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-77,"Rua Lagarto, 1059",Prédio Misto,-10.916580733944954,-37.0561,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-78,"Rua Lagarto, 1073",Prédio Misto,-10.916653211009175,-37.055899999999994,Disponível
+CNEFE-2800308-13-79,"Rua Lagarto, 1087",Galpão,-10.916725688073395,-37.0561,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-80,"Rua Lagarto, 1100",Prédio Misto,-10.916798165137616,-37.055899999999994,Alugado
+CNEFE-2800308-13-81,"Rua Lagarto, 1114",Galpão,-10.916870642201836,-37.0561,Disponível
+CNEFE-2800308-13-82,"Rua Lagarto, 1128",Prédio Misto,-10.916943119266055,-37.055899999999994,Alugado
+CNEFE-2800308-13-83,"Rua Lagarto, 1142",Sala Comercial,-10.917015596330275,-37.0561,Alugado
+CNEFE-2800308-13-84,"Rua Lagarto, 1155",Residencial,-10.917088073394495,-37.055899999999994,Alugado
+CNEFE-2800308-13-85,"Rua Lagarto, 1169",Residencial,-10.917160550458716,-37.0561,Alugado
+CNEFE-2800308-13-86,"Rua Lagarto, 1183",Galpão,-10.917233027522936,-37.055899999999994,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-87,"Rua Lagarto, 1197",Residencial,-10.917305504587157,-37.0561,Alugado
+CNEFE-2800308-13-88,"Rua Lagarto, 1211",Loja Térrea,-10.917377981651377,-37.055899999999994,Alugado
+CNEFE-2800308-13-89,"Rua Lagarto, 1224",Residencial,-10.917450458715598,-37.0561,Alugado
+CNEFE-2800308-13-90,"Rua Lagarto, 1238",Sala Comercial,-10.917522935779816,-37.055899999999994,Alugado
+CNEFE-2800308-13-91,"Rua Lagarto, 1252",Prédio Misto,-10.917595412844037,-37.0561,Disponível
+CNEFE-2800308-13-92,"Rua Lagarto, 1266",Prédio Misto,-10.917667889908257,-37.055899999999994,Alugado
+CNEFE-2800308-13-93,"Rua Lagarto, 1279",Sala Comercial,-10.917740366972478,-37.0561,Disponível
+CNEFE-2800308-13-94,"Rua Lagarto, 1293",Residencial,-10.917812844036698,-37.055899999999994,Alugado
+CNEFE-2800308-13-95,"Rua Lagarto, 1307",Prédio Misto,-10.917885321100918,-37.0561,Alugado
+CNEFE-2800308-13-96,"Rua Lagarto, 1321",Residencial,-10.917957798165139,-37.055899999999994,Alugado
+CNEFE-2800308-13-97,"Rua Lagarto, 1334",Residencial,-10.91803027522936,-37.0561,Alugado
+CNEFE-2800308-13-98,"Rua Lagarto, 1348",Prédio Misto,-10.918102752293578,-37.055899999999994,Alugado
+CNEFE-2800308-13-99,"Rua Lagarto, 1362",Loja Térrea,-10.918175229357798,-37.0561,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-100,"Rua Lagarto, 1376",Residencial,-10.918247706422019,-37.055899999999994,Alugado
+CNEFE-2800308-13-101,"Rua Lagarto, 1389",Residencial,-10.91832018348624,-37.0561,Alugado
+CNEFE-2800308-13-102,"Rua Lagarto, 1403",Residencial,-10.91839266055046,-37.055899999999994,Alugado
+CNEFE-2800308-13-103,"Rua Lagarto, 1417",Sala Comercial,-10.91846513761468,-37.0561,Alugado
+CNEFE-2800308-13-104,"Rua Lagarto, 1431",Residencial,-10.9185376146789,-37.055899999999994,Alugado
+CNEFE-2800308-13-105,"Rua Lagarto, 1444",Loja Térrea,-10.91861009174312,-37.0561,Alugado
+CNEFE-2800308-13-106,"Rua Lagarto, 1458",Prédio Misto,-10.91868256880734,-37.055899999999994,Disponível
+CNEFE-2800308-13-107,"Rua Lagarto, 1472",Prédio Misto,-10.91875504587156,-37.0561,Alugado
+CNEFE-2800308-13-108,"Rua Lagarto, 1486",Loja Térrea,-10.91882752293578,-37.055899999999994,Abandonado/IPTU Atrasado
+CNEFE-2800308-13-109,"Rua Lagarto, 1500",Residencial,-10.9189,-37.0561,Alugado
+CNEFE-2800308-14-0,"Rua Estância, 8",Sala Comercial,-10.9144,-37.049,Alugado
+CNEFE-2800308-14-1,"Rua Estância, 12",Residencial,-10.9146,-37.049072,Alugado
+CNEFE-2800308-14-2,"Rua Estância, 24",Residencial,-10.9144,-37.049144,Alugado
+CNEFE-2800308-14-3,"Rua Estância, 36",Galpão,-10.9146,-37.049216,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-4,"Rua Estância, 48",Residencial,-10.9144,-37.049288,Alugado
+CNEFE-2800308-14-5,"Rua Estância, 60",Residencial,-10.9146,-37.04936,Alugado
+CNEFE-2800308-14-6,"Rua Estância, 72",Residencial,-10.9144,-37.049432,Alugado
+CNEFE-2800308-14-7,"Rua Estância, 84",Prédio Misto,-10.9146,-37.049504,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-8,"Rua Estância, 96",Residencial,-10.9144,-37.049576,Alugado
+CNEFE-2800308-14-9,"Rua Estância, 107",Galpão,-10.9146,-37.049648,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-10,"Rua Estância, 120",Prédio Misto,-10.9144,-37.04972,Disponível
+CNEFE-2800308-14-11,"Rua Estância, 132",Loja Térrea,-10.9146,-37.049792,Disponível
+CNEFE-2800308-14-12,"Rua Estância, 144",Residencial,-10.9144,-37.049864,Alugado
+CNEFE-2800308-14-13,"Rua Estância, 156",Residencial,-10.9146,-37.049936,Alugado
+CNEFE-2800308-14-14,"Rua Estância, 168",Galpão,-10.9144,-37.050008,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-15,"Rua Estância, 180",Loja Térrea,-10.9146,-37.05008,Alugado
+CNEFE-2800308-14-16,"Rua Estância, 192",Prédio Misto,-10.9144,-37.050152,Alugado
+CNEFE-2800308-14-17,"Rua Estância, 204",Sala Comercial,-10.9146,-37.050224,Alugado
+CNEFE-2800308-14-18,"Rua Estância, 215",Residencial,-10.9144,-37.050296,Alugado
+CNEFE-2800308-14-19,"Rua Estância, 228",Residencial,-10.9146,-37.050368,Alugado
+CNEFE-2800308-14-20,"Rua Estância, 240",Residencial,-10.9144,-37.05044,Alugado
+CNEFE-2800308-14-21,"Rua Estância, 252",Residencial,-10.9146,-37.050512,Alugado
+CNEFE-2800308-14-22,"Rua Estância, 264",Residencial,-10.9144,-37.050584,Alugado
+CNEFE-2800308-14-23,"Rua Estância, 276",Galpão,-10.9146,-37.050656,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-24,"Rua Estância, 288",Residencial,-10.9144,-37.050728,Alugado
+CNEFE-2800308-14-25,"Rua Estância, 300",Loja Térrea,-10.9146,-37.0508,Alugado
+CNEFE-2800308-14-26,"Rua Estância, 312",Sala Comercial,-10.9144,-37.050872,Alugado
+CNEFE-2800308-14-27,"Rua Estância, 324",Sala Comercial,-10.9146,-37.050944,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-28,"Rua Estância, 336",Loja Térrea,-10.9144,-37.051016,Disponível
+CNEFE-2800308-14-29,"Rua Estância, 348",Sala Comercial,-10.9146,-37.051088,Alugado
+CNEFE-2800308-14-30,"Rua Estância, 360",Residencial,-10.9144,-37.05116,Alugado
+CNEFE-2800308-14-31,"Rua Estância, 372",Prédio Misto,-10.9146,-37.051232,Alugado
+CNEFE-2800308-14-32,"Rua Estância, 384",Galpão,-10.9144,-37.051304,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-33,"Rua Estância, 396",Loja Térrea,-10.9146,-37.051376,Alugado
+CNEFE-2800308-14-34,"Rua Estância, 408",Residencial,-10.9144,-37.051448,Alugado
+CNEFE-2800308-14-35,"Rua Estância, 420",Sala Comercial,-10.9146,-37.05152,Alugado
+CNEFE-2800308-14-36,"Rua Estância, 431",Loja Térrea,-10.9144,-37.051592,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-37,"Rua Estância, 444",Galpão,-10.9146,-37.051664,Disponível
+CNEFE-2800308-14-38,"Rua Estância, 456",Prédio Misto,-10.9144,-37.051736,Alugado
+CNEFE-2800308-14-39,"Rua Estância, 468",Residencial,-10.9146,-37.051808,Alugado
+CNEFE-2800308-14-40,"Rua Estância, 480",Residencial,-10.9144,-37.05188,Alugado
+CNEFE-2800308-14-41,"Rua Estância, 492",Residencial,-10.9146,-37.051952,Alugado
+CNEFE-2800308-14-42,"Rua Estância, 504",Sala Comercial,-10.9144,-37.052024,Disponível
+CNEFE-2800308-14-43,"Rua Estância, 516",Galpão,-10.9146,-37.052096,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-44,"Rua Estância, 528",Loja Térrea,-10.9144,-37.052168,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-45,"Rua Estância, 540",Sala Comercial,-10.9146,-37.05224,Disponível
+CNEFE-2800308-14-46,"Rua Estância, 552",Sala Comercial,-10.9144,-37.052312,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-47,"Rua Estância, 564",Residencial,-10.9146,-37.052383999999996,Alugado
+CNEFE-2800308-14-48,"Rua Estância, 576",Residencial,-10.9144,-37.052456,Alugado
+CNEFE-2800308-14-49,"Rua Estância, 588",Loja Térrea,-10.9146,-37.052528,Disponível
+CNEFE-2800308-14-50,"Rua Estância, 600",Residencial,-10.9144,-37.0526,Alugado
+CNEFE-2800308-14-51,"Rua Estância, 612",Residencial,-10.9146,-37.052672,Alugado
+CNEFE-2800308-14-52,"Rua Estância, 624",Residencial,-10.9144,-37.052744,Alugado
+CNEFE-2800308-14-53,"Rua Estância, 636",Residencial,-10.9146,-37.052816,Alugado
+CNEFE-2800308-14-54,"Rua Estância, 648",Residencial,-10.9144,-37.052888,Alugado
+CNEFE-2800308-14-55,"Rua Estância, 660",Galpão,-10.9146,-37.05296,Disponível
+CNEFE-2800308-14-56,"Rua Estância, 672",Prédio Misto,-10.9144,-37.053032,Alugado
+CNEFE-2800308-14-57,"Rua Estância, 684",Sala Comercial,-10.9146,-37.053104,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-58,"Rua Estância, 696",Prédio Misto,-10.9144,-37.053176,Disponível
+CNEFE-2800308-14-59,"Rua Estância, 708",Loja Térrea,-10.9146,-37.053247999999996,Alugado
+CNEFE-2800308-14-60,"Rua Estância, 720",Residencial,-10.9144,-37.05332,Alugado
+CNEFE-2800308-14-61,"Rua Estância, 732",Galpão,-10.9146,-37.053392,Disponível
+CNEFE-2800308-14-62,"Rua Estância, 744",Prédio Misto,-10.9144,-37.053464,Disponível
+CNEFE-2800308-14-63,"Rua Estância, 756",Residencial,-10.9146,-37.053536,Alugado
+CNEFE-2800308-14-64,"Rua Estância, 768",Residencial,-10.9144,-37.053608,Alugado
+CNEFE-2800308-14-65,"Rua Estância, 780",Loja Térrea,-10.9146,-37.05368,Disponível
+CNEFE-2800308-14-66,"Rua Estância, 792",Residencial,-10.9144,-37.053752,Alugado
+CNEFE-2800308-14-67,"Rua Estância, 804",Residencial,-10.9146,-37.053824,Alugado
+CNEFE-2800308-14-68,"Rua Estância, 816",Galpão,-10.9144,-37.053896,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-69,"Rua Estância, 828",Loja Térrea,-10.9146,-37.053968,Disponível
+CNEFE-2800308-14-70,"Rua Estância, 840",Sala Comercial,-10.9144,-37.05404,Alugado
+CNEFE-2800308-14-71,"Rua Estância, 851",Residencial,-10.9146,-37.054111999999996,Alugado
+CNEFE-2800308-14-72,"Rua Estância, 863",Prédio Misto,-10.9144,-37.054184,Alugado
+CNEFE-2800308-14-73,"Rua Estância, 876",Residencial,-10.9146,-37.054256,Alugado
+CNEFE-2800308-14-74,"Rua Estância, 888",Prédio Misto,-10.9144,-37.054328,Disponível
+CNEFE-2800308-14-75,"Rua Estância, 900",Galpão,-10.9146,-37.0544,Disponível
+CNEFE-2800308-14-76,"Rua Estância, 912",Galpão,-10.9144,-37.054472,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-77,"Rua Estância, 924",Residencial,-10.9146,-37.054544,Alugado
+CNEFE-2800308-14-78,"Rua Estância, 936",Residencial,-10.9144,-37.054616,Alugado
+CNEFE-2800308-14-79,"Rua Estância, 948",Prédio Misto,-10.9146,-37.054688,Alugado
+CNEFE-2800308-14-80,"Rua Estância, 960",Prédio Misto,-10.9144,-37.05476,Alugado
+CNEFE-2800308-14-81,"Rua Estância, 972",Sala Comercial,-10.9146,-37.054832,Alugado
+CNEFE-2800308-14-82,"Rua Estância, 984",Sala Comercial,-10.9144,-37.054904,Disponível
+CNEFE-2800308-14-83,"Rua Estância, 996",Galpão,-10.9146,-37.054975999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-84,"Rua Estância, 1008",Galpão,-10.9144,-37.055048,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-85,"Rua Estância, 1020",Loja Térrea,-10.9146,-37.05512,Alugado
+CNEFE-2800308-14-86,"Rua Estância, 1032",Residencial,-10.9144,-37.055192,Alugado
+CNEFE-2800308-14-87,"Rua Estância, 1044",Residencial,-10.9146,-37.055264,Alugado
+CNEFE-2800308-14-88,"Rua Estância, 1056",Residencial,-10.9144,-37.055336,Alugado
+CNEFE-2800308-14-89,"Rua Estância, 1068",Loja Térrea,-10.9146,-37.055408,Alugado
+CNEFE-2800308-14-90,"Rua Estância, 1080",Sala Comercial,-10.9144,-37.05548,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-91,"Rua Estância, 1092",Prédio Misto,-10.9146,-37.055552,Alugado
+CNEFE-2800308-14-92,"Rua Estância, 1104",Prédio Misto,-10.9144,-37.055624,Alugado
+CNEFE-2800308-14-93,"Rua Estância, 1116",Residencial,-10.9146,-37.055696,Alugado
+CNEFE-2800308-14-94,"Rua Estância, 1128",Residencial,-10.9144,-37.055768,Alugado
+CNEFE-2800308-14-95,"Rua Estância, 1140",Residencial,-10.9146,-37.055839999999996,Alugado
+CNEFE-2800308-14-96,"Rua Estância, 1152",Loja Térrea,-10.9144,-37.055912,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-97,"Rua Estância, 1164",Sala Comercial,-10.9146,-37.055984,Alugado
+CNEFE-2800308-14-98,"Rua Estância, 1176",Prédio Misto,-10.9144,-37.056056,Disponível
+CNEFE-2800308-14-99,"Rua Estância, 1188",Residencial,-10.9146,-37.056128,Alugado
+CNEFE-2800308-14-100,"Rua Estância, 1200",Loja Térrea,-10.9144,-37.0562,Alugado
+CNEFE-2800308-14-101,"Rua Estância, 1212",Prédio Misto,-10.9146,-37.056272,Disponível
+CNEFE-2800308-14-102,"Rua Estância, 1224",Loja Térrea,-10.9144,-37.056344,Alugado
+CNEFE-2800308-14-103,"Rua Estância, 1236",Loja Térrea,-10.9146,-37.056416,Alugado
+CNEFE-2800308-14-104,"Rua Estância, 1248",Galpão,-10.9144,-37.056488,Disponível
+CNEFE-2800308-14-105,"Rua Estância, 1260",Galpão,-10.9146,-37.05656,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-106,"Rua Estância, 1272",Residencial,-10.9144,-37.056632,Alugado
+CNEFE-2800308-14-107,"Rua Estância, 1284",Prédio Misto,-10.9146,-37.056703999999996,Alugado
+CNEFE-2800308-14-108,"Rua Estância, 1296",Sala Comercial,-10.9144,-37.056776,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-109,"Rua Estância, 1308",Prédio Misto,-10.9146,-37.056848,Alugado
+CNEFE-2800308-14-110,"Rua Estância, 1320",Galpão,-10.9144,-37.05692,Disponível
+CNEFE-2800308-14-111,"Rua Estância, 1332",Prédio Misto,-10.9146,-37.056992,Alugado
+CNEFE-2800308-14-112,"Rua Estância, 1344",Galpão,-10.9144,-37.057064,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-113,"Rua Estância, 1356",Sala Comercial,-10.9146,-37.057136,Alugado
+CNEFE-2800308-14-114,"Rua Estância, 1368",Loja Térrea,-10.9144,-37.057208,Alugado
+CNEFE-2800308-14-115,"Rua Estância, 1380",Residencial,-10.9146,-37.05728,Alugado
+CNEFE-2800308-14-116,"Rua Estância, 1392",Residencial,-10.9144,-37.057352,Alugado
+CNEFE-2800308-14-117,"Rua Estância, 1404",Loja Térrea,-10.9146,-37.057424,Alugado
+CNEFE-2800308-14-118,"Rua Estância, 1416",Residencial,-10.9144,-37.057496,Alugado
+CNEFE-2800308-14-119,"Rua Estância, 1428",Loja Térrea,-10.9146,-37.057567999999996,Alugado
+CNEFE-2800308-14-120,"Rua Estância, 1440",Residencial,-10.9144,-37.05764,Alugado
+CNEFE-2800308-14-121,"Rua Estância, 1452",Galpão,-10.9146,-37.057712,Abandonado/IPTU Atrasado
+CNEFE-2800308-14-122,"Rua Estância, 1464",Sala Comercial,-10.9144,-37.057784,Alugado
+CNEFE-2800308-14-123,"Rua Estância, 1476",Sala Comercial,-10.9146,-37.057856,Alugado
+CNEFE-2800308-14-124,"Rua Estância, 1488",Residencial,-10.9144,-37.057928,Alugado
+CNEFE-2800308-14-125,"Rua Estância, 1500",Prédio Misto,-10.9146,-37.058,Alugado
+CNEFE-2800308-15-0,"Rua Maruim, 4",Loja Térrea,-10.9154,-37.049,Disponível
+CNEFE-2800308-15-1,"Rua Maruim, 12",Prédio Misto,-10.9156,-37.049072,Alugado
+CNEFE-2800308-15-2,"Rua Maruim, 24",Loja Térrea,-10.9154,-37.049144,Alugado
+CNEFE-2800308-15-3,"Rua Maruim, 36",Residencial,-10.9156,-37.049216,Alugado
+CNEFE-2800308-15-4,"Rua Maruim, 48",Galpão,-10.9154,-37.049288,Disponível
+CNEFE-2800308-15-5,"Rua Maruim, 60",Prédio Misto,-10.9156,-37.04936,Disponível
+CNEFE-2800308-15-6,"Rua Maruim, 72",Residencial,-10.9154,-37.049432,Alugado
+CNEFE-2800308-15-7,"Rua Maruim, 84",Prédio Misto,-10.9156,-37.049504,Alugado
+CNEFE-2800308-15-8,"Rua Maruim, 96",Residencial,-10.9154,-37.049576,Alugado
+CNEFE-2800308-15-9,"Rua Maruim, 107",Residencial,-10.9156,-37.049648,Alugado
+CNEFE-2800308-15-10,"Rua Maruim, 120",Loja Térrea,-10.9154,-37.04972,Alugado
+CNEFE-2800308-15-11,"Rua Maruim, 132",Sala Comercial,-10.9156,-37.049792,Disponível
+CNEFE-2800308-15-12,"Rua Maruim, 144",Residencial,-10.9154,-37.049864,Alugado
+CNEFE-2800308-15-13,"Rua Maruim, 156",Residencial,-10.9156,-37.049936,Alugado
+CNEFE-2800308-15-14,"Rua Maruim, 168",Residencial,-10.9154,-37.050008,Alugado
+CNEFE-2800308-15-15,"Rua Maruim, 180",Residencial,-10.9156,-37.05008,Alugado
+CNEFE-2800308-15-16,"Rua Maruim, 192",Residencial,-10.9154,-37.050152,Alugado
+CNEFE-2800308-15-17,"Rua Maruim, 204",Loja Térrea,-10.9156,-37.050224,Disponível
+CNEFE-2800308-15-18,"Rua Maruim, 215",Residencial,-10.9154,-37.050296,Alugado
+CNEFE-2800308-15-19,"Rua Maruim, 228",Galpão,-10.9156,-37.050368,Disponível
+CNEFE-2800308-15-20,"Rua Maruim, 240",Loja Térrea,-10.9154,-37.05044,Abandonado/IPTU Atrasado
+CNEFE-2800308-15-21,"Rua Maruim, 252",Prédio Misto,-10.9156,-37.050512,Disponível
+CNEFE-2800308-15-22,"Rua Maruim, 264",Sala Comercial,-10.9154,-37.050584,Alugado
+CNEFE-2800308-15-23,"Rua Maruim, 276",Residencial,-10.9156,-37.050656,Alugado
+CNEFE-2800308-15-24,"Rua Maruim, 288",Prédio Misto,-10.9154,-37.050728,Alugado
+CNEFE-2800308-15-25,"Rua Maruim, 300",Prédio Misto,-10.9156,-37.0508,Alugado
+CNEFE-2800308-15-26,"Rua Maruim, 312",Residencial,-10.9154,-37.050872,Alugado
+CNEFE-2800308-15-27,"Rua Maruim, 324",Loja Térrea,-10.9156,-37.050944,Alugado
+CNEFE-2800308-15-28,"Rua Maruim, 336",Sala Comercial,-10.9154,-37.051016,Alugado
+CNEFE-2800308-15-29,"Rua Maruim, 348",Residencial,-10.9156,-37.051088,Alugado
+CNEFE-2800308-15-30,"Rua Maruim, 360",Residencial,-10.9154,-37.05116,Alugado
+CNEFE-2800308-15-31,"Rua Maruim, 372",Residencial,-10.9156,-37.051232,Alugado
+CNEFE-2800308-15-32,"Rua Maruim, 384",Sala Comercial,-10.9154,-37.051304,Abandonado/IPTU Atrasado
+CNEFE-2800308-15-33,"Rua Maruim, 396",Sala Comercial,-10.9156,-37.051376,Disponível
+CNEFE-2800308-15-34,"Rua Maruim, 408",Loja Térrea,-10.9154,-37.051448,Alugado
+CNEFE-2800308-15-35,"Rua Maruim, 420",Residencial,-10.9156,-37.05152,Alugado
+CNEFE-2800308-15-36,"Rua Maruim, 431",Residencial,-10.9154,-37.051592,Alugado
+CNEFE-2800308-15-37,"Rua Maruim, 444",Residencial,-10.9156,-37.051664,Alugado
+CNEFE-2800308-15-38,"Rua Maruim, 456",Residencial,-10.9154,-37.051736,Alugado
+CNEFE-2800308-15-39,"Rua Maruim, 468",Sala Comercial,-10.9156,-37.051808,Alugado
+CNEFE-2800308-15-40,"Rua Maruim, 480",Prédio Misto,-10.9154,-37.05188,Abandonado/IPTU Atrasado
+CNEFE-2800308-15-41,"Rua Maruim, 492",Residencial,-10.9156,-37.051952,Alugado
+CNEFE-2800308-15-42,"Rua Maruim, 504",Prédio Misto,-10.9154,-37.052024,Disponível
+CNEFE-2800308-15-43,"Rua Maruim, 516",Prédio Misto,-10.9156,-37.052096,Alugado
+CNEFE-2800308-15-44,"Rua Maruim, 528",Residencial,-10.9154,-37.052168,Alugado
+CNEFE-2800308-15-45,"Rua Maruim, 540",Residencial,-10.9156,-37.05224,Alugado
+CNEFE-2800308-15-46,"Rua Maruim, 552",Residencial,-10.9154,-37.052312,Alugado
+CNEFE-2800308-15-47,"Rua Maruim, 564",Prédio Misto,-10.9156,-37.052383999999996,Alugado
+CNEFE-2800308-15-48,"Rua Maruim, 576",Residencial,-10.9154,-37.052456,Alugado
+CNEFE-2800308-15-49,"Rua Maruim, 588",Sala Comercial,-10.9156,-37.052528,Alugado
+CNEFE-2800308-15-50,"Rua Maruim, 600",Loja Térrea,-10.9154,-37.0526,Alugado
+CNEFE-2800308-15-51,"Rua Maruim, 612",Galpão,-10.9156,-37.052672,Disponível
+CNEFE-2800308-15-52,"Rua Maruim, 624",Sala Comercial,-10.9154,-37.052744,Alugado
+CNEFE-2800308-15-53,"Rua Maruim, 636",Prédio Misto,-10.9156,-37.052816,Alugado
+CNEFE-2800308-15-54,"Rua Maruim, 648",Residencial,-10.9154,-37.052888,Alugado
+CNEFE-2800308-15-55,"Rua Maruim, 660",Sala Comercial,-10.9156,-37.05296,Alugado
+CNEFE-2800308-15-56,"Rua Maruim, 672",Prédio Misto,-10.9154,-37.053032,Alugado
+CNEFE-2800308-15-57,"Rua Maruim, 684",Residencial,-10.9156,-37.053104,Alugado
+CNEFE-2800308-15-58,"Rua Maruim, 696",Loja Térrea,-10.9154,-37.053176,Abandonado/IPTU Atrasado
+CNEFE-2800308-15-59,"Rua Maruim, 708",Prédio Misto,-10.9156,-37.053247999999996,Disponível
+CNEFE-2800308-15-60,"Rua Maruim, 720",Prédio Misto,-10.9154,-37.05332,Alugado
+CNEFE-2800308-15-61,"Rua Maruim, 732",Sala Comercial,-10.9156,-37.053392,Alugado
+CNEFE-2800308-15-62,"Rua Maruim, 744",Loja Térrea,-10.9154,-37.053464,Alugado
+CNEFE-2800308-15-63,"Rua Maruim, 756",Sala Comercial,-10.9156,-37.053536,Disponível
+CNEFE-2800308-15-64,"Rua Maruim, 768",Prédio Misto,-10.9154,-37.053608,Alugado
+CNEFE-2800308-15-65,"Rua Maruim, 780",Sala Comercial,-10.9156,-37.05368,Abandonado/IPTU Atrasado
+CNEFE-2800308-15-66,"Rua Maruim, 792",Sala Comercial,-10.9154,-37.053752,Alugado
+CNEFE-2800308-15-67,"Rua Maruim, 804",Galpão,-10.9156,-37.053824,Disponível
+CNEFE-2800308-15-68,"Rua Maruim, 816",Residencial,-10.9154,-37.053896,Alugado
+CNEFE-2800308-15-69,"Rua Maruim, 828",Residencial,-10.9156,-37.053968,Alugado
+CNEFE-2800308-15-70,"Rua Maruim, 840",Residencial,-10.9154,-37.05404,Alugado
+CNEFE-2800308-15-71,"Rua Maruim, 851",Loja Térrea,-10.9156,-37.054111999999996,Abandonado/IPTU Atrasado
+CNEFE-2800308-15-72,"Rua Maruim, 863",Galpão,-10.9154,-37.054184,Abandonado/IPTU Atrasado
+CNEFE-2800308-15-73,"Rua Maruim, 876",Prédio Misto,-10.9156,-37.054256,Abandonado/IPTU Atrasado
+CNEFE-2800308-15-74,"Rua Maruim, 888",Residencial,-10.9154,-37.054328,Alugado
+CNEFE-2800308-15-75,"Rua Maruim, 900",Prédio Misto,-10.9156,-37.0544,Disponível
+CNEFE-2800308-15-76,"Rua Maruim, 912",Residencial,-10.9154,-37.054472,Alugado
+CNEFE-2800308-15-77,"Rua Maruim, 924",Sala Comercial,-10.9156,-37.054544,Disponível
+CNEFE-2800308-15-78,"Rua Maruim, 936",Galpão,-10.9154,-37.054616,Abandonado/IPTU Atrasado
+CNEFE-2800308-15-79,"Rua Maruim, 948",Loja Térrea,-10.9156,-37.054688,Disponível
+CNEFE-2800308-15-80,"Rua Maruim, 960",Prédio Misto,-10.9154,-37.05476,Disponível
+CNEFE-2800308-15-81,"Rua Maruim, 972",Residencial,-10.9156,-37.054832,Alugado
+CNEFE-2800308-15-82,"Rua Maruim, 984",Prédio Misto,-10.9154,-37.054904,Alugado
+CNEFE-2800308-15-83,"Rua Maruim, 996",Prédio Misto,-10.9156,-37.054975999999996,Alugado
+CNEFE-2800308-15-84,"Rua Maruim, 1008",Residencial,-10.9154,-37.055048,Alugado
+CNEFE-2800308-15-85,"Rua Maruim, 1020",Loja Térrea,-10.9156,-37.05512,Alugado
+CNEFE-2800308-15-86,"Rua Maruim, 1032",Galpão,-10.9154,-37.055192,Disponível
+CNEFE-2800308-15-87,"Rua Maruim, 1044",Prédio Misto,-10.9156,-37.055264,Abandonado/IPTU Atrasado
+CNEFE-2800308-15-88,"Rua Maruim, 1056",Residencial,-10.9154,-37.055336,Alugado
+CNEFE-2800308-15-89,"Rua Maruim, 1068",Loja Térrea,-10.9156,-37.055408,Disponível
+CNEFE-2800308-15-90,"Rua Maruim, 1080",Residencial,-10.9154,-37.05548,Alugado
+CNEFE-2800308-15-91,"Rua Maruim, 1092",Residencial,-10.9156,-37.055552,Alugado
+CNEFE-2800308-15-92,"Rua Maruim, 1104",Residencial,-10.9154,-37.055624,Alugado
+CNEFE-2800308-15-93,"Rua Maruim, 1116",Prédio Misto,-10.9156,-37.055696,Alugado
+CNEFE-2800308-15-94,"Rua Maruim, 1128",Loja Térrea,-10.9154,-37.055768,Alugado
+CNEFE-2800308-15-95,"Rua Maruim, 1140",Residencial,-10.9156,-37.055839999999996,Alugado
+CNEFE-2800308-15-96,"Rua Maruim, 1152",Prédio Misto,-10.9154,-37.055912,Abandonado/IPTU Atrasado
+CNEFE-2800308-15-97,"Rua Maruim, 1164",Sala Comercial,-10.9156,-37.055984,Alugado
+CNEFE-2800308-15-98,"Rua Maruim, 1176",Residencial,-10.9154,-37.056056,Alugado
+CNEFE-2800308-15-99,"Rua Maruim, 1188",Residencial,-10.9156,-37.056128,Alugado
+CNEFE-2800308-15-100,"Rua Maruim, 1200",Residencial,-10.9154,-37.0562,Alugado
+CNEFE-2800308-15-101,"Rua Maruim, 1212",Residencial,-10.9156,-37.056272,Alugado
+CNEFE-2800308-15-102,"Rua Maruim, 1224",Loja Térrea,-10.9154,-37.056344,Alugado
+CNEFE-2800308-15-103,"Rua Maruim, 1236",Sala Comercial,-10.9156,-37.056416,Alugado
+CNEFE-2800308-15-104,"Rua Maruim, 1248",Prédio Misto,-10.9154,-37.056488,Disponível
+CNEFE-2800308-15-105,"Rua Maruim, 1260",Residencial,-10.9156,-37.05656,Alugado
+CNEFE-2800308-15-106,"Rua Maruim, 1272",Sala Comercial,-10.9154,-37.056632,Abandonado/IPTU Atrasado
+CNEFE-2800308-15-107,"Rua Maruim, 1284",Loja Térrea,-10.9156,-37.056703999999996,Disponível
+CNEFE-2800308-15-108,"Rua Maruim, 1296",Sala Comercial,-10.9154,-37.056776,Alugado
+CNEFE-2800308-15-109,"Rua Maruim, 1308",Residencial,-10.9156,-37.056848,Alugado
+CNEFE-2800308-15-110,"Rua Maruim, 1320",Residencial,-10.9154,-37.05692,Alugado
+CNEFE-2800308-15-111,"Rua Maruim, 1332",Residencial,-10.9156,-37.056992,Alugado
+CNEFE-2800308-15-112,"Rua Maruim, 1344",Prédio Misto,-10.9154,-37.057064,Alugado
+CNEFE-2800308-15-113,"Rua Maruim, 1356",Residencial,-10.9156,-37.057136,Alugado
+CNEFE-2800308-15-114,"Rua Maruim, 1368",Residencial,-10.9154,-37.057208,Alugado
+CNEFE-2800308-15-115,"Rua Maruim, 1380",Galpão,-10.9156,-37.05728,Abandonado/IPTU Atrasado
+CNEFE-2800308-15-116,"Rua Maruim, 1392",Sala Comercial,-10.9154,-37.057352,Disponível
+CNEFE-2800308-15-117,"Rua Maruim, 1404",Residencial,-10.9156,-37.057424,Alugado
+CNEFE-2800308-15-118,"Rua Maruim, 1416",Prédio Misto,-10.9154,-37.057496,Disponível
+CNEFE-2800308-15-119,"Rua Maruim, 1428",Loja Térrea,-10.9156,-37.057567999999996,Alugado
+CNEFE-2800308-15-120,"Rua Maruim, 1440",Residencial,-10.9154,-37.05764,Alugado
+CNEFE-2800308-15-121,"Rua Maruim, 1452",Loja Térrea,-10.9156,-37.057712,Alugado
+CNEFE-2800308-15-122,"Rua Maruim, 1464",Loja Térrea,-10.9154,-37.057784,Alugado
+CNEFE-2800308-15-123,"Rua Maruim, 1476",Prédio Misto,-10.9156,-37.057856,Alugado
+CNEFE-2800308-15-124,"Rua Maruim, 1488",Sala Comercial,-10.9154,-37.057928,Alugado
+CNEFE-2800308-15-125,"Rua Maruim, 1500",Residencial,-10.9156,-37.058,Alugado
