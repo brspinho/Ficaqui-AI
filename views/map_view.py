@@ -1,6 +1,7 @@
 import streamlit as st
 import folium
 from streamlit_folium import st_folium
+from folium.plugins import MarkerCluster
 
 def render_map_view(df):
     st.subheader("Painel de Controle Espacial")
@@ -12,24 +13,42 @@ def render_map_view(df):
     c1, c2 = st.columns([2, 1])
     
     with c1:
-        m = folium.Map(location=[-10.913, -37.052], zoom_start=15, tiles="cartodbpositron")
+        m = folium.Map(location=[-10.913, -37.052], zoom_start=15, tiles="OpenStreetMap")
+        
+        # Usamos MarkerCluster para dar conta da multidão de endereços oficiais do IBGE
+        marker_cluster = MarkerCluster().add_to(m)
         
         for i, row in df_filtrado.iterrows():
-            # A cor agora determina o problema do imóvel
+            # A cor agora determina o status de ocupação (Aluguel, Disponível, Abandonado)
             color = 'red' if row['status_aluguel'] == 'Abandonado/IPTU Atrasado' else 'orange' if row['status_aluguel'] == 'Disponível' else 'green'
             
-            folium.CircleMarker(
-                location=[row['lat'], row['lon']],
-                radius=max(row['fluxo_pessoas_dia']/1800, 3), # Visibilidade por fluxo com min_radius
-                popup=f"<b># {row['id_espaco']}</b>",
-                tooltip=f"Clique para analisar {row['id_espaco']} na Barra Lateral",
-                color=color,
-                fill=True,
-                fill_opacity=0.6,
-            ).add_to(m)
+            # O ícone determina o TIPO físico/operacional
+            tipo = row['tipo']
+            if tipo == 'Residencial':
+                fa_icon = 'home'
+            elif tipo == 'Galpão':
+                fa_icon = 'industry'
+            elif tipo == 'Prédio Misto':
+                fa_icon = 'building'
+            elif tipo == 'Sala Comercial':
+                fa_icon = 'briefcase'
+            else:
+                fa_icon = 'shopping-cart' # Lojas Térreas / Varejo
             
-        # O st_folium captura eventos de clique no web app
-        st_data = st_folium(m, width="100%", height=550)
+            folium.Marker(
+                location=[row['lat'], row['lon']],
+                popup=f"<b># {row['id_espaco']}</b><br><i>{tipo}</i>",
+                tooltip=f"{tipo} - Clique para analisar na Barra Lateral",
+                icon=folium.Icon(color=color, icon=fa_icon, prefix='fa')
+            ).add_to(marker_cluster) # Adicionado ao Cluster em vez do mapa Base!
+            
+        # O st_folium captura eventos de clique no web app limitando o retorno para não recarregar no pan/zoom
+        st_data = st_folium(
+            m, 
+            width="100%", 
+            height=550, 
+            returned_objects=["last_object_clicked"]
+        )
         
     with c2:
         st.subheader("🏢 Diagnóstico do Espaço")
