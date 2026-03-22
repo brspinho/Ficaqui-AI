@@ -2,6 +2,16 @@
 
 Este guia orienta o deploy do Ficaqui-AI usando **AWS App Runner**, que é a forma mais moderna e performática de rodar Streamlit na AWS.
 
+## Passo 0: Coletar as Credenciais (AWS Academy / Learner Lab)
+Como você está no **AWS Academy**, as credenciais são temporárias e funcionam de forma diferente:
+1. No console do **Learner Lab**, clique no botão **AWS Details**.
+2. Clique em **Show** ao lado de "AWS CLI local credentials".
+3. Você verá três valores importantes:
+   - `aws_access_key_id`
+   - `aws_secret_access_key`
+   - `aws_session_token` (**Essencial no AWS Academy!**)
+4. **IMPORTANTE:** No AWS Academy, essas chaves expiram em poucas horas. Você precisará atualizar os Secrets no GitHub sempre que iniciar uma nova sessão no Learner Lab.
+
 ## Passo 1: Preparar o Registro de Container (Amazon ECR)
 1. Acesse o Console AWS e procure por **Elastic Container Registry (ECR)**.
 2. Clique em **Create repository**.

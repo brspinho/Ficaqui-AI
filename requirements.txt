@@ -6,7 +6,4 @@ streamlit-folium
 groq
 python-dotenv
 fpdf2
-<<<<<<< Updated upstream
 pydeck
-=======
->>>>>>> Stashed changes
