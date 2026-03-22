@@ -56,12 +56,20 @@ def load_data():
             # Calçadões e grandes avenidas têm trânsito mais denso
             if "CALCADAO" in rua_nome.upper() or "PRACA" in rua_nome.upper() or "AVENIDA" in rua_nome.upper() or "AV " in rua_nome.upper():
                 flux_base = np.random.randint(5000, 20000)
+                policia_base = round(float(np.random.uniform(0.6, 0.95)), 2)
             else:
                 flux_base = np.random.randint(500, 10000)
-            ruas_macro_dados[rua_nome] = {"iluminacao": ilum, "fluxo": flux_base}
+                policia_base = round(float(np.random.uniform(0.2, 0.65)), 2)
+            # Penaliza policiamento em zonas escuras
+            if ilum == "Ruim/Inexistente":
+                policia_base = round(max(0.05, policia_base - 0.3), 2)
+            elif ilum == "Regular":
+                policia_base = round(max(0.1, policia_base - 0.12), 2)
+            ruas_macro_dados[rua_nome] = {"iluminacao": ilum, "fluxo": flux_base, "policia": policia_base}
             
         iluminacao = ruas_macro_dados[rua_nome]["iluminacao"]
         fluxo = ruas_macro_dados[rua_nome]["fluxo"] + np.random.randint(-150, 150)
+        cobertura_policial = ruas_macro_dados[rua_nome]["policia"]
             
         # Dados fiscais / venda
         if status == "Alugado":
@@ -71,6 +79,18 @@ def load_data():
             
         potencial = round(np.random.uniform(0.4, 0.98), 2)
         
+        # Crimes mensais: correlacionados com iluminação + abandono
+        base_crimes = {"Boa": 1, "Regular": 3, "Ruim/Inexistente": 8}.get(iluminacao, 3)
+        if status == "Abandonado/IPTU Atrasado":
+            base_crimes = int(base_crimes * 2.5)
+        crimes_mes = max(0, int(base_crimes * np.random.uniform(0.7, 1.5)) - int(cobertura_policial * 4))
+        
+        # Índice de Segurança composto (0-10)
+        penalidade = min(10, crimes_mes / 2)
+        bonus_pol = cobertura_policial * 4
+        bonus_luz = {"Boa": 2, "Regular": 1, "Ruim/Inexistente": 0}.get(iluminacao, 0)
+        indice_seguranca = round(max(0.0, min(10.0, 10 - penalidade + bonus_pol + bonus_luz - 2)), 1)
+        
         # Anexa o nome do estab (se oficial) ao ID visual para facilitar pro usuario
         if nome_estab and str(nome_estab) != 'nan':
             label_id = str(nome_estab)
@@ -78,7 +98,7 @@ def load_data():
             label_id = endereco_completo
             
         data.append({
-            "id_espaco": label_id, # Aqui trocamos o ID IBGE duro pelo Label Limpo para o Front-End
+            "id_espaco": label_id,
             "rua": endereco_completo,
             "tipo": tipo,
             "lat": lat,
@@ -87,7 +107,10 @@ def load_data():
             "iluminacao": iluminacao,
             "receita_gerada": receita,
             "fluxo_pessoas_dia": max(0, fluxo),
-            "potencial_retrofit": potencial
+            "potencial_retrofit": potencial,
+            "cobertura_policial": cobertura_policial,
+            "crimes_mes": crimes_mes,
+            "indice_seguranca": indice_seguranca,
         })
 
     return pd.DataFrame(data)

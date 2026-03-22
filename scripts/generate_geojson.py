@@ -50,14 +50,37 @@ def generate_geojson():
             ilum = np.random.choice(["Boa", "Regular", "Ruim/Inexistente"])
             if any(kw in rua_nome.upper() for kw in ["CALCADAO", "PRACA", "AVENIDA", "AV "]):
                 flux_base = int(np.random.randint(5000, 20000))
+                # Eixos comerciais têm maior presença policial
+                policia_base = round(np.random.uniform(0.6, 0.95), 2)
             else:
                 flux_base = int(np.random.randint(500, 10000))
-            ruas_macro[rua_nome] = {"iluminacao": ilum, "fluxo": flux_base}
+                policia_base = round(np.random.uniform(0.2, 0.65), 2)
+            
+            # Penaliza policiamento em zonas escuras
+            if ilum == "Ruim/Inexistente":
+                policia_base = round(max(0.05, policia_base - 0.3), 2)
+            elif ilum == "Regular":
+                policia_base = round(max(0.1, policia_base - 0.12), 2)
+                
+            ruas_macro[rua_nome] = {"iluminacao": ilum, "fluxo": flux_base, "policia": policia_base}
 
         iluminacao = ruas_macro[rua_nome]["iluminacao"]
         fluxo = max(0, ruas_macro[rua_nome]["fluxo"] + int(np.random.randint(-150, 150)))
+        cobertura_policial = ruas_macro[rua_nome]["policia"]
         receita = int(np.random.randint(15000, 450000)) if status == "Alugado" else 0
         potencial = round(float(np.random.uniform(0.4, 0.98)), 2)
+
+        # Crimes mensais: base correlacionada à iluminação + abandono + policiamento inverso
+        base_crimes = {"Boa": 1, "Regular": 3, "Ruim/Inexistente": 8}.get(iluminacao, 3)
+        if status == "Abandonado/IPTU Atrasado":
+            base_crimes = int(base_crimes * 2.5)  # Imóveis abandonados atraem mais ocorrências
+        crimes_mes = max(0, int(base_crimes * np.random.uniform(0.7, 1.5)) - int(cobertura_policial * 4))
+
+        # Índice de Segurança: score 0-10 (10 = muito seguro)
+        penalidade_crimes = min(10, crimes_mes / 2)
+        bonus_policia = cobertura_policial * 4
+        bonus_luz = {"Boa": 2, "Regular": 1, "Ruim/Inexistente": 0}.get(iluminacao, 0)
+        indice_seguranca = round(max(0.0, min(10.0, 10 - penalidade_crimes + bonus_policia + bonus_luz - 2)), 1)
 
         label_id = nome_estab if nome_estab and nome_estab != 'nan' else endereco
 
@@ -73,7 +96,7 @@ def generate_geojson():
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [float(row['lon']), float(row['lat'])]  # GeoJSON é [lon, lat]!
+                "coordinates": [float(row['lon']), float(row['lat'])]
             },
             "properties": {
                 "id_espaco": label_id,
@@ -84,6 +107,9 @@ def generate_geojson():
                 "fluxo_pessoas_dia": fluxo,
                 "receita_gerada": receita,
                 "potencial_retrofit": potencial,
+                "cobertura_policial": cobertura_policial,
+                "crimes_mes": crimes_mes,
+                "indice_seguranca": indice_seguranca,
                 "color": color
             }
         }

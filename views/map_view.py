@@ -53,14 +53,19 @@ def _get_cluster_data(status_filter: tuple) -> list:
     return rows
 
 
+# Gradiente universal Verde → Amarelo → Vermelho
+_VERDE_VERMELHO = {0.0: "#00c800", 0.4: "#ffff00", 0.7: "#ff8c00", 1.0: "#cc0000"}
+
+
 def _build_heatmap_data(status_filter: tuple, metrica: str) -> list:
-    """Extrai coordenadas e pesos para a camada de calor."""
+    """Extrai coordenadas e pesos [0-1] normalizados para o HeatMap."""
     geojson = _load_geojson_filtered(status_filter)
     heat_data = []
     for f in geojson["features"]:
         props = f["properties"]
         lon, lat = f["geometry"]["coordinates"]
         weight = 0.0
+
         if metrica == "🔥 Fluxo de Pessoas":
             weight = float(props.get("fluxo_pessoas_dia", 0)) / 20000.0
         elif metrica == "💰 Oportunidade/Potencial":
@@ -68,11 +73,21 @@ def _build_heatmap_data(status_filter: tuple, metrica: str) -> list:
                 weight = float(props.get("potencial_retrofit", 0))
             else:
                 weight = float(props.get("receita_gerada", 0)) / 500000.0
-        elif metrica == "🌑 Zonas Escuras (Risco)":
+        elif metrica == "💡 Iluminação Noturna (Risco)":
             ilu = props.get("iluminacao", "")
-            if ilu == "Ruim/Inexistente": weight = 1.0
-            elif ilu == "Regular": weight = 0.4
-        if weight > 0:
+            # Verde = boa iluminação, Vermelho = sem iluminação
+            weight = {"Ruim/Inexistente": 1.0, "Regular": 0.45, "Boa": 0.1}.get(ilu, 0)
+        elif metrica == "🚨 Crimes por Mês":
+            crimes = float(props.get("crimes_mes", 0))
+            weight = min(1.0, crimes / 20.0)  # Normalizado pelo teto de 20 crimes/mês
+        elif metrica == "👮 Cobertura Policial":
+            # Verde = alta cobertura, Vermelho = baixa cobertura (escala invertida)
+            weight = 1.0 - float(props.get("cobertura_policial", 0.5))
+        elif metrica == "🛡️ Índice de Segurança":
+            # Verde = seguro, Vermelho = inseguro (escala invertida: 10=verde, 0=vermelho)
+            weight = 1.0 - float(props.get("indice_seguranca", 5)) / 10.0
+
+        if weight > 0.01:
             heat_data.append([lat, lon, weight])
     return heat_data
 
@@ -98,6 +113,53 @@ def generate_time_series(tipo_imovel: str, fluxo_total: int) -> pd.DataFrame:
     return df_ts.set_index("Hora")
 
 
+def generate_police_timeseries(cobertura_base: float, iluminacao: str) -> pd.DataFrame:
+    """Curva de presença policial ao longo do dia.
+    - Pico em horário comercial (08h-18h) e virada da noite (22h-01h)
+    - Zona escura penaliza presença noturna
+    """
+    horas = list(range(24))
+    pesos = np.zeros(24)
+    for h in horas:
+        # Turno diurno: policiamento ostensivo
+        pesos[h] += cobertura_base * np.exp(-0.5 * ((h - 10) / 3.5) ** 2)
+        # Turno noturno: patrulhamento preventivo
+        noturno = cobertura_base * np.exp(-0.5 * ((h - 23) / 2.0) ** 2)
+        if iluminacao == "Ruim/Inexistente":
+            noturno *= 0.4  # Rua escura: polícia evita
+        elif iluminacao == "Regular":
+            noturno *= 0.7
+        pesos[h] += noturno
+    max_p = max(pesos) if max(pesos) > 0 else 1
+    presenca = [round(p / max_p * cobertura_base * 100, 1) for p in pesos]
+    df = pd.DataFrame({"Hora": [f"{h:02d}h" for h in horas], "Presença (%)" : presenca})
+    return df.set_index("Hora")
+
+
+def generate_crime_breakdown(crimes_mes: int, iluminacao: str, status: str) -> pd.DataFrame:
+    """Distribuição ficticia de crimes por tipo e período, baseada no perfil do imóvel."""
+    # Crimes tendem a ser mais noturnos em zonas escuras / abandonadas
+    fator_noite = {"Ruim/Inexistente": 0.70, "Regular": 0.55, "Boa": 0.35}.get(iluminacao, 0.5)
+    fator_abandono = 1.5 if status == "Abandonado/IPTU Atrasado" else 1.0
+
+    diurno = int(crimes_mes * (1 - fator_noite))
+    noturno = int(crimes_mes * fator_noite)
+
+    # Distribui crimes por tipo (proporcional ao total)
+    tipos = {
+        "Furto/Roubo": int(crimes_mes * 0.45 * fator_abandono),
+        "Uso de Drogas": int(crimes_mes * 0.25),
+        "Vandalismo": int(crimes_mes * 0.15),
+        "Agressão": int(crimes_mes * 0.10),
+        "Outros": int(crimes_mes * 0.05),
+    }
+    df = pd.DataFrame.from_dict(
+        tipos, orient="index", columns=["Ocorrências/mês"]
+    )
+    df.index.name = "Tipo de Crime"
+    return df, diurno, noturno
+
+
 def render_map_view(df):
     st.subheader("Painel de Controle Espacial")
 
@@ -117,7 +179,14 @@ def render_map_view(df):
     if modo_visao == "🌡️ Visão Macro (Mapas de Calor)":
         metrica_calor = st.selectbox(
             "Camada Termográfica:",
-            ["🔥 Fluxo de Pessoas", "💰 Oportunidade/Potencial", "🌑 Zonas Escuras (Risco)"]
+            [
+                "🔥 Fluxo de Pessoas",
+                "💰 Oportunidade/Potencial",
+                "💡 Iluminação Noturna (Risco)",
+                "🚨 Crimes por Mês",
+                "👮 Cobertura Policial",
+                "🛡️ Índice de Segurança",
+            ]
         )
 
     c1, c2 = st.columns([2, 1])
@@ -136,15 +205,9 @@ def render_map_view(df):
                 options={"disableClusteringAtZoom": 17, "maxClusterRadius": 40}
             ).add_to(m)
         else:
-            # HeatMap com gradiente vibrante sobre mapa claro
+            # HeatMap: sempre verde→amarelo→vermelho para leitura intuitiva universal
             heat_data = _build_heatmap_data(status_tuple, metrica_calor)
-            gradients = {
-                "🔥 Fluxo de Pessoas":    {0.2: "#ffffb2", 0.5: "#fd8d3c", 0.8: "#f03b20", 1.0: "#bd0026"},
-                "💰 Oportunidade/Potencial": {0.2: "#edf8b1", 0.5: "#7fcdbb", 0.8: "#2c7fb8", 1.0: "#253494"},
-                "🌑 Zonas Escuras (Risco)": {0.3: "#fee5d9", 0.6: "#fc9272", 0.85: "#de2d26", 1.0: "#67000d"},
-            }
-            gradient = gradients.get(metrica_calor, {0.4: "lime", 0.7: "orange", 1.0: "red"})
-            HeatMap(heat_data, radius=20, blur=18, min_opacity=0.4, gradient=gradient).add_to(m)
+            HeatMap(heat_data, radius=22, blur=18, min_opacity=0.45, gradient=_VERDE_VERMELHO).add_to(m)
 
         map_key = f"ficaqui_map_{'_'.join(sorted(f_status))}_{modo_visao}_{metrica_calor}"
         st_data = st_folium(m, use_container_width=True, height=650, key=map_key, returned_objects=["last_object_clicked"])
@@ -174,6 +237,27 @@ def render_map_view(df):
             st.write(f"**Status:** {detalhe['status_aluguel']}")
             st.write(f"**Iluminação Base:** {detalhe['iluminacao']}")
             st.write(f"**VPT (Volume Pedonal Total):** {int(detalhe['fluxo_pessoas_dia']):,} hab/dia")
+
+            # Métricas de Segurança Pública
+            with st.expander("🛡️ Segurança Pública", expanded=False):
+                crimes_mes = int(detalhe.get('crimes_mes', 0))
+                cobertura = float(detalhe.get('cobertura_policial', 0.5))
+                idx_seg = float(detalhe.get('indice_seguranca', 5))
+                ilum = detalhe['iluminacao']
+                cor_seg = "🟢" if idx_seg >= 7 else "🟡" if idx_seg >= 4 else "🔴"
+
+                col_a, col_b, col_c = st.columns(3)
+                col_a.metric("🚨 Crimes/mês", crimes_mes)
+                col_b.metric("👮 Policiamento", f"{int(cobertura * 100)}%")
+                col_c.metric("🛡️ Segurança", f"{idx_seg}/10", delta=cor_seg)
+
+                st.caption("🕒 **Presença Policial por Hora (Estimada)**")
+                df_pol = generate_police_timeseries(cobertura, ilum)
+                st.area_chart(df_pol, color="#1E88E5")
+
+                df_crimes, diurno, noturno = generate_crime_breakdown(crimes_mes, ilum, detalhe['status_aluguel'])
+                st.caption(f"🌞 Diurno: **{diurno}** | 🌙 Noturno: **{noturno}** ocorrências/mês")
+                st.bar_chart(df_crimes, color="#E53935")
 
             st.markdown("### 📈 Fluxo Preditivo Diário")
             df_temporal = generate_time_series(detalhe["tipo"], detalhe["fluxo_pessoas_dia"])
