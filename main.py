@@ -4,8 +4,15 @@ import folium
 from streamlit_folium import st_folium
 import plotly.express as px
 import numpy as np
+from huggingface_hub import InferenceClient
 
 st.set_page_config(page_title="Ficaqui - Inteligência Urbana", layout="wide", initial_sidebar_state="expanded")
+
+with st.sidebar:
+    st.header("Configurações Avançadas Ficaqui AI")
+    hf_token = st.text_input("🔑 HF Token (Opcional)", type="password", help="Insira um Token do Hugging Face para remover limitações de requisição da IA. Se vazio, usaremos a camada gratuita com limites limitados.")
+    st.markdown("---")
+    st.markdown("**Status do Projeto:** MVP B2G em Operação.")
 
 st.title("🏙️ Ficaqui: Ecossistema de Inteligência Urbana")
 st.markdown("Plataforma B2G de mapeamento de desertos comerciais e direcionamento de políticas públicas.")
@@ -65,15 +72,15 @@ total_imoveis = len(df)
 abandonados = len(df[df['status_aluguel'] == 'Abandonado/IPTU Atrasado'])
 taxa_vacancia = (len(df[df['status_aluguel'] != 'Alugado']) / total_imoveis) * 100
 
-col1.metric("Total de Espaços Mapeados", total_imoveis)
+col1.metric("Total de Espaços", total_imoveis)
 col2.metric("Ociosidade (Vacância/Desuso)", f"{taxa_vacancia:.1f}%")
-col3.metric("Receita Fiscal/Vendas Atual", f"R$ {df['receita_gerada'].sum()/1e6:.1f}M")
+col3.metric("Receita Fiscal/Vendas Estimada", f"R$ {df['receita_gerada'].sum()/1e6:.1f}M")
 col4.metric("Pontos Cegos Públicos (Ilum. Ruim)", len(df[df['iluminacao'] == 'Ruim/Inexistente']))
 
 st.markdown("---")
 
 # 3. INTERFACE EM ABAS
-tab1, tab2 = st.tabs(["📍 Mapa Georreferenciado & Diagnóstico Individual", "💬 Ficaqui AI (Chatbot Educacional/Gestor)"])
+tab1, tab2 = st.tabs(["📍 Mapa Georreferenciado & Interativo", "💬 Ficaqui AI Real (LLM Chatbot)"])
 
 with tab1:
     st.subheader("Painel de Controle Espacial")
@@ -93,87 +100,136 @@ with tab1:
             
             folium.CircleMarker(
                 location=[row['lat'], row['lon']],
-                radius=row['fluxo_pessoas_dia']/1800, # Visibilidade por fluxo
-                popup=f"<b># {row['id_espaco']}</b><br>Rua: {row['rua']}<br>Status: {row['status_aluguel']}<br>Luz Pub: {row['iluminacao']}<br>Receita: R$ {row['receita_gerada']:,}",
+                radius=max(row['fluxo_pessoas_dia']/1800, 3), # Visibilidade por fluxo com min_radius
+                popup=f"<b># {row['id_espaco']}</b>",
+                tooltip=f"Clique para analisar {row['id_espaco']} na Barra Lateral",
                 color=color,
                 fill=True,
                 fill_opacity=0.6,
             ).add_to(m)
             
-        st_folium(m, width="100%", height=550)
+        # O st_folium captura eventos de clique no web app
+        st_data = st_folium(m, width="100%", height=550)
         
     with c2:
-        st.subheader("🏢 Diagnóstico Geral por Espaço")
-        espaco_selecionado = st.selectbox("Selecione um identificador de imóvel no painel ou procure aqui:", df['id_espaco'])
+        st.subheader("🏢 Diagnóstico do Espaço")
+        
+        # Identificar imóvel clicado no mapa
+        clicked_espaco = None
+        if st_data and st_data.get("last_object_clicked"):
+            lat_clicado = st_data["last_object_clicked"]["lat"]
+            lon_clicado = st_data["last_object_clicked"]["lng"]
+            
+            # Cálculo de distância simples para achar o id_espaco na base
+            dist = (df_filtrado['lat'] - lat_clicado)**2 + (df_filtrado['lon'] - lon_clicado)**2
+            min_dist_idx = dist.idxmin()
+            clicked_espaco = df_filtrado.loc[min_dist_idx]['id_espaco']
+        
+        # Default Index para o SelectBox (Atualiza baseado no clique)
+        default_idx = 0
+        if clicked_espaco:
+            default_idx = int(df.index[df['id_espaco'] == clicked_espaco][0]) # Busca index absoluto
+            
+        espaco_selecionado = st.selectbox(
+            "📍 Selecionado no Mapa:", 
+            df['id_espaco'],
+            index=default_idx
+        )
         
         if espaco_selecionado:
             detalhe = df[df['id_espaco'] == espaco_selecionado].iloc[0]
             st.write(f"**Logradouro:** {detalhe['rua']}")
             st.write(f"**Tipologia Principal:** {detalhe['tipo']}")
             st.write(f"**Status de Aluguel:** {detalhe['status_aluguel']}")
-            st.write(f"**Segurança Prédio/Rua (Iluminação):** {detalhe['iluminacao']}")
-            st.write(f"**Fluxo Estimado de Pedestres:** {detalhe['fluxo_pessoas_dia']} hab/dia")
+            st.write(f"**Infra. de Iluminação:** {detalhe['iluminacao']}")
+            st.write(f"**Fluxo Diário Estimado:** {detalhe['fluxo_pessoas_dia']} hab/dia")
             
-            # DIAGNÓSTICO PROFUNDO DA IA
-            st.markdown("### 🧠 Parecer Ficaqui AI")
+            # DIAGNÓSTICO PROFUNDO DA IA (Mockado para o Overview Rápido)
+            st.markdown("### 📊 Overview Rápido")
             
             if detalhe['status_aluguel'] != "Alugado":
                 if detalhe['fluxo_pessoas_dia'] > 8000 and detalhe['iluminacao'] != "Boa":
-                    diag = "🚨 **Alta Oportunidade Desperdiçada:** O imóvel goza de fluxo altíssimo e comercialmente viável, porém o ambiente urbano oprime a locação noturna. \n\n**Sugestões para a 'Caneta':** Acionar PPP de Iluminação. Notificar proprietários para aplicação de IPTU progressivo se retrofits não forem buscados."
+                    diag = "🚨 O imóvel goza de fluxo altíssimo e comercialmente viável, porém o ambiente urbano oprime a locação noturna. Ação: Notificar proprietários para IPTU progressivo ou iluminar entorno."
                 elif detalhe['status_aluguel'] == "Abandonado/IPTU Atrasado":
-                    diag = "🏚️ **Déficit Total (Padrão FII):** Endividamento sobre o valor venal. Este é o alvo clássico. \n\n**Sugestão da IA:** O 'Músculo' (FII Ficaqui) deve ofertar sublocação ou desapropriação em acordo judicial. Inserir retrofit misto e dar isenção profunda para os próximos locatários âncora nos pisos térreos."
+                    diag = "🏚️ Endividamento sobre o valor venal. O Fundo Imobiliário (FII Ficaqui) deve focar na desapropriação e aplicar retrofit misto (Loja Embaixo + Moradia Em Cima)."
                 else:
-                    diag = "🏢 **Oportunidade Adormecida:** Status razoável, mas a região carece de atração orgânica pós-18h. Precisa ancorar empreendimentos que façam moradia nos pisos superiores para manter consumo local."
+                    diag = "🏢 Oportunidade Subutilizada. Falta atração orgânica pós-18h. Precisa ancorar empreendimentos mistos."
             else:
                 if detalhe['receita_gerada'] > 150000:
-                    diag = "💎 **Motor Comercial Base:** Este ativo representa um super-gerador de tributo orgânico. Deve-se maximizar a infraestrutura cruzada (calçadas e lixeiras acessíveis) pra não perder a empresa para polos periféricos."
+                    diag = "💎 Motor Comercial Forte! Manter calçadas, segurança e iluminação em dia para não perder este lojista para shoppings fechados."
                 else:
-                    diag = "✅ **Ativo Padrão:** O imóvel se sustenta. O monitoramento foca apenas em evitar que comércios vazios próximos desvalorizem este perímetro, mantendo atratividade."
+                    diag = "✅ Ativo locado e operante. Exige apenas manutenção básica da prefeitura."
             
             st.info(diag)
 
 with tab2:
-    st.subheader("Chatbot G2B: Assessor Executivo para Prefeitos/Secretários")
-    st.markdown("💬 Converse de forma humanizada com seus dados base de ordenamento, isenção e urbanismo.")
+    st.subheader("Chatbot G2B: Inteligência Generativa sobre os Dados Urbanos")
+    st.markdown("🤖 *Conectado ao Hugging Face LLM.* Pergunte à Inteligência Artificial sobre as discrepâncias, isenções, ou como resolver os desertos mapeados.")
     
     # Session State Chat
     if "messages" not in st.session_state:
         st.session_state.messages = [
-            {"role": "assistant", "content": "Olá! Sou o **Ficaqui AI**. Eu cruzo dados de iluminação, fluxo de pedestres, receitas de lojistas e inadimplência do Centro. Em que rua quer focar as iniciativas de Retrofit da prefeitura hoje?"}
+            {"role": "assistant", "content": "Olá, Gestor! Sou a IA avançada do Projeto Ficaqui. Consigo cruzar todos os dados dos imóveis mapeados na tabela desta região. Como posso guiar suas Políticas Públicas hoje?"}
         ]
 
+    chat_container = st.container(height=500, border=False)
     for msg in st.session_state.messages:
-        with st.chat_message(msg["role"]):
+        with chat_container.chat_message(msg["role"]):
             st.markdown(msg["content"])
 
-    prompt = st.chat_input("Ex: Me indique o maior problema na Rua Laranjeiras hoje.")
+    prompt = st.chat_input("Ex: Qual o resumo dos locais com iluminação ruim e fluxo alto?")
     
     if prompt:
         # Mostra pergunta do user
         st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user"):
+        with chat_container.chat_message("user"):
             st.markdown(prompt)
 
-        # Regras Mockadas de NLP p/ resposta Ficaqui AI
-        with st.chat_message("assistant"):
-            prompt_lower = prompt.lower()
-            
-            # Condições baseadas na nova granularidade
-            if "laranjeiras" in prompt_lower:
-                subset = df[df['rua'] == "Rua Laranjeiras"]
-                vacos = len(subset[subset['status_aluguel'] != "Alugado"])
-                response = f"🔍 **Relatório Rápido da Rua Laranjeiras:**\nMapeei {len(subset)} estabelecimentos por lá. Atualmente, {vacos} estão inutilizados (seja para uso ou calote). O pior gargalo visível da métrica é a iluminação — dos abandonados, quase 80% perdem atração pois a iluminação é deficitária. Sugerimos subsidiar IPTU condicionado à iluminação de fachada (Gentileza Urbana)."
-            
-            elif "ilumina" in prompt_lower or "luz" in prompt_lower or "segurança" in prompt_lower:
-                ruins = len(df[df['iluminacao'] == 'Ruim/Inexistente'])
-                response = f"📉 **Cegueira Urbana:**\nIdentificamos que {ruins} pontos focais do Centro possuem iluminação precária. Isso tem correlação direta de 87% com a evasão nas vias comerciais após as 18h. Resolver este problema deve vir antes de isentar impostos de empresas menores, pois o risco supera a despesa."
-            
-            elif "receit" in prompt_lower or "arrecadação" in prompt_lower or "fundo" in prompt_lower:
-                total_rec = df['receita_gerada'].sum()
-                response = f"💰 **Diagnóstico Fiscal:**\nOs comerciantes saudáveis estão gerando atualmente R$ {total_rec/1e6:.1f} Milhões no Centro. No entanto, estamos perdendo mais de R$ 35 Milhões anuais nestes prédios que restam abandonados. Engatilhar as construtoras do Banese no *Fundo Músculo* para reformar e aplicar moradias no segundo andar é fundamental para injetar vida orgânica nesse setor."
-            
-            else:
-                response = "Entendido. 🧠 Posso correlacionar esse dado e fazer uma análise de impacto financeiro, ou se preferir... Posso redigir agora mesmo a **Proposta de Projeto de Lei** baseada nesse seu pedido sobre moradia de uso misto e enviar aos gabinetes. O que acha de darmos os primeiros passos nos desertos da 'Praça Fausto Cardoso'?"
-            
-            st.markdown(response)
-            st.session_state.messages.append({"role": "assistant", "content": response})
+        # Resposta Via Hugging Face (InferenceClient)
+        with chat_container.chat_message("assistant"):
+            with st.spinner("Analisando microdados com a Nuvem..."):
+                try:
+                    # Amostrando o DF para que caiba no contexto do limite gratuito do modelo (Zephyr 7B)
+                    df_sample = df[['rua', 'status_aluguel', 'iluminacao', 'fluxo_pessoas_dia']].sample(min(15, len(df)))
+                    context = df_sample.to_json(orient='records')
+                    
+                    system_prompt = f"""Você é o Ficaqui AI, um Urbanista Sênior que orienta Prefeituras e Fundos de Investimentos.
+Voce foca em: Uso misto (moradia no centro), Retrofits e políticas de isenção de ISS/IPTU.
+Sempre responda em Portugues e seja claro.
+Use como base exclusiva estes dados do centro da cidade (uma amostra dos imoveis): {context}."""
+
+                    messages_hf = [{"role": "system", "content": system_prompt}]
+                    for m in st.session_state.messages[-4:]:  # last 4
+                        if m["role"] != "system":
+                            messages_hf.append({"role": m["role"], "content": m["content"]})
+                    
+                    # Conectar ao Hugging Face (Se não tiver token, usa Rate Limit anonimo aberto)
+                    client_kwargs = {}
+                    if hf_token:
+                        client_kwargs['api_key'] = hf_token
+                        
+                    client = InferenceClient(**client_kwargs)
+                    
+                    # Stream the real AI response
+                    response = ""
+                    stream = client.chat.completions.create(
+                        model="deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+                        messages=messages_hf,
+                        max_tokens=2048,
+                        stream=True,
+                        temperature=0.6,
+                    )
+                    
+                    placeholder = st.empty()
+                    for chunk in stream:
+                        if hasattr(chunk, 'choices') and chunk.choices:
+                            delta = getattr(chunk.choices[0].delta, 'content', "") or ""
+                            response += delta
+                            placeholder.markdown(response + "▌")
+                    placeholder.markdown(response)
+                    
+                    st.session_state.messages.append({"role": "assistant", "content": response})
+                    
+                except Exception as e:
+                    st.error(f"Erro ao contatar API do Hugging Face. Detalhes: {e}")
+                    st.warning("💡 Verifique se inseriu um HF Token válido na aba lateral caso o limite gratuito tenha estourado. A API gratuita restringe muitas requisições por minuto.")
