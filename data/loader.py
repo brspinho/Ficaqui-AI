@@ -10,6 +10,15 @@ def load_data():
     
     try:
         base_df = pd.read_csv("data/cnefe_centro_oficial.csv")
+        
+        # Recuperando as 6330 linhas completas para o card de métricas.
+        # Para evitar o bug do zoom onde prédios verticais se sobrepõem perfeitamente
+        # (causando o spiderfy de 200 pinos iguais), aplicamos um micro deslocamento (jitter).
+        # 0.0001 graus de latitude/longitude equivale a ~11 metros (espalhando pelo terreno e calçada).
+        np.random.seed(42)
+        base_df['lat'] = base_df['lat'] + np.random.uniform(-0.00015, 0.00015, size=len(base_df))
+        base_df['lon'] = base_df['lon'] + np.random.uniform(-0.00015, 0.00015, size=len(base_df))
+        
     except Exception as e:
         st.error("Erro ao ler base CNEFE Oficial processada: " + str(e))
         return pd.DataFrame()
@@ -62,14 +71,14 @@ def load_data():
             
         potencial = round(np.random.uniform(0.4, 0.98), 2)
         
-        # Anexa o nome do estab (se oficial) ao ID visual
-        if nome_estab and nome_estab != 'nan':
-            label_id = f"{id_espaco} ({nome_estab})"
+        # Anexa o nome do estab (se oficial) ao ID visual para facilitar pro usuario
+        if nome_estab and str(nome_estab) != 'nan':
+            label_id = str(nome_estab)
         else:
-            label_id = id_espaco
+            label_id = endereco_completo
             
         data.append({
-            "id_espaco": label_id,
+            "id_espaco": label_id, # Aqui trocamos o ID IBGE duro pelo Label Limpo para o Front-End
             "rua": endereco_completo,
             "tipo": tipo,
             "lat": lat,

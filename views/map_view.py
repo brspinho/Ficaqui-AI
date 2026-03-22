@@ -19,31 +19,31 @@ def render_map_view(df):
     with c1:
         m = folium.Map(location=[-10.913, -37.052], zoom_start=15, tiles="OpenStreetMap")
         
-        # Usamos MarkerCluster para dar conta da multidão de endereços oficiais do IBGE
-        marker_cluster = MarkerCluster().add_to(m)
+        # MarkerCluster agora "explode" e revela os pinos individuais nas ruas originais a partir do Zoom 16!
+        # maxClusterRadius diminui a "gravidade" do cluster, separando-os mais cedo.
+        marker_cluster = MarkerCluster(
+            options={
+                'disableClusteringAtZoom': 16,
+                'maxClusterRadius': 35
+            }
+        ).add_to(m)
         
         for i, row in df_mapa.iterrows():
             # A cor agora determina o status de ocupação (Aluguel, Disponível, Abandonado)
             color = 'red' if row['status_aluguel'] == 'Abandonado/IPTU Atrasado' else 'orange' if row['status_aluguel'] == 'Disponível' else 'green'
             
-            # O ícone determina o TIPO físico/operacional
             tipo = row['tipo']
-            if tipo == 'Residencial':
-                fa_icon = 'home'
-            elif tipo == 'Galpão':
-                fa_icon = 'industry'
-            elif tipo == 'Prédio Misto':
-                fa_icon = 'building'
-            elif tipo == 'Sala Comercial':
-                fa_icon = 'briefcase'
-            else:
-                fa_icon = 'shopping-cart' # Lojas Térreas / Varejo
             
-            folium.Marker(
+            folium.CircleMarker(
                 location=[row['lat'], row['lon']],
-                popup=f"<b># {row['id_espaco']}</b><br><i>{tipo}</i>",
-                tooltip=f"{tipo} - Clique para analisar na Barra Lateral",
-                icon=folium.Icon(color=color, icon=fa_icon, prefix='fa')
+                radius=5, # Tamanho muito menor e focado na performance
+                color=color, # Bordas
+                weight=1,
+                fill=True,
+                fill_color=color,
+                fill_opacity=0.8,
+                popup=f"<b>{row['id_espaco']}</b><br><i>{tipo}</i>",
+                tooltip=f"{tipo} - Clique para analisar na Barra Lateral"
             ).add_to(marker_cluster) # Adicionado ao Cluster em vez do mapa Base!
             
         # O st_folium captura eventos de clique no web app limitando o retorno para não recarregar no pan/zoom
