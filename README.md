@@ -8,6 +8,15 @@
 
 O **Ficaqui** é uma plataforma de decisão baseada em dados criada durante o **Hackathon Centrolab**. O foco absoluto do projeto é a **revitalização do comércio do Centro de Aracaju**, conectando o poder público, o capital privado e o ecossistema local para reaquecer a economia e ocupar os espaços ociosos.
 
+### 👥 Equipe
+| Integrante | Função |
+| :--- | :--- |
+| **Miguel Lucas** | Dev FullStack |
+| **Irandi Silva** | Engenheiro IoT |
+| **Samuel Pinho** | Especialista em IA |
+| **Antônio Santos** | Gerente de Produtos |
+| **Matheus Figueiredo** | Especialista em Processos |
+
 ## 💡 Nossa Tese de Solução
 
 Acreditamos que a solução definitiva para o esvaziamento do Centro **não é apenas um software**, mas sim a aplicação de **Políticas Públicas estruturadas** (como incentivos de ICMS, PPPs, Retrofit e novos marcos fiscais).
